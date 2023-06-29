@@ -9,10 +9,32 @@
           -  SSR  ( First component generated on the server ,then sent to the client for rendering [Good For S.E.O {Easy Crawling and Indexing by web crawlers }] )         
           -  SSG    
           -  ISG
-          - 
+          
     + Routing :   
          + Next.js has it's own file based routing system , each folder in the api folder becomes a route , and the folder name , the route path( so you're not dependent on some package like  React Router Dom )
 
         + Api routes , help is handling serverless api requests
         
-        + The serverless api architecture of next js frees us from worrying about scaling the server on increased demand ( as the serverless functions scale up and down as per demand automatically )
+        + The serverless api architecture of next js frees us from worrying about managing the server infrastructure or  scaling the server on increased demand ( as the serverless functions scale up and down as per demand automatically )
+    
+    + Automatic Code Splitting :    
+        + Code splitting is a technique of splitting large bundles of javascript code to small , more manageable bundles that are loaded in as and when needed .
+       
+        + Code splitting leads to quicker load times of an app , thereby optimizing the user experience 
+        
+        + In create react app , you need to manually do the code splitting process
+
+     
+
+----
+
+
+Setup : 
+
++ The `layout` file within the `app` directory is the entry point into the app.
+
++  The  `page` represents the home page of the application.
+
++  By default , all components in the `app` folder are server components.
+
++ If you want to make a page interactive ( i.e using react hooks  , or onClick() , onChange() etc...) , then render it as client component  by using `use client` statement of the top of the page 
