@@ -8,7 +8,7 @@
           - CSR  ( Same as CrateReactApp client)   
           -  SSR  ( First component generated on the server ,then sent to the client for rendering [Good For S.E.O {Easy Crawling and Indexing by web crawlers }] )         
           -  SSG    
-          -  ISR ( It re-generates a static site template after specified about of time )
+          -  ISR ( It re-generates a static site template after specified about of time , so any changes to the data in that time is reflecte , Good for blog posts etc... )
           
     + Routing :   
          + Next.js has it's own file based routing system , each folder in the api folder becomes a route , and the folder name , the route path( so you're not dependent on some package like  React Router Dom )
