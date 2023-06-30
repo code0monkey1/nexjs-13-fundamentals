@@ -6,5 +6,7 @@ export async function GET(request){
 
 export async function POST(request){
 
-         
+     console.log(request.body)  
+
+     return new Response("Done")
 }  
