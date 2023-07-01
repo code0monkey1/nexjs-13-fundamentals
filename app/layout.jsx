@@ -1,4 +1,5 @@
-import '@styles/globals.css'
+import '@styles/globals.css';
+import navbar from './navbar';
 
 export const metadata = {
   title: 'Next.js Fundamentals',
@@ -9,6 +10,7 @@ export default function RootLayout({ children }) {
  return (
     <html lang="en">
       <div className='main'>
+        <navbar/>
         <div className="gradient"/>
       </div>
       <main className='app'>
