@@ -39,7 +39,7 @@ Setup :
 
 +  By default , all components in the `app` folder are server components.
 
-+ If you want to make a page interactive ( i.e using react hooks  , or onClick() , onChange() etc...) , then render it as client component  by using `use client` statement of the top of the page.
++ If you want to make a page interactive ( i.e using react hooks  , or onClick() , onChange() etc... .i.e Client Side Rendered ) , then render it as client component  by adding `use client` statement at the top of the component page.
 
 ---
 
@@ -49,8 +49,9 @@ If you want to change the metadata , you could do it dynamically by :
 
 
 ---
-
+ 
 ### CSS 
  
-- The `globals.css` file contains the global css properties of the entire app.
+- The `globals.css` file contains the global css properties of the entire app. This even has the `tailwind` imports to apply tailwind properties to our app.
+ 
 - It is imported in `layout` file as `import './globals.css'` to be applied to the entire app
