@@ -12,7 +12,8 @@
     
     + Creating a new page:
 
-        - Next.js has it's own file based routing system , each folder in the api folder becomes a route , and the folder name , the route path( so you're not dependent on some package like  React Router Dom )
+        - Next.js has it's own file based routing system , each folder in the api folder becomes a route , and the folder name , the route path( so you're not dependent on some package like  React Router Dom ).
+        - Eg. For creating a new page named `new-page` , jest crate a `new-page folder` and crate a file named `page.jsx` which will have the content to be displayed when we visit `http://localhost:3000/new-page`
 
           
     + Routing :   
