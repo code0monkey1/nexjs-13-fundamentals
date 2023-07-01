@@ -5,7 +5,7 @@
  1. Simplifies the app dev process
  1. Automatically optimizes the web app through :    
     + Rendering  :   
-          - CSR  ( Same as CrateReactApp client)   
+          - CSR  ( Client Side Rendering : Same as CrateReactApp client )   
           -  SSR  ( First component generated on the server ,then sent to the client for rendering [Good For S.E.O {Easy Crawling and Indexing by web crawlers }] )         
           -  SSG    
           -  ISR ( It re-generates a static site template after specified about of time , so any changes to the data in that time is reflecte , Good for blog posts etc... )
