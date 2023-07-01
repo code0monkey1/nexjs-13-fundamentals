@@ -11,7 +11,8 @@
         -  SSG
         [ The only difference between SSG and SSR in terms of syntax is  removing the `{cache:'no-store'}` statement , which means , you cache the page and make it static after the first page load ]  
          ![Server Site Generation](./data/pics/ssg.jpg 'static site generation')    
-        -  ISG ( It re-generates a static site template after specified amount of time , so any changes to the data in that time is reflect , Good for blog posts etc... )
+        -  ISG ( It re-generates a static site template after specified amount of time , so any changes to the data in that time is reflect , Good for blog posts etc... ) 
+        ![Incremental Static Generation](./data/pics/ssg.jpg 'incremental static generation') 
     
     + Creating a new page:
 
