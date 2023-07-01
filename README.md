@@ -16,6 +16,7 @@
         - Eg. For creating a new page named `new-page` , jest crate a `new-page folder` and crate a file named `page.jsx` which will have the content to be displayed when we visit `http://localhost:3000/new-page`
        
         - ` Dynamic Page Routing ` - If you want to create a dynamic page using the `:pageId` , for example , then you can do that using the`[postId]` folder (A folder , with the argument name within square brackets) within the `posts` folder .
+        - Sharing UI components b/w components of a folder can be achieved by creating a `layout.js` file in the folder and putting common components the same way you put in the main folders layout page 
           
     + Routing :   
          
