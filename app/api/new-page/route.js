@@ -1,4 +1,4 @@
-export default function GET(REQUEST){
+export default function Get(REQUEST){
 
-      
+      get()
 }
