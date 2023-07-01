@@ -29,6 +29,8 @@
         - Api routes , help is handling serverless api requests
         
         - The serverless api architecture of next js frees us from worrying about managing the server infrastructure or  scaling the server on increased demand ( as the serverless functions scale up and down as per demand automatically )
+        ![Serverless Get Request](./data/pics/get.jpg 'incremental static generation') 
+    
     
     + Automatic Code Splitting :    
         - Code splitting is a technique of splitting large bundles of javascript code to small , more manageable bundles that are loaded in as and when needed .
