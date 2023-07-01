@@ -36,7 +36,7 @@ const Post=({id,content,important})=>{
   
   
   return(
-     <div className='border-2 border-black p-2' key={id}>
+     <div className='border-2 border-black p-2 m-2 w-auto' key={id}>
 
          <h1>{content}</h1>
          <input type='checkbox' checked={important}/>
