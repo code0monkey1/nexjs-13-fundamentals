@@ -62,10 +62,11 @@ Setup :
 
 If you want to change the metadata , you could do it statically / dynamically by : 
 
+   In this case , we statically render the `title` in the `head` tag
    ![Static Meta Data](./data/pics/static-metadata.jpg 'Static Meta Data') 
    
 ---
-
+   In this case , we dynamically render the `title` in the `head` tag
    ![Dynamic Meta Data](./data/pics/dynamic-meta-data.jpg 'Dynamic Meta Data') 
 
 
