@@ -1,6 +1,6 @@
 
 
-export default function GET(request){
+export async function GET(request){
 
     const users=[
       {id:1,name:"chinu"},
