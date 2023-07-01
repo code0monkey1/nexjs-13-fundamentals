@@ -29,9 +29,9 @@
         - Api routes , help is handling serverless api requests
         
         - The serverless api architecture of next js frees us from worrying about managing the server infrastructure or  scaling the server on increased demand ( as the serverless functions scale up and down as per demand automatically )
-        - You define the the api routes in the `app/api` folder , where you name a folder corresponding to the route you want eg . `users` , and then define a `router.js` file , in which you define the serverlesss routes
+        - You define the the api routes in the `app/api` folder , where you name a folder corresponding to the route you want eg . `users` , and then define a `router.js` file , in which you define the serverless routes
         ![Serverless Get Request](./data/pics/get.jpg 'incremental static generation') 
-    
+        ( you'll get the data at `http://localhost:3000/api/users`)
     
     + Automatic Code Splitting :    
         - Code splitting is a technique of splitting large bundles of javascript code to small , more manageable bundles that are loaded in as and when needed .
