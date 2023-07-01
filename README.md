@@ -60,7 +60,13 @@ Setup :
 
 ### Metadata / SEO
 
-If you want to change the metadata , you could do it dynamically by : 
+If you want to change the metadata , you could do it statically / dynamically by : 
+
+   ![Static Meta Data](./data/pics/static-metadata.jpg 'Static Meta Data') 
+   
+---
+
+   ![Dynamic Meta Data](./data/pics/dynamic-meta-data.jpg 'Dynamic Meta Data') 
 
 
 ---
