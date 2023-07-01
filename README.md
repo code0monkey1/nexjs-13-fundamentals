@@ -9,7 +9,7 @@
         ![Server Side Rendered](./data/pics/ssr.jpg 'server side rendered')       
         - CSR  ( Client Side Rendering : Same as CrateReactApp client )   
         -  SSG
-        [ The only difference between ]  
+        [ The only difference between SSG and SSR in terms of syntax is  removing the `{cache:'no-store'}` statement , which means , you cache the page and make it static after the first page load ]  
          ![Server Site Generation](./data/pics/ssg.jpg 'static site generation')    
         -  ISR ( It re-generates a static site template after specified about of time , so any changes to the data in that time is reflect , Good for blog posts etc... )
     
