@@ -1,6 +1,6 @@
 # Next.js 13 Fundamentals
 
-
+> [part 1]
 ## Next.js advantages
  1. Simplifies the app dev process
  1. Automatically optimizes the web app through :    
@@ -75,5 +75,8 @@ If you want to change the metadata , you could do it statically / dynamically by
 ### CSS 
  
 - The `globals.css` file contains the global css properties of the entire app. This even has the `tailwind` imports to apply tailwind properties to our app.
+-
  
-- It is imported in `layout` file as `import './globals.css'` to be applied to the entire app
+> [End of part 1]
+
+---
