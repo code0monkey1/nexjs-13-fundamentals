@@ -33,8 +33,10 @@ Setup :
 
 + The `layout` file within the `app` directory is the entry point into the app.
 
++ Any component you render in the `layout` page will be reflected on every page of the app.
+
 +  The  `page` represents the home page of the application.
 
 +  By default , all components in the `app` folder are server components.
 
-+ If you want to make a page interactive ( i.e using react hooks  , or onClick() , onChange() etc...) , then render it as client component  by using `use client` statement of the top of the page 
++ If you want to make a page interactive ( i.e using react hooks  , or onClick() , onChange() etc...) , then render it as client component  by using `use client` statement of the top of the page.
