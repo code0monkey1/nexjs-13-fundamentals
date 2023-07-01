@@ -46,3 +46,10 @@ Setup :
 ### Metadata
 
 If you want to change the metadata , you could do it dynamically by : 
+
+
+---
+
+### CSS 
+ 
+- The `globals.css` file contains the global css properties of the entire app.
