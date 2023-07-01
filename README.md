@@ -15,7 +15,7 @@
         - Next.js has it's own file based routing system , each folder in the api folder becomes a route , and the folder name , the route path( so you're not dependent on some package like  React Router Dom ).
         - Eg. For creating a new page named `new-page` , jest crate a `new-page folder` and crate a file named `page.jsx` which will have the content to be displayed when we visit `http://localhost:3000/new-page`
        
-        - ` Dynamic Page Routing ` - If you want to create a dynamic page using the `:pageId` , for example , then you can do that using `new-page/'[pageId].jsx'` dynamic route.
+        - ` Dynamic Page Routing ` - If you want to create a dynamic page using the `:pageId` , for example , then you can do that using the`[postId]` folder (A folder , with the argument name within square brackets) within the `posts` folder .
           
     + Routing :   
          
