@@ -17,7 +17,7 @@
        
         - ` Dynamic Page Routing ` - If you want to create a dynamic page using the `:pageId` , for example , then you can do that using the`[postId]` folder (A folder , with the argument name within square brackets) within the `posts` folder .
         - Sharing UI components b/w components of a folder can be achieved by creating a `layout.js` file in the folder and putting common components the same way you put in the main folders layout page
-        - You can create a `loading.js` file and an `error.js` file in the Posts folder to handle any loading or error states when posts load or error out. 
+        - You can create a `loading.js` file and an `error.js` ( will have `use client` at the top, as Error components must be client components) file in the Posts folder to handle any loading or error states when posts load or error out. 
           
     + Routing :   
          
