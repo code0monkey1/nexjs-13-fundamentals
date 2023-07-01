@@ -35,8 +35,14 @@ Setup :
 
 + Any component you render in the `layout` page will be reflected on every page of the app.
 
-+  The  `page` represents the home page of the application.
++  The  `page` represents the home page of the application. ( The page that's displayed when the app starts)
 
 +  By default , all components in the `app` folder are server components.
 
 + If you want to make a page interactive ( i.e using react hooks  , or onClick() , onChange() etc...) , then render it as client component  by using `use client` statement of the top of the page.
+
+---
+
+### Metadata
+
+If you want to change the metadata , you could do it dynamically by : 
