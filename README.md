@@ -81,7 +81,7 @@ If you want to change the metadata , you could do it statically / dynamically by
 
 ---
 
-> Part 2
+> [ Part 2 ]
 
 # The `styles` folder :
 
@@ -136,3 +136,5 @@ This folder will have all the component files (`jsx files`) you'll use throughou
 You can import the components into files using `@component/ComponentName` into files .
 
 - We need to call the NavBar component within the` layout.jsx` file in the app directory , so that it's visible on all pages throughout the app
+- 
+> [End of Part 2]
