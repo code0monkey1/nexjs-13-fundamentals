@@ -1,9 +1,10 @@
-import Link from "next/link"
+'use client'
+
 import Image from "next/image"
+import Link from "next/link"
 
-import {useState,useEffect} from 'react'
-import {signIn,signOut,useSession,getProviders} from 'next-auth/react'
-
+import { getProviders, signIn, signOut, useSession } from 'next-auth/react'
+import { useEffect, useState } from 'react'
 
 const Nav = () => {
   return (
