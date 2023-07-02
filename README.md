@@ -113,16 +113,18 @@ const RootLayout = ({children}) => {
     <body>
       <div className='main'>
       <div className='gradient'/>
+      </div>
       <main className='app'>
         {children}
       </main>
-      </div>
+
     </body>
     </html>
   )
 }
 
 export default RootLayout
+
 ```
 
 
