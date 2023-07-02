@@ -85,4 +85,4 @@ If you want to change the metadata , you could do it statically / dynamically by
 
 # The `styles` folder :
 
-This is the folder where we define all our styles and we import it to use them in out project
+This is the folder , with the `globals.css` file ,  where we define all our styles and we import it to use them in out project
