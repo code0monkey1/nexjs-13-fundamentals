@@ -2,7 +2,12 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <h1>Home</h1>
+    <section className='w-full flex-center flex-co
+    '>
+
+
+        
+    </section>
   )
 }
 
