@@ -80,3 +80,9 @@ If you want to change the metadata , you could do it statically / dynamically by
 > [End of part 1]
 
 ---
+
+> Part 2
+
+# The `styles` folder :
+
+This is the folder where we define all our styles and we import it to use them in out project
