@@ -3,7 +3,7 @@ import React from 'react'
 const Home = () => {
   return (
     <section className='w-full flex-center flex-co
-    '>
+    l'>
 
     <h1 className='head_text text-center'>
       Discover and Share
@@ -12,7 +12,7 @@ const Home = () => {
     </h1>
   
     <p className='desc text-center'>
-      A general Description
+     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut labore, recusandae molestias ad qui dolore saepe dolores sunt assumenda, voluptas amet nam! Dolores magnam quas sunt voluptatum, labore maxime neque.
     </p>
       
     </section>
