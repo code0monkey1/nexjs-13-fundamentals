@@ -134,3 +134,5 @@ export default RootLayout
 This folder will have all the component files (`jsx files`) you'll use throughout the project .
 
 You can import the components into files using `@component/ComponentName` into files .
+
+- We need to call the NavBar component within the` layout.jsx` file in the app directory , so that it's visible on all pages throughout the app
