@@ -85,4 +85,14 @@ If you want to change the metadata , you could do it statically / dynamically by
 
 # The `styles` folder :
 
-This is the folder , with the `globals.css` file ,  where we define all our styles and we import it to use them in out project
+This is the folder , with the `globals.css` file ,  where we define all our styles and we import it to use them in out project by importing it to our layout.jxs file at the top ` import '@styles/globals.css'` ( and change the `jsconfig.json` to)
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "@*": ["./*"]  // change @/ to @*
+    }
+  }
+}
+```
