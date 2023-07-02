@@ -127,4 +127,10 @@ export default RootLayout
 
 ```
 
+--- 
 
+### The Components Folder
+
+This folder will have all the component files (`jsx files`) you'll use throughout the project .
+
+You can import the components into files using `@component/ComponentName` into files .
