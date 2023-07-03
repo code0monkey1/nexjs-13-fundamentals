@@ -1,9 +1,6 @@
 abstract class Test{
-  private  name;
 
-  constructor(name){
-    this.name=name
-  }
+  constructor(private name:string){}
 
   public abstract setName(name);
   
@@ -11,15 +8,13 @@ abstract class Test{
 
 
 class TestingTest extends Test{
-
-    constructor(name){
-      super(name)
-
-    }
-  public setName(name: any) {
-     this.name=
+   
+  constructor(name:string){
+    super(name);
   }
 
-
+  public setName(name: any) {
+    throw new Error("Method not implemented.");
+  }
 
 }
