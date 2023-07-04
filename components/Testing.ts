@@ -3,7 +3,7 @@ class Airplane{
 
 
      public setSpeed(speed:string){
-          this.setSpeed(speed)
+         this.speed=speed
      } 
      public displaySpeed(){
       console.log(this.speed)

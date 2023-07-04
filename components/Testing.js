@@ -17,7 +17,7 @@ var Airplane = /** @class */ (function () {
     function Airplane() {
     }
     Airplane.prototype.setSpeed = function (speed) {
-        this.setSpeed(speed);
+        this.speed = speed;
     };
     Airplane.prototype.displaySpeed = function () {
         console.log(this.speed);
