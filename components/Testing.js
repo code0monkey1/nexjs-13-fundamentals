@@ -34,3 +34,6 @@ var Jet = /** @class */ (function (_super) {
     };
     return Jet;
 }(Airplane));
+var j = new Jet();
+j.setSpeed("12");
+j.displaySpeed();

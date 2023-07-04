@@ -11,7 +11,8 @@ class Airplane{
 }
 
 class Jet extends Airplane{
-
+      
+    
      
       public displaySpeed(): void {
           super.displaySpeed()
@@ -19,3 +20,9 @@ class Jet extends Airplane{
 
 
 }
+
+const j = new Jet()
+
+j.setSpeed("12");
+
+j.displaySpeed()
