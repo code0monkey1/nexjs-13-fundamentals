@@ -85,8 +85,14 @@ const Nav = () => {
                     Object
                     .values(providers)
                     .map((provider) =>(
-                      <button> 
 
+                      <button
+                       type="button"
+                       key={provider.name}
+                       onClick={()=>signIn(provider.id)}
+                       className="black_btn"
+                       > 
+                        SignIn
                       </button>
                     ))
                   }
