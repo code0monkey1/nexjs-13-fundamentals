@@ -16,7 +16,7 @@ const Nav = () => {
 
   const [providers,setProviders] =useState(null)
 
-  const [toggleDropdown,setToggleDropdown] = useState(true)
+  const [toggleDropdown,setToggleDropdown] = useState(false)
 
   useEffect(()=>{
 
@@ -128,6 +128,10 @@ const Nav = () => {
                           >
                           My Profile
                           </Link>
+                        <Link href='/create-prompt' className="dropdown_link"
+                        onClick={()=>{setToggleDropdown(false)}}>
+                        Create Prompt
+                        </Link>
                         </div>
                       
                       }
