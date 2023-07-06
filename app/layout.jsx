@@ -22,7 +22,7 @@ const RootLayout = ({children}) => {
         {children}
 
       </main>
-
+     
     </body>
     </html>
   )
