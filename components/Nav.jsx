@@ -28,7 +28,12 @@ const Nav = () => {
         className="object-contain"/>
         <p className="logo_text">PROMPTOPIA</p>
       </Link>
-      {/*mobile nav*/}
+
+      { /*mobile nav */
+        <div className=" sm:flex hidden">
+           mobile nav
+        </div>
+        }
     </nav>
   )
 }
