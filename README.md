@@ -146,5 +146,5 @@ You can import the components into files using `@component/ComponentName` into f
 
 The `Nav` component is put right on top of the `{children}` in the `layout.jsx` file , as the nav component will be shared among all components in the app.
 
-
+  ![Placing the Nav component](./data/pics/nav-component.jpg   'Dynamic Meta Data') 
 
