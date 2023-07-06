@@ -13,7 +13,7 @@ import { useEffect, useState } from 'react'
 
 const Nav = () => {
   const isUserLoggedIn = true;
-  
+
   const [providers,setProviders] =useState(null)
 
   useEffect(()=>{
@@ -80,8 +80,16 @@ const Nav = () => {
                   </div>
                   :
                   <>
-                  {/*To signIn using next auth , we will need Providers */}
-                   
+                   {
+                    providers && 
+                    Object
+                    .values(providers)
+                    .map((provider) =>(
+                      <button> 
+
+                      </button>
+                    ))
+                  }
                   </>
            }
         </div>
