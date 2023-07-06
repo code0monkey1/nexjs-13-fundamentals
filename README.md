@@ -173,4 +173,11 @@ The `Nav` component will be a client component , as we will be using `state hook
 1. We have to use the Next.js `getProviders` component from Next for an OAuth signup.
 1. Create a state for `providers`  : `const [providers,setProviders]=useState(null)`
 1. Next, create a `useEffect` hook that runs during the initial component render and sets the provider using an async call to `setProviders`
-1. 
+1. Next, Check if you have `providers` set as as `not null` and conditionally render , the providers that are available to us by using the following code  :
+    ```javascript
+       
+      {
+         providers && 
+      }
+  
+    ``` 
