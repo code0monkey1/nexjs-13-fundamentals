@@ -108,21 +108,7 @@ const Nav = () => {
                isUserLoggedIn? 
                   <div className="flex">
 
-                        {/* Used to create a new post  */}
 
-                        <Link href='/create-prompt' className="black_btn">
-                        Create Post
-                        </Link>
-                        <button type='button' 
-                        onClick={signOut}
-                        className='outline_btn'
-                        >
-                        Sign Out
-                        </button> 
-
-                      {/* We will use this to  show the profile picture of the logged in user  , clicking on which takes us to the profile page of the logged in user */}
-
-                      <Link href='/profile'>
                         <Image 
                         src='/assets/images/logo.svg'
                         width={37}
@@ -132,7 +118,6 @@ const Nav = () => {
                         onClick={()=>toggleDropdown(prev => !prev)}
                         />
                     
-                      </Link>
                       {toggleDropdown &&
                         <div className="dropdown">
                           <Link  
