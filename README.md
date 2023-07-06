@@ -148,3 +148,5 @@ The `Nav` component is put right on top of the `{children}` in the `layout.jsx` 
 
   ![Placing the Nav component](./data/pics/nav-component.jpg   'Dynamic Meta Data') 
 
+
+#### Creating the navigation bar component with next-auth Google OAuth
