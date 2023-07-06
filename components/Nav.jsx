@@ -26,7 +26,7 @@ const Nav = () => {
       }
 
       setProvider()
-      
+
   },[])
 
   return (
@@ -46,7 +46,7 @@ const Nav = () => {
         <p className="logo_text">PROMPTOPIA</p>
       </Link>
 
-      { /*mobile nav */
+      { /*desktop nave  first component */
         <div className="sm:flex hidden">
            {
             isUserLoggedIn? 
