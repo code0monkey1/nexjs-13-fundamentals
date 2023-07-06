@@ -158,6 +158,8 @@ The `Nav` component will be a client component , as we will be using `state hook
 
 ##### Steps For Next/OAuth : 
 
+> [Source Code for Auth](./components/Nav.jsx 'nav component')
+
 [ Log out Flow ]:
 
 1. Mock the users being already logged in by  defining a useState property `isUserLoggedIn`  and set it's state to `true`
@@ -198,4 +200,5 @@ The `Nav` component will be a client component , as we will be using `state hook
     ``` 
 
 ---
-###### Creating Mobile Navigation
+###### Creating Mobile Navigation : 
+
