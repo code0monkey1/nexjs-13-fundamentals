@@ -176,12 +176,12 @@ The `Nav` component will be a client component , as we will be using `state hook
 1. Next, Check if you have `providers` set as as `not null` and conditionally render , the providers that are available to us by using the following code  :
     ```javascript
        
-       <>
-                   {
-                    providers && 
-                    Object
-                    .values(providers)
-                    .map((provider) =>(
+      
+        {
+            providers && 
+            Object
+            values(providers)
+            .map((provider) =>(
 
                       <button
                        type="button"
@@ -191,8 +191,8 @@ The `Nav` component will be a client component , as we will be using `state hook
                        > 
                         SignIn
                       </button>
-                    ))
-                  }
-                  </>
+            ))
+        }
+      
   
     ``` 
