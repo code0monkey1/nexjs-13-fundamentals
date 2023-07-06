@@ -28,6 +28,7 @@ const Nav = () => {
         className="object-contain"/>
         <p className="logo_text">PROMPTOPIA</p>
       </Link>
+      {/*mobile nav*/}
     </nav>
   )
 }
