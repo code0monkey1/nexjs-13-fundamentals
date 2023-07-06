@@ -12,6 +12,7 @@ import { getProviders, signIn, signOut, useSession } from 'next-auth/react'
 import { useEffect, useState } from 'react'
 
 const Nav = () => {
+  const isUserLoggedIn = true;
   return (
     <nav className="flex-between w-full mb-16 pt-3">
 
@@ -31,7 +32,15 @@ const Nav = () => {
 
       { /*mobile nav */
         <div className="sm:flex hidden">
-           mobile nav
+           {
+            isUserLoggedIn? 
+                  <div>
+                    
+                  </div>
+                  :
+                  <>
+                  </>
+           }
         </div>
         }
     </nav>
