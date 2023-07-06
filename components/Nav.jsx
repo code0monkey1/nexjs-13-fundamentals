@@ -97,8 +97,18 @@ const Nav = () => {
                     ))
                   }
                   </>
+                  
            }
+            /* Mobile View Nav*/
+          <div>
+            
+          </div>
+
+          
         </div>
+
+         
+          
         }
     </nav>
   )
