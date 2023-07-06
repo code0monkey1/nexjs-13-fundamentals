@@ -162,6 +162,4 @@ The `Nav` component will be a client component , as we will be using `state hook
 
 1. Now, you would conditionally render logged in persons pic/name if person is logged in
 
-1. Create a similar fragment for when the user is not logged in 
-
-1. 
+1. Create a similar fragment for when the user is not logged in with a signout button , which has and `onClick = {signOut}`, where the `signOut` function comes from `next-auth/react`
