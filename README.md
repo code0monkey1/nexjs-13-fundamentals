@@ -199,7 +199,10 @@ The `Nav` component will be a client component , as we will be using `state hook
   
       ``` 
 
-1. You need to create the `Provider.js` component , inside which you import the `session` from the browser and render the children within it.
+1. You need to create the `Provider.js` component , inside which you import the `session` from the browser and render the children within it. it uses the session from the client ,thus we have to declare it as a `client component`
 
+    > [Provider Code](./components/Provider.jsx 'provider')
 
-> [Provider Code](./components/Provider.jsx 'provider')
+1. Next , we import the provider to the `layout.js` file , so as to make it available to all components within the app
+    
+    > [Layout](./app/layout.jsx 'layout')
