@@ -8,5 +8,14 @@ const handler = NextAuth({
       clientId:'',
       clientSecret:''
     })
-  ]
+  ],
+  async session({session}){
+
+  },
+  async signIn({profile}){
+
+     
+  }
 })
+
+export { handler as GET, handler as POST };
