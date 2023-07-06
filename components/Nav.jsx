@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react'
 
 const Nav = () => {
   const isUserLoggedIn = true;
+  const [providers,setProviders] =useState(null)
   return (
     <nav className="flex-between w-full mb-16 pt-3">
 
@@ -48,7 +49,8 @@ const Nav = () => {
                   Sign Out
                   </button> 
 
-                {/* We will use this to  show the profile picture of the logged in user */}
+                {/* We will use this to  show the profile picture of the logged in user  , clicking on which takes us to the profile page of the logged in user */}
+
                 <Link href='/profile'>
                    <Image 
                    src='/assets/images/logo.svg'
@@ -56,14 +58,14 @@ const Nav = () => {
                    height={37}
                    className='rounded-full'
                    alt='profile'
-                   >
-
-                    
-                   </Image>
+                   />
+               
                 </Link>
                   </div>
                   :
                   <>
+                  {/*To signIn using next auth , we will need Providers */}
+
                   </>
            }
         </div>
