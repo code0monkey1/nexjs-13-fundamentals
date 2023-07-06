@@ -151,4 +151,4 @@ The `Nav` component is put right on top of the `{children}` in the `layout.jsx` 
 
 #### Creating the navigation bar component with `next-auth Google OAuth`
 
-
+[Source Code for Nav](./components/Nav.jsx 'nav component')
