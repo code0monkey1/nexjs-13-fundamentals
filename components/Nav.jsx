@@ -49,7 +49,7 @@ const Nav = () => {
         <p className="logo_text">PROMPTOPIA</p>
       </Link>
 
-      { /*desktop nave  first component */
+      { /*desktop nave  first component */ }
         <div className="sm:flex hidden">
            {
             isUserLoggedIn? 
@@ -99,10 +99,11 @@ const Nav = () => {
                     ))
                   }
                   </>
-                  
+                       
            }
+        </div> 
+            {/* Mobile View Nav*/}
             
-          {/* Mobile View Nav*/}
           <div className="sm:hidden flex relative">
             {
                isUserLoggedIn? 
@@ -152,16 +153,9 @@ const Nav = () => {
                     ))
                   }
                   </>
-            }
-            
-          </div>
-
-
-        </div>
-
-         
-          
+        
         }
+        </div>
     </nav>
   )
 }
