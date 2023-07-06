@@ -47,7 +47,7 @@ const Nav = () => {
           
                 <Link href='/profile'>
                    <Image 
-                   src='/assets/images/profile.svg'
+                   src='/assets/images/logo.svg'
                    width={37}
                    height={37}
                    className='rounded-full'
