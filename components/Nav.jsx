@@ -35,6 +35,9 @@ const Nav = () => {
            {
             isUserLoggedIn? 
                   <div className="flex gap-3 md:gap-5">
+
+                  {/* Used to create a new post  */}
+
                   <Link href='/create-prompt' className="black_btn">
                   Create Post
                   </Link>
@@ -42,9 +45,10 @@ const Nav = () => {
                   onClick={signOut}
                   className='outline_btn'
                   >
-                 Sign Out
+                  Sign Out
                   </button> 
-          
+
+                {/* We will use this to  show the profile picture of the logged in user */}
                 <Link href='/profile'>
                    <Image 
                    src='/assets/images/logo.svg'
