@@ -168,4 +168,6 @@ The `Nav` component will be a client component , as we will be using `state hook
 
 ---
 
-[ Log in Flow ]
+[ Log in Flow ]:
+
+1. We have to use the Next.js `getProviders` component from Next for an OAuth signup.
