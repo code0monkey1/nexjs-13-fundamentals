@@ -206,3 +206,8 @@ The `Nav` component will be a client component , as we will be using `state hook
 1. Next , we import the provider to the `layout.js` file , so as to make it available to all components within the app
     
     > [Layout](./app/layout.jsx 'layout')
+
+
+> [ End of Part 3 ]
+
+-----
