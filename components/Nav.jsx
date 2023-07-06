@@ -135,7 +135,10 @@ const Nav = () => {
                       </Link>
                       {toggleDropdown &&<>
                         <div className="dropdown">
-                          <Link  href='/profile'>
+                          <Link  
+                          href='/profile'
+                          className="dropdown_link"
+                          >
                           
                           </Link>
 
