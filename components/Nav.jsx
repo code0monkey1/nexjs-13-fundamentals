@@ -12,7 +12,7 @@ import { getProviders, signIn, signOut, useSession } from 'next-auth/react'
 import { useEffect, useState } from 'react'
 
 const Nav = () => {
-  
+
   const isUserLoggedIn = true;
 
   const [providers,setProviders] =useState(null)
@@ -133,6 +133,15 @@ const Nav = () => {
                         onClick={()=>{setToggleDropdown(false)}}>
                         Create Prompt
                         </Link>
+                         <button type='button' 
+                        onClick={()=>{
+                          setToggleDropdown(false);
+                          signOut()
+                        }}
+                        className='mt-5 w-full black_btn'
+                        >
+                        Sign Out
+                        </button> 
                         </div>
                       
                       }
