@@ -12,7 +12,7 @@ import { getProviders, signIn, signOut, useSession } from 'next-auth/react'
 import { useEffect, useState } from 'react'
 
 const Nav = () => {
-  const isUserLoggedIn = false;
+  const isUserLoggedIn = true;
 
   const [providers,setProviders] =useState(null)
 
@@ -53,30 +53,30 @@ const Nav = () => {
             isUserLoggedIn? 
                   <div className="flex gap-3 md:gap-5">
 
-                  {/* Used to create a new post  */}
+                        {/* Used to create a new post  */}
 
-                  <Link href='/create-prompt' className="black_btn">
-                  Create Post
-                  </Link>
-                  <button type='button' 
-                  onClick={signOut}
-                  className='outline_btn'
-                  >
-                  Sign Out
-                  </button> 
+                        <Link href='/create-prompt' className="black_btn">
+                        Create Post
+                        </Link>
+                        <button type='button' 
+                        onClick={signOut}
+                        className='outline_btn'
+                        >
+                        Sign Out
+                        </button> 
 
-                {/* We will use this to  show the profile picture of the logged in user  , clicking on which takes us to the profile page of the logged in user */}
+                      {/* We will use this to  show the profile picture of the logged in user  , clicking on which takes us to the profile page of the logged in user */}
 
-                <Link href='/profile'>
-                   <Image 
-                   src='/assets/images/logo.svg'
-                   width={37}
-                   height={37}
-                   className='rounded-full'
-                   alt='profile'
-                   />
-               
-                </Link>
+                      <Link href='/profile'>
+                        <Image 
+                        src='/assets/images/logo.svg'
+                        width={37}
+                        height={37}
+                        className='rounded-full'
+                        alt='profile'
+                        />
+                    
+                      </Link>
                   </div>
                   :
                   <>
