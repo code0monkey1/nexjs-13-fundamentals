@@ -16,6 +16,8 @@ const Nav = () => {
 
   const [providers,setProviders] =useState(null)
 
+  const [toggleDropdown,setToggleDropdown] = useState(false)
+
   useEffect(()=>{
 
       const setProvider =async()=>{
@@ -127,6 +129,7 @@ const Nav = () => {
                         height={37}
                         className='rounded-full'
                         alt='profile'
+                        onClick={()=>toggleDropdown(prev => !prev)}
                         />
                     
                       </Link>
