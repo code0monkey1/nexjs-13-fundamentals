@@ -45,7 +45,12 @@ const Nav = () => {
                  Sign Out
                   </button> 
           
+                <Link href='/profile'>
+                   <Image src='/assets/images/profile.svg'>
 
+                    
+                   </Image>
+                </Link>
                   </div>
                   :
                   <>
