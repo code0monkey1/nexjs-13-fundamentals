@@ -30,7 +30,7 @@ const Nav = () => {
       </Link>
 
       { /*mobile nav */
-        <div className=" sm:flex hidden">
+        <div className="sm:flex hidden">
            mobile nav
         </div>
         }
