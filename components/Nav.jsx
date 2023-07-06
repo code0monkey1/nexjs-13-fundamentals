@@ -43,7 +43,9 @@ const Nav = () => {
                   className='outline_btn'
                   >
                  Sign Out
-                  </button>
+                  </button> 
+          
+
                   </div>
                   :
                   <>
