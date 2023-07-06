@@ -158,7 +158,7 @@ The `Nav` component will be a client component , as we will be using `state hook
 
 ##### Steps For Next/OAuth : 
 
-> [Source Code for Auth](./components/Nav.jsx 'nav component')
+> [Source Code for Nav](./components/Nav.jsx 'nav component')
 
 [ Log out Flow ]:
 
@@ -197,8 +197,9 @@ The `Nav` component will be a client component , as we will be using `state hook
         }
       
   
-    ``` 
+      ``` 
 
----
-###### Creating Mobile Navigation : 
+1. You need to create the `Provider.js` component , inside which you import the `session` from the browser and render the children within it.
 
+
+> [Provider Code](./components/Provider.jsx 'provider')
