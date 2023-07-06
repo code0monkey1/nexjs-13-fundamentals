@@ -16,7 +16,7 @@ const Nav = () => {
 
   const [providers,setProviders] =useState(null)
 
-  const [toggleDropdown,setToggleDropdown] = useState(false)
+  const [toggleDropdown,setToggleDropdown] = useState(true)
 
   useEffect(()=>{
 
@@ -109,7 +109,6 @@ const Nav = () => {
                isUserLoggedIn? 
                   <div className="flex">
 
-
                         <Image 
                         src='/assets/images/logo.svg'
                         width={37}
@@ -119,7 +118,8 @@ const Nav = () => {
                         onClick={()=>toggleDropdown(prev => !prev)}
                         />
                     
-                      {toggleDropdown &&
+                      {
+                      toggleDropdown &&
                         <div className="dropdown">
                           <Link  
                           href='/profile'
@@ -128,7 +128,6 @@ const Nav = () => {
                           >
                           My Profile
                           </Link>
-
                         </div>
                       
                       }
