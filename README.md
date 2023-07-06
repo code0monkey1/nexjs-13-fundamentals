@@ -156,8 +156,12 @@ The `Nav` component is put right on top of the `{children}` in the `layout.jsx` 
 The `Nav` component will be a client component , as we will be using `state hooks` for `auth`
 
 
-##### Steps For OAuth : 
+##### Steps For Next/OAuth : 
 
 1. Mock the users being already logged in by  defining a useState property `isUserLoggedIn`  and set it's state to `true`
+
+1. Now, you would conditionally render logged in persons pic/name if person is logged in
+
+1. Create a similar fragment for when the user is not logged in 
 
 1. 
