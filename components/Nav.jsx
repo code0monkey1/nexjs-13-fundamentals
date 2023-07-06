@@ -14,6 +14,21 @@ import { useEffect, useState } from 'react'
 const Nav = () => {
   const isUserLoggedIn = true;
   const [providers,setProviders] =useState(null)
+
+  useEffect(()=>{
+
+      const setProvider =async()=>{
+        
+        const response = await getProviders()
+
+        setProviders(response)
+        
+      }
+
+      setProvider()
+      
+  },[])
+
   return (
     <nav className="flex-between w-full mb-16 pt-3">
 
@@ -65,7 +80,7 @@ const Nav = () => {
                   :
                   <>
                   {/*To signIn using next auth , we will need Providers */}
-
+                   
                   </>
            }
         </div>
