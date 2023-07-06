@@ -1,8 +1,14 @@
 'use client'
+
+// used for image optimization
 import Image from "next/image"
+
+// used for moving from one page to another
 import Link from "next/link"
 
+//used for oAuth ( natively present in next.js)
 import { getProviders, signIn, signOut, useSession } from 'next-auth/react'
+
 import { useEffect, useState } from 'react'
 
 const Nav = () => {
