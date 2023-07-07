@@ -226,5 +226,5 @@ The `Nav` component will be a client component , as we will be using `state hook
       + Give the app a `name` and provide the `email` and  , and we finally set everything up.
 
 1. Next ,we go to the `credentials` tab and click `create credentials` , where we choose to create a `web app` with `http://localhost:3000`  as `origin` and `redirect` , which will finally give us the prompt `oauth client created`
-1. Next, we put the `client_id` an `client_secret` in our `.env` file and use it in our `auth` file
+1. Next, we put the `client_id` an `client_secret` in our `.env` file and use it in our `auth` file using `process.env`
 1. 
