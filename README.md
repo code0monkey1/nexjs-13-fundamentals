@@ -217,4 +217,5 @@ The `Nav` component will be a client component , as we will be using `state hook
 1. next , we need to create a route for the auth with the following folder structure    
 
     ![Folder Structure](./data/pics/auth-router-folder.jpg 'folder structure')
-1. In the `route.js` file , we import the `Provider`
+1. In the `route.js` file , we use the `GoogleProvider` from `next/auth` and use it to authenticate 
+    > [route.js code](./app/api/auth/%5B...nextauth%5D/route.js)
