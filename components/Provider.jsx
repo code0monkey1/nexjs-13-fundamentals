@@ -5,7 +5,6 @@ import React from 'react'
 
 
 
-
 const Provider = ({children,session}) => {
   return (
     <SessionProvider session={session}> 
