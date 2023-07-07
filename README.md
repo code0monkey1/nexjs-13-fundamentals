@@ -214,5 +214,7 @@ The `Nav` component will be a client component , as we will be using `state hook
 
 > [ Part 4]
 
-1. next , we need to create a route for the auth with the following folder structure 
+1. next , we need to create a route for the auth with the following folder structure    
+
     ![Folder Structure](./data/pics/auth-router-folder.jpg 'folder structure')
+1. In the `route.js` file , we import the `Provider`
