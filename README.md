@@ -219,4 +219,4 @@ The `Nav` component will be a client component , as we will be using `state hook
     ![Folder Structure](./data/pics/auth-router-folder.jpg 'folder structure')
 1. In the `route.js` file , we use the `GoogleProvider` from `next/auth` and use it to authenticate 
     > [route.js code](./app/api/auth/%5B...nextauth%5D/route.js)
-1. We need to create our Google SignIn Credentials from  [[console.cloud.google.com]] .
+1. We need to create our Google SignIn Credentials from  [Click to Visit Google Cloud Website](console.cloud.google.com)
