@@ -7,8 +7,8 @@ console.log(process.env.GOOGLE_CLIENT_ID)
 const handler = NextAuth({
   providers:[
     GoogleProvider({
-      clientId:'',
-      clientSecret:''
+      clientId:process.env.GOOGLE_CLIENT_ID,
+      clientSecret:process.env.GOOGLE_CLIENT_SECRET
     })
   ],
   async session({session}){
