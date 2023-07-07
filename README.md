@@ -222,4 +222,5 @@ The `Nav` component will be a client component , as we will be using `state hook
 1. We need to create our Google SignIn Credentials from  [Click to Visit Google Cloud Website](console.cloud.google.com)
     
       + First , Create a new project by going to the top left project name !['google-name'](./data/pics/google-name.jpg 'google name')
-      + Next , Goto `Api's and Services` and then to ` OAuth concent screen` and create a 
+      + Next , Goto `Api's and Services` and then to ` OAuth concent screen` and click `Create`
+      + Give the app a `name` and provide the `email` and then set the `authorized domain` to `http://localhost:3000`
