@@ -223,4 +223,6 @@ The `Nav` component will be a client component , as we will be using `state hook
     
       + First , Create a new project by going to the top left project name !['google-name'](./data/pics/google-name.jpg 'google name')
       + Next , Goto `Api's and Services` and then to ` OAuth concent screen` and click `Create`
-      + Give the app a `name` and provide the `email` and then set the `authorized domain` to `http://localhost:3000`
+      + Give the app a `name` and provide the `email` and  , and we finally set everything up.
+
+1. Next ,we go to the `credentials` tab and click `create credentials` , where we choose to create a `web app` with `http://localhost:3000`  as `origin` and `redirect` , which will finally give us the prompt `oauth client created`
