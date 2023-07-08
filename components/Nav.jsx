@@ -13,6 +13,8 @@ import { useEffect, useState } from 'react'
 
 const Nav = () => {
 
+  const {data:session} = useSession()
+
   const isUserLoggedIn = true;
 
   const [providers,setProviders] =useState(null)
