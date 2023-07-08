@@ -255,14 +255,16 @@ The `Nav` component will be a client component , as we will be using `state hook
 1. Goto all `Image` tags where the profile pic is supposed to be shown and replace it with `session.user?.image`
       ```javascript
         
-                      <Link href='/profile'>
-                        <Image 
-                        src={session?.user.image}
-                        width={37}
-                        height={37}
-                        className='rounded-full'
-                        alt='profile'
-                        />
+          <Link href='/profile'>
+             <Image 
+                src={session?.user.image} 
+                //extract image from the session
+                width={37}
+                height={37}
+                className='rounded-full'
+                alt='profile'
+                />
+          </Link>
                     
       ```
 1. Copy the `next.js.config` settings so as to ensure that the profile pic is loaded successfully
