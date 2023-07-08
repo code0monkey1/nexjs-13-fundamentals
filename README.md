@@ -245,6 +245,6 @@ The `Nav` component will be a client component , as we will be using `state hook
 
 1. Next, we need to set 3 env variables for Oauth to work with `next-auth`.
 
-    + NEXTAUTH_URL
-    + NEXTAUTH_URL_INTERNAL
-    + NEXTAUTH_SECRET
+    + NEXTAUTH_URL = http://localhost:3000
+    + NEXTAUTH_URL_INTERNAL = http://localhost:3000
+    + NEXTAUTH_SECRET=ladWqU6y/mlG4kIWE+Y4shGZqL40EV8TLUtm6e6F370=
