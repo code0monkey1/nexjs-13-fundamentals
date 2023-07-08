@@ -15,7 +15,7 @@ const Nav = () => {
 
   const {data:session} = useSession()
 
-  const isUserLoggedIn = true;
+  const isUserLoggedIn = session?.user;
 
   const [providers,setProviders] =useState(null)
 
