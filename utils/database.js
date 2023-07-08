@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 let isConnected  = false;
 
 
+
 export const connectToDb =async()=>{
 
   mongoose.set('strictQuery',true)
@@ -17,9 +18,18 @@ export const connectToDb =async()=>{
   
   try{
 
-  }catch(error){
+    await mongoose.connect(process.env.MONGODB_URI,{
+       dbName:"",
+       useNewUrlParser:true,
+       useUnifiedTopology:true
+    })
 
-    
+    isConnected=true
+   console.log("MongoDb connected!")
+  }catch(error){
+   
+    console.log('error connecting to MongoDb')
+
   }
 
 
