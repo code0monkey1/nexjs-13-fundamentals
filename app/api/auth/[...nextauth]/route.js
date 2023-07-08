@@ -12,10 +12,13 @@ const handler = NextAuth({
     })
   ],
   async session({session}){
+
+    // get session user from current session
     const sessionUser = await User.findOne({
       email:session.user.email
     })
-
+ 
+    // set the session.id to the  current users session id 
     session.user.id=sessionUser._id.toString();
 
     return session
