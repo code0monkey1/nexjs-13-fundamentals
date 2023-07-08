@@ -27,6 +27,8 @@ const Nav = () => {
         
         const response = await getProviders()
 
+        console.log("response",JSON.stringify(response,null,2))
+
         setProviders(response)
         
       }
