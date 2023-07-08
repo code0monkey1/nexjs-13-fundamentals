@@ -234,3 +234,5 @@ The `Nav` component will be a client component , as we will be using `state hook
 
 #### MongoDb Setup :
 
+1. First create a `database.js` file in the `utils folder` where you connect to the MongoDb instance.
+
