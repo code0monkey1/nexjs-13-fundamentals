@@ -8,7 +8,7 @@ const userSchema = new Schema({
     unique:[true,'Email already exists'],
     required:[true,'Email is required']
    },
-   userName:{
+   username:{
      type:String,
      required:[true,'Username is required!'],
      match: [/^[A-Za-z\s]+$/,'Name is of invalid Pattern']
