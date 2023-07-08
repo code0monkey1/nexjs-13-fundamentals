@@ -240,5 +240,6 @@ The `Nav` component will be a client component , as we will be using `state hook
       > ![Check Model](./data/pics/check-models.jpg)
        
 
-1. Next, create a `database.js` file in the `utils folder` where you connect to the MongoDb instance.
+1. Next, create a `database.js` file in the `utils folder` where you connect to the   =   MongoDb instance.
+      > [database.js source code](./utils/database.js)
 
