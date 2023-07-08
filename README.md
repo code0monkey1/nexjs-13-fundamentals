@@ -243,8 +243,11 @@ The `Nav` component will be a client component , as we will be using `state hook
 1. Next, create a `database.js` file in the `utils folder` where you connect to the   =   MongoDb instance.
       > [database.js source code](./utils/database.js)
 
-1. Next, we need to set 3 env variables for Oauth to work with `next-auth`.
+1. Next, we need to set 3 `.env` variables for Oauth to work with `next-auth`.
 
     + NEXTAUTH_URL = http://localhost:3000
     + NEXTAUTH_URL_INTERNAL = http://localhost:3000
     + NEXTAUTH_SECRET=ladWqU6y/mlG4kIWE+Y4shGZqL40EV8TLUtm6e6F370=
+
+    + > Paste the following in the terminal and execute , to get the nextauth_secret :   
+    `openssl rand -base64 32`
