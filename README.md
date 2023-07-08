@@ -267,5 +267,5 @@ The `Nav` component will be a client component , as we will be using `state hook
           </Link>
                     
       ```
-1. Copy the `next.js.config` settings so as to ensure that the profile pic is loaded successfully
+1. Copy the `next.js.config` (from this project) settings so as to ensure that the profile pic is loaded successfully
 1. Now, when you `signUp` , your user data is saved to `MongoDb`
