@@ -251,5 +251,18 @@ The `Nav` component will be a client component , as we will be using `state hook
 
     + > Paste the following in the terminal and execute , to get the nextauth_secret :   
     `openssl rand -base64 32`
-1. Next, goto  the `Nav` component and  substitute `isUserLoggedIn` for  `session?.user.image`
+1. Next, goto  the `Nav` component and  substitute `isUserLoggedIn` for  `session?.user`
+1. Goto all `Image` tags where the profile pic is supposed to be shown and replace it with `session.user?.image`
+      ```javascript
+        
+                      <Link href='/profile'>
+                        <Image 
+                        src={session?.user.image}
+                        width={37}
+                        height={37}
+                        className='rounded-full'
+                        alt='profile'
+                        />
+                    
+      ```
 1. Copy the `next.js.config` settings so as to ensure that the profile pic is loaded successfully
