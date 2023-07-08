@@ -11,6 +11,7 @@ const userSchema = new Schema({
    userName:{
      type:String,
      required:[true,'Username is required!'],
+     match: [/^[A-Za-z\s]+$/,'Name is of invalid Pattern']
    },
    image:string
 
