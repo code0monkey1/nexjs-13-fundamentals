@@ -17,9 +17,9 @@ export const connectToDb =async()=>{
   }
   
   try{
-
+    console.log("The mongodb uri is",process.env.MONGODB_URI)
     await mongoose.connect(process.env.MONGODB_URI,{
-       dbName:"",
+       dbName:"next_app",
        useNewUrlParser:true,
        useUnifiedTopology:true
     })
