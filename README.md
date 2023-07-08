@@ -234,8 +234,11 @@ The `Nav` component will be a client component , as we will be using `state hook
 
 #### MongoDb Setup :
 1. First you need to create a mongoose model for the user
-      > [User Model](./models/user.js)
+      > [Click to see : User Model Code ](./models/user.js)
+      
+      > ![User Model](./data/pics/models-next.jpg)
+      > ![Check Model](./data/pics/check-models.jpg)
        
 
-1. First create a `database.js` file in the `utils folder` where you connect to the MongoDb instance.
+1. Next, create a `database.js` file in the `utils folder` where you connect to the MongoDb instance.
 
