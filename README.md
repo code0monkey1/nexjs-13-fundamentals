@@ -232,6 +232,7 @@ The `Nav` component will be a client component , as we will be using `state hook
 
 ---
 
+> [ Part 5 ]
 #### MongoDb Setup :
 1. First you need to create a mongoose model for the user
       > [Click to see : User Model Code ](./models/user.js)
@@ -272,6 +273,6 @@ The `Nav` component will be a client component , as we will be using `state hook
 
 ---
 
-> [ End of Part 4]
+> [ End of Part 5 ]
 
 ##### Creating Posts : 
