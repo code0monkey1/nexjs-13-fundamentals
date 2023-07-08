@@ -19,9 +19,15 @@ const handler = NextAuth({
 
          //check if user already exists
 
-         // if not , create a new user 
+         // if not , create a new user  
+
+         return true;
       }
       catch(error){
+
+       console.error(error)
+
+       return false
        
       }
      
