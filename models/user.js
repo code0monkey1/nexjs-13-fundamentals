@@ -15,3 +15,8 @@ const userSchema = new Schema({
    image:string
 
 })
+
+
+const User = models.User || model('User',userSchema)
+
+export default User
