@@ -16,6 +16,7 @@ const userSchema = new Schema({
 
 })
 
+// we need to do this , as the serverless  architecture of  NextJs restarts the model every time , and you need to look into the `models` and see if the User model is already present or not . If it is , retrieve that , else create a model called `User` with the defined `userSchema` and return that .
 
 const User = models.User || model('User',userSchema)
 
