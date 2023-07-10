@@ -25,7 +25,7 @@ const Form=({
       <form 
             onSubmit={handleSubmit}
             className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
-         >
+      >
 
          <label>
 
@@ -49,9 +49,9 @@ const Form=({
                />
 
 
-            </label>
+         </label>
            
-            <label>
+         <label>
                
                <span className="font-satoshi font-semibold text-base text-gray-700">
                    Tag{' '} <span className="font-normal">( #code , #system-design , #idea )</span>
@@ -72,9 +72,9 @@ const Form=({
                   className="form_input"     
                />
 
-            </label>
+         </label>
 
-            <div className="flex-end mx-3 mb-5 gap-4">
+         <div className="flex-end mx-3 mb-5 gap-4">
 
                <Link href='/' className="text-grey-500 text-sm">
                   Cancel
@@ -88,9 +88,9 @@ const Form=({
                  {submitting? `${type}...`:`${type}`}
                </button>
 
-            </div>
+         </div>
 
-         </form>
+      </form>
          
       </section>
    )
