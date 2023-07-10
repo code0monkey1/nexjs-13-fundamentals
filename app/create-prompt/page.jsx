@@ -12,6 +12,9 @@ import { useState } from "react"
 
 const CreatePrompt=()=>{
 
+  const [submitting, setSubmitting] = useState(false)
+  const [post, setPost] = useState(second)
+
      return<>
        
        <h1>Prompt</h1>
