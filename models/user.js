@@ -30,6 +30,10 @@ const userSchema = new Schema({
 // If it is , retrieve that , else create a model called 
 // `User` with the defined `userSchema` and return that .
 
+/* `const User` is a variable that is used to store the Mongoose model for the "User" collection in the
+database. It is created by calling the `model` function from the Mongoose library, passing in the
+name of the model ("User") and the userSchema that defines the structure and validation rules for
+the user data. */
 const User = models.User || model('User',userSchema)
 
 export default User
