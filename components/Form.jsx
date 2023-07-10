@@ -49,9 +49,11 @@ const Form=({
 
 
             </label>
-
+           
             <label>
-               
+                 <span className="font-satoshi font-semibold text-base text-gray-700">
+                   Tag{' '} <span>(#code #system-design)</span>
+               </span>
                <textarea
                   
                   value={post.prompt}
