@@ -33,7 +33,16 @@ const Form=({
                </span>
 
                <textarea
+                  
                   value={post.prompt}
+                  
+                  onChange={(e)=>{
+                        setPost({
+                           ...post,
+                           prompt:e.target.value
+                        })
+                  }} 
+                  placeholder="Write your prompt here..."      
                
                >
 
