@@ -22,11 +22,12 @@ const Form=({
               {type} and share amazing prompts with the world
           </p>
 
-          <form 
+         <form 
             onSubmit={handleSubmit}
             className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
-          >
-            <label>
+         >
+
+         <label>
 
                <span className="font-satoshi font-semibold text-base text-gray-700">
                   Your A.I Prompt
@@ -89,7 +90,7 @@ const Form=({
 
             </div>
 
-          </form>
+         </form>
          
       </section>
    )
