@@ -15,7 +15,17 @@ handler = NextAuth({
       clientSecret:process.env.GOOGLE_CLIENT_SECRET
     })
   ],
+  /* The `callbacks` property in the NextAuth configuration is used to define functions that handle
+  specific events during the authentication process. In this code, there are two callback functions
+  defined: `session` and `signIn`. */
   callbacks:{
+
+    /* The `session` callback function is responsible for modifying the session object that is
+    passed to the client after a successful authentication. In this code, the `session`
+    function is used to add the user's ID to the session object. It retrieves the user's ID
+    from the database based on their email address and sets it as the `id` property of the
+    `session.user` object. This allows the user's ID to be easily accessed and used in
+    subsequent requests or pages. */
 
     async session({session}){
   
@@ -29,6 +39,14 @@ handler = NextAuth({
   
       return session
     },
+
+    /**
+     * The function signIn checks if a user already exists in the database, and if not, creates a new
+     * user with the provided profile information.
+     * @returns a boolean value. If the function is successful, it will return true. If there is an
+     * error, it will return false.
+     */
+    
     async signIn({profile}){
        
         try{
