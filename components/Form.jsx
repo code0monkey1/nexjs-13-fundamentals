@@ -10,7 +10,7 @@ const Form=({
 
    return(<>
    
-      <section>
+      <section className="w-full max-w-full flex-start flex-col">
 
           
 
