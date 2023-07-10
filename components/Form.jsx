@@ -42,8 +42,9 @@ const Form=({
                            prompt:e.target.value
                         })
                   }} 
-                  placeholder="Write your prompt here..."      
-               
+                  placeholder="Write your prompt here..." 
+                  required
+                  className="form_textarea"     
                >
 
                </textarea>
