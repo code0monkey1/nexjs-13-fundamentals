@@ -29,8 +29,6 @@ const CreatePrompt=()=>{
     e.preventDefault()
     setSubmitting(true)
 
-
-
   }
 
      return<>
