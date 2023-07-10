@@ -26,7 +26,7 @@ const Form=({
             onSubmit={handleSubmit}
             className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
           >
-             <label>
+            <label>
 
                <span className="font-satoshi font-semibold text-base text-gray-700">
                   Your A.I Prompt
@@ -45,9 +45,27 @@ const Form=({
                   placeholder="Write your prompt here..." 
                   required
                   className="form_textarea"     
-               >
+               />
 
-               </textarea>
+
+            </label>
+
+            <label>
+               
+               <textarea
+                  
+                  value={post.prompt}
+                  
+                  onChange={(e)=>{
+                        setPost({
+                           ...post,
+                           prompt:e.target.value
+                        })
+                  }} 
+                  placeholder="Write your tag here..." 
+                  required
+                  className="form_textarea"     
+               />
 
              </label>
 
