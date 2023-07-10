@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "test/intex.test.js"  ],
   "exclude": [
     "node_modules"
   ]
