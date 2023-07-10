@@ -79,6 +79,13 @@ const Form=({
                   Cancel
                </Link>
 
+               <button
+                type="button"
+                disabled={submitting}
+               >
+                 {submitting? `${type}...`:`${type}`}
+               </button>
+
             </div>
 
           </form>
