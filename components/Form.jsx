@@ -53,17 +53,17 @@ const Form=({
             <label>
                
                <span className="font-satoshi font-semibold text-base text-gray-700">
-                   Tag{' '} <span>( #code , #system-design , #idea )</span>
+                   Tag{' '} <span className="font-normal">( #code , #system-design , #idea )</span>
                </span>
 
-               <textarea
+               <input
                   
-                  value={post.prompt}
+                  value={post.tag}
                   
                   onChange={(e)=>{
                         setPost({
                            ...post,
-                           prompt:e.target.value
+                           tag:e.target.value
                         })
                   }} 
                   placeholder="Write your tag here..." 
@@ -71,7 +71,7 @@ const Form=({
                   className="form_textarea"     
                />
 
-             </label>
+            </label>
 
           </form>
          
