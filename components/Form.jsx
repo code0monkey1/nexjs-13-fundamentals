@@ -8,7 +8,7 @@ const Form=({
    handleSubmit
 })=>{
 
-   return(<>
+   return(
    
       <section className="w-full max-w-full flex-start flex-col">
 
@@ -17,9 +17,6 @@ const Form=({
 
          
       </section>
-   
-   </>
-
    )
 }
 
