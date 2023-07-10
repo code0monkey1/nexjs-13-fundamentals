@@ -21,12 +21,14 @@ const CreatePrompt=()=>{
   const [submitting, setSubmitting] = useState(false)
   
   const [post, setPost] = useState({
-    prompt:string,
-    tag:string
+    prompt:'',
+    tag:''
   })
 
 
-  const CreatePrompt=async(e)=>{
+  const createPrompt=async(e)=>{
+
+      
 
   }
 
