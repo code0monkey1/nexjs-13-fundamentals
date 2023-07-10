@@ -27,7 +27,11 @@ const Form=({
             className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
           >
              <label>
-               <span>Your A.I Prompt</span>
+
+               <span className="font-satoshi font-semibold text-base text-gray-700">
+                  Your A.I Prompt
+               </span>
+
              </label>
 
           </form>
