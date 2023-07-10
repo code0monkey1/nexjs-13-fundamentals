@@ -66,9 +66,9 @@ const Form=({
                            tag:e.target.value
                         })
                   }} 
-                  placeholder="Write your tag here..." 
+                  placeholder="#tag" 
                   required
-                  className="form_textarea"     
+                  className="form_input"     
                />
 
             </label>
