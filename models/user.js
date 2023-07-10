@@ -1,6 +1,11 @@
 import { Schema, model, models } from "mongoose";
 
 
+/* `const userSchema` is creating a new instance of the `Schema` class from the Mongoose library. This
+schema defines the structure and validation rules for the user data that will be stored in the
+database. It specifies the fields `email`, `username`, and `image`, along with their respective data
+types and any additional constraints. */
+
 const userSchema = new Schema({
    
    email:{
