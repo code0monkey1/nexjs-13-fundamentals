@@ -10,14 +10,29 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { useState } from "react"
 
+// export type Propmt={
+//   prompt:string,
+//   tag:string
+// }
 const CreatePrompt=()=>{
 
   const [submitting, setSubmitting] = useState(false)
-  const [post, setPost] = useState(second)
+  
+  const [post, setPost] = useState({
+    prompt:string,
+    tag:string
+  })
+
+
+  const CreatePrompt=async(e)=>{
+
+  }
 
      return<>
        
-       <h1>Prompt</h1>
+       <Form
+       
+       />
      
      </>
 }
