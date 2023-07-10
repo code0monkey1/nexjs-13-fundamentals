@@ -82,6 +82,7 @@ const Form=({
                <button
                 type="button"
                 disabled={submitting}
+                className="px-5 py-1.5 rounded-full text-sm bg-primary-orange text-white"
                >
                  {submitting? `${type}...`:`${type}`}
                </button>
