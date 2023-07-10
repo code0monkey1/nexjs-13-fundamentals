@@ -1,5 +1,6 @@
 //Tests that the Form function renders the form with default values
-import Form from "../components/Form"
+import Form from "./Form"
+
 it('test_rendering_form_with_default_values', () => {
     const post = {
         prompt: '',
