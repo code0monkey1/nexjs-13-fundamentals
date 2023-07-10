@@ -8,7 +8,19 @@ const Form=({
    handleSubmit
 })=>{
 
-   return(<h1>Form</h1>)
+   return(<>
+   
+      <section>
+
+          
+
+
+         
+      </section>
+   
+   </>
+
+   )
 }
 
 export default Form;
