@@ -32,6 +32,13 @@ const Form=({
                   Your A.I Prompt
                </span>
 
+               <textarea
+                  value={post.prompt}
+               
+               >
+
+               </textarea>
+
              </label>
 
           </form>
