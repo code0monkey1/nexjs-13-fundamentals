@@ -24,8 +24,11 @@ const Form=({
 
           <form 
             onSubmit={handleSubmit}
-            className="mt-10 w-full max-w-2xl flex flex-col"
+            className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
           >
+             <label>
+               <span>Your A.I Prompt</span>
+             </label>
 
           </form>
          
