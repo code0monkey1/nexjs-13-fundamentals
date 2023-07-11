@@ -18,9 +18,9 @@ const Form=({
                onSubmit={handleSubmit}
                className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism">
             
-               <PromptForm post={post}  setPost={setPost} />
+               <PromptInput post={post}  setPost={setPost} />
 
-               <TagForm post={post} setPost={setPost}/>
+               <TagInput post={post} setPost={setPost}/>
 
                <Cancel submitting={submitting} type={type}/>
 
@@ -51,7 +51,7 @@ const Heading=({type})=>{
    </>)
 }
 
-const TagForm=({post, setPost})=> {
+const TagInput=({post, setPost})=> {
 
    return ( 
          <label>
@@ -78,7 +78,7 @@ const TagForm=({post, setPost})=> {
       )
 }
 
-function Cancel({submitting, type}) {
+const Cancel=({submitting, type}) =>{
 
    return <div className="flex-end mx-3 mb-5 gap-4">
 
@@ -97,7 +97,7 @@ function Cancel({submitting, type}) {
    </div>;
 }
 
-function PromptForm({post, setPost}) {
+const PromptInput =({post, setPost})=>{
 
    return <label>
 
