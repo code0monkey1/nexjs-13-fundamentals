@@ -24,7 +24,7 @@ const Form=({
 
                <Cancel submitting={submitting} type={type}/>
 
-             </form>
+            </form>
             
       </section>
    )
@@ -98,7 +98,7 @@ function Cancel({submitting, type}) {
 }
 
 function PromptForm({post, setPost}) {
-   
+
    return <label>
 
       <span className="font-satoshi font-semibold text-base text-gray-700">
