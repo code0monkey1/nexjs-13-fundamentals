@@ -102,7 +102,7 @@ const PromptInput =({post, setPost})=>{
    return <label>
 
       <span className="font-satoshi font-semibold text-base text-gray-700">
-         Your A.I Prompt
+         Your A.I Prompt to make you work less
       </span>
 
       <textarea
