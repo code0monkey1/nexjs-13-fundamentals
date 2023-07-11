@@ -37,7 +37,7 @@ const Nav = () => {
 
   },[])
   
-  console.log("Providers",providers)
+ 
   return (
     <nav className="flex-between w-full mb-16 pt-3">
 
@@ -56,7 +56,7 @@ const Nav = () => {
         <p className="logo_text">PROMPTOPIA</p>
       </Link>
 
-      { /*desktop nave  first component */ }
+      { /*desktop native  first component */ }
         <div className="sm:flex hidden">
            {
             isUserLoggedIn? 
