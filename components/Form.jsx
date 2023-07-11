@@ -29,8 +29,6 @@ const Form=({
 export default Form;
 
 
-
-
 const Heading=({type})=>{
 
    return(<>
@@ -103,27 +101,30 @@ function PromptForm({handleSubmit, post, setPost, submitting, type}) {
    
    </>)
 }
-function TagForm({post, setPost}) {
-   return <label>
+const TagForm=({post, setPost})=> {
+   
+   return ( 
+         <label>
 
-      <span className="font-satoshi font-semibold text-base text-gray-700">
-         Tag{' '} <span className="font-normal">( #code , #system-design , #idea )</span>
-      </span>
+            <span className="font-satoshi font-semibold text-base text-gray-700">
+               Tag{' '} <span className="font-normal">( #code , #system-design , #idea )</span>
+            </span>
 
-      <input
+            <input
 
-         value={post.tag}
+               value={post.tag}
 
-         onChange={(e) => {
-            setPost({
-               ...post,
-               tag: e.target.value
-            });
-         } }
-         placeholder="#tag"
-         required
-         className="form_input" />
+               onChange={(e) => {
+                  setPost({
+                     ...post,
+                     tag: e.target.value
+                  });
+               } }
+               placeholder="#tag"
+               required
+               className="form_input" />
 
-   </label>;
+        </label>
+      )
 }
 
