@@ -14,7 +14,7 @@ const Form=({
        
          <Heading/>
 
-         <NewPromptForm 
+         <PromptForm 
             handleSubmit={handleSubmit}
             post={post} 
             setPost={setPost} 
@@ -27,6 +27,8 @@ const Form=({
 }
 
 export default Form;
+
+
 
 
 const Heading=()=>{
@@ -47,7 +49,7 @@ const Heading=()=>{
    </>)
 }
 
-function NewPromptForm(handleSubmit, post, setPost, submitting, type) {
+function PromptForm({handleSubmit, post, setPost, submitting, type}) {
    return( <> 
 
       <form
@@ -79,27 +81,7 @@ function NewPromptForm(handleSubmit, post, setPost, submitting, type) {
 
          </label>
 
-         <label>
-
-            <span className="font-satoshi font-semibold text-base text-gray-700">
-               Tag{' '} <span className="font-normal">( #code , #system-design , #idea )</span>
-            </span>
-
-            <input
-
-               value={post.tag}
-
-               onChange={(e) => {
-                  setPost({
-                     ...post,
-                     tag: e.target.value
-                  });
-               } }
-               placeholder="#tag"
-               required
-               className="form_input" />
-
-         </label>
+         <TagForm post={post} setPost={setPost}/>
 
          <div className="flex-end mx-3 mb-5 gap-4">
 
@@ -121,3 +103,27 @@ function NewPromptForm(handleSubmit, post, setPost, submitting, type) {
    
    </>)
 }
+function TagForm({post, setPost}) {
+   return <label>
+
+      <span className="font-satoshi font-semibold text-base text-gray-700">
+         Tag{' '} <span className="font-normal">( #code , #system-design , #idea )</span>
+      </span>
+
+      <input
+
+         value={post.tag}
+
+         onChange={(e) => {
+            setPost({
+               ...post,
+               tag: e.target.value
+            });
+         } }
+         placeholder="#tag"
+         required
+         className="form_input" />
+
+   </label>;
+}
+
