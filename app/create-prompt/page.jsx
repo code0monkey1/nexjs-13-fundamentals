@@ -20,7 +20,7 @@ const CreatePrompt=()=>{
   
   const [post, setPost] = useState({
     prompt:'',
-    tag:''
+    tag:''   
   })
 
 
