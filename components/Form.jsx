@@ -55,54 +55,18 @@ function PromptForm({handleSubmit, post, setPost, submitting, type}) {
          className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
        >
 
-         <label>
-
-            <span className="font-satoshi font-semibold text-base text-gray-700">
-               Your A.I Prompt
-            </span>
-
-            <textarea
-
-               value={post.prompt}
-
-               onChange={(e) => {
-                  setPost({
-                     ...post,
-                     prompt: e.target.value
-                  });
-               } }
-               placeholder="Write your prompt here..."
-               required
-               className="form_textarea" 
-            />
-
-
-         </label>
+        <PrompForm post={post}  setPost={setPost} />
 
          <TagForm post={post} setPost={setPost}/>
 
-         <div className="flex-end mx-3 mb-5 gap-4">
-
-            <Link href='/' className="text-grey-500 text-sm">
-               Cancel
-            </Link>
-
-            <button
-               type="button"
-               disabled={submitting}
-               className="px-5 py-1.5 rounded-full text-sm bg-primary-orange text-white"
-            >
-               {submitting ? `${type}...` : `${type}`}
-            </button>
-
-         </div>
+         <Cancel submitting={submitting} type={type}/>
 
       </form>
    
    </>)
 }
 const TagForm=({post, setPost})=> {
-   
+
    return ( 
          <label>
 
@@ -126,5 +90,48 @@ const TagForm=({post, setPost})=> {
 
         </label>
       )
+}
+
+function Cancel({submitting, type}) {
+   return <div className="flex-end mx-3 mb-5 gap-4">
+
+      <Link href='/' className="text-grey-500 text-sm">
+         Cancel
+      </Link>
+
+      <button
+         type="button"
+         disabled={submitting}
+         className="px-5 py-1.5 rounded-full text-sm bg-primary-orange text-white"
+      >
+         {submitting ? `${type}...` : `${type}`}
+      </button>
+
+   </div>;
+}
+
+function PrompForm({post, setPost}) {
+   return <label>
+
+      <span className="font-satoshi font-semibold text-base text-gray-700">
+         Your A.I Prompt
+      </span>
+
+      <textarea
+
+         value={post.prompt}
+
+         onChange={(e) => {
+            setPost({
+               ...post,
+               prompt: e.target.value
+            });
+         } }
+         placeholder="Write your prompt here..."
+         required
+         className="form_textarea" />
+
+
+   </label>;
 }
 
