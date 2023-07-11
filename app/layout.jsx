@@ -3,6 +3,7 @@ import Provider from '@components/Provider'
 
 import '@styles/globals.css'
 
+
 export const metadata={
   title:"Next Demo",
   description:"Learning the basics of Next.js"
