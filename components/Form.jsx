@@ -12,7 +12,7 @@ const Form=({
    
       <section className="w-full max-w-full flex-start flex-col">
        
-         <Heading/>
+         <Heading type={type}/>
 
          <PromptForm 
             handleSubmit={handleSubmit}
@@ -31,7 +31,7 @@ export default Form;
 
 
 
-const Heading=()=>{
+const Heading=({type})=>{
 
    return(<>
 
