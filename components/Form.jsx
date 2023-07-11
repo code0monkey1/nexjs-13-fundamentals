@@ -14,13 +14,17 @@ const Form=({
        
          <Heading type={type}/>
 
-         <PromptForm 
-            handleSubmit={handleSubmit}
-            post={post} 
-            setPost={setPost} 
-            submitting={submitting}  
-            type={type} 
-         />
+            <form
+               onSubmit={handleSubmit}
+               className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism">
+            
+               <PromptForm post={post}  setPost={setPost} />
+
+               <TagForm post={post} setPost={setPost}/>
+
+               <Cancel submitting={submitting} type={type}/>
+
+             </form>
             
       </section>
    )
@@ -47,24 +51,24 @@ const Heading=({type})=>{
    </>)
 }
 
-function PromptForm({handleSubmit, post, setPost, submitting, type}) {
-   return( <> 
+// function PromptForm({handleSubmit, post, setPost, submitting, type}) {
+//    return( <> 
 
-      <form
-         onSubmit={handleSubmit}
-         className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
-       >
+//       <form
+//          onSubmit={handleSubmit}
+//          className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
+//        >
 
-        <PrompForm post={post}  setPost={setPost} />
+//          <PrompForm post={post}  setPost={setPost} />
 
-         <TagForm post={post} setPost={setPost}/>
+//          <TagForm post={post} setPost={setPost}/>
 
-         <Cancel submitting={submitting} type={type}/>
+//          <Cancel submitting={submitting} type={type}/>
 
-      </form>
+//       </form>
    
-   </>)
-}
+//    </>)
+// }
 const TagForm=({post, setPost})=> {
 
    return ( 
@@ -110,7 +114,7 @@ function Cancel({submitting, type}) {
    </div>;
 }
 
-function PrompForm({post, setPost}) {
+function PromptForm({post, setPost}) {
    return <label>
 
       <span className="font-satoshi font-semibold text-base text-gray-700">
