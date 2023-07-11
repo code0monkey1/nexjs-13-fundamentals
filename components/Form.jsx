@@ -12,7 +12,7 @@ const Form=({
    
       <section className="w-full max-w-full flex-start flex-col">
        
-         <Heading type={type}/>
+            <Heading type={type}/>
 
             <form
                onSubmit={handleSubmit}
@@ -51,24 +51,6 @@ const Heading=({type})=>{
    </>)
 }
 
-// function PromptForm({handleSubmit, post, setPost, submitting, type}) {
-//    return( <> 
-
-//       <form
-//          onSubmit={handleSubmit}
-//          className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
-//        >
-
-//          <PrompForm post={post}  setPost={setPost} />
-
-//          <TagForm post={post} setPost={setPost}/>
-
-//          <Cancel submitting={submitting} type={type}/>
-
-//       </form>
-   
-//    </>)
-// }
 const TagForm=({post, setPost})=> {
 
    return ( 
@@ -97,6 +79,7 @@ const TagForm=({post, setPost})=> {
 }
 
 function Cancel({submitting, type}) {
+
    return <div className="flex-end mx-3 mb-5 gap-4">
 
       <Link href='/' className="text-grey-500 text-sm">
@@ -115,6 +98,7 @@ function Cancel({submitting, type}) {
 }
 
 function PromptForm({post, setPost}) {
+   
    return <label>
 
       <span className="font-satoshi font-semibold text-base text-gray-700">
