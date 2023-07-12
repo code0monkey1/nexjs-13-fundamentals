@@ -4,6 +4,6 @@ export const GET =async()=>{
    
   const prompts= await Prompt.find({})
 
-  return new Response(prompts,{status:200})
+  return new Response(JSON.stringify(prompts),{status:200})
 
 }

@@ -12,7 +12,7 @@ const PromptCardList =({data,handleTagClick})=>{
 
   return (<div className='mt-16 prompt_layout'>
     
-    {data.map(({d}) =><div key={d._id}> {d}</div>) }
+    {/* {data?.map(({d}) =><div key={d._id}> {d}</div>) } */}
 
     </div>
   )
