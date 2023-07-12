@@ -1,5 +1,4 @@
 import Prompt from '../../../../models/prompt';
-import User from "../../../../models/user";
 import { connectToDb } from "../../../../utils/database";
 
 export async function POST(req,res){
@@ -18,7 +17,7 @@ export async function POST(req,res){
     
     const savedPrompt=  await newPrompt.save()
 
-     res.status(201).json(savedPrompt)
+    res.status(201).json(savedPrompt)
     
    }
    catch(e){
