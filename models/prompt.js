@@ -1,4 +1,4 @@
-const { ObjectId } = require('mongodb');
+
 const mongoose = require('mongoose'); // Erase if already required
 
 // Declare the Schema of the Mongo model
@@ -14,8 +14,8 @@ const promptSchema = new mongoose.Schema({
         
     },
     creator:{
-       type:ObjectId,
-       required:true
+       type:mongoose.Schema.Types.ObjectId, 
+       ref:'User'
     },
 
 });
