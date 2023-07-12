@@ -17,7 +17,7 @@ export async function POST(req,res){
     
     const savedPrompt=  await newPrompt.save()
 
-    res.status(201).json(savedPrompt)
+    return  new Response(JSON.stringify(savedPrompt,null,2),{status:201})
     
    }
    catch(e){
