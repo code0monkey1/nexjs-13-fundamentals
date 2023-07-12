@@ -29,7 +29,7 @@ const Feed = () => {
         const fetchPrompts= async()=>{
               
             const response = await  axios.get('/api/prompt')
-
+            console.log("response is",response.data)
             if(response.status===200){
 
                  setData(response.data)
