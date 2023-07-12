@@ -18,6 +18,7 @@ needs to be implemented to handle the form submission. */
 const CreatePrompt=()=>{
 
   const session = useSession()
+  const router = useRouter()
 
   const [submitting, setSubmitting] = useState(false)
   
@@ -34,16 +35,25 @@ const CreatePrompt=()=>{
     setSubmitting(true) 
 
     try{
-      const postObject ={
+     
+      const NewPrompt ={
         prompt:post.prompt,
         tag:post.tag,
         userId:session?.user.id
       }
-      const response = await axios.get('/api/prompt/new')
+
+      const response = await axios.post('/api/prompt/new',NewPrompt)
+
+      if(response.status===201){
+          router.push('/')
+      }
 
     }
     catch(e){
       console.error("Error: " +e)
+    }
+    finally{
+      setSubmitting(false)
     }
 
   }
