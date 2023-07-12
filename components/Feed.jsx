@@ -7,8 +7,8 @@ const Feed = () => {
     const[searchText,setSearchText] = useState('')
 
     const handleSearchChange=({target})=>{
-
-        setSearchText(target.value)
+        
+       setSearchText(target.value)
     }
    
     console.log(searchText)
