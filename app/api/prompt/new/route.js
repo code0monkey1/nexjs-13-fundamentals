@@ -4,18 +4,17 @@ import { connectToDb } from "../../../../utils/database";
 export async function POST(req,res){
  
    try{
-      connectToDb()
 
-      if(!req.body){
+     await connectToDb()
+     
+     const newUser = await User.create(req.body)
 
-        res.status(501).send("Error : No body found")
-
-      }
-
+     res.status(201).json(newUser)
+    
    }
    catch(e){
 
-    res.status(500).send("Error : "+e.message)
+    res.status(501).send("Error : "+e.message)
 
    } 
   
