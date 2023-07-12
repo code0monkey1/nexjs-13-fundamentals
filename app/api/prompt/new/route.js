@@ -1,3 +1,4 @@
+import Prompt from '../../../../models/prompt';
 import User from "../../../../models/user";
 import { connectToDb } from "../../../../utils/database";
 
@@ -7,11 +8,9 @@ export async function POST(req,res){
 
     const{userId,prompt,tag} = await req.json()
 
-    console.log(userId,prompt,tag)
-
-     await connectToDb()
+    await connectToDb()
      
-     const newUser = await User.create(req.body)
+    const newUser = await Prompt.create(req.body)
 
      res.status(201).json(newUser)
     
