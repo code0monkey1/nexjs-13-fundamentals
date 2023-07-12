@@ -22,16 +22,17 @@ const Feed = () => {
 
     const [data,setData]  = useState([])
 
-    console.log("data is",data)
 
     useEffect(()=>{
 
         const fetchPrompts= async()=>{
               
-            const response = await  axios.get('/api/prompt')
-            console.log("response is",response.data)
-            if(response.status===200){
+            const response = await axios.get('/api/prompt')
 
+            console.log("response is",response.data)
+
+            if(response.status===200){
+       
                  setData(response.data)
             }
             else{
@@ -50,7 +51,7 @@ const Feed = () => {
        setSearchText(target.value)
     }
    
-
+    console.log("data is",data)
   return (
     <section className='feed'>
         <form className='relative w-full flex-center'>
