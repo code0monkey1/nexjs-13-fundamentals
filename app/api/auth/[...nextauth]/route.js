@@ -50,6 +50,8 @@ handler = NextAuth({
     async signIn({profile}){
        
         try{
+
+          // every time you sign in , you need to connect to the db 
            await connectToDb()
   
            //check if user already exists
