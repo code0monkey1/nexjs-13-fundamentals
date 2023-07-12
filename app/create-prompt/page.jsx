@@ -27,7 +27,15 @@ const CreatePrompt=()=>{
   const createPrompt=async(e)=>{
      
     e.preventDefault()
-    setSubmitting(true)
+    
+    setSubmitting(true) 
+
+    try{
+
+    }
+    catch(e){
+      console.error("Error: " +e)
+    }
 
   }
 
@@ -39,7 +47,6 @@ const CreatePrompt=()=>{
          setPost={setPost}
          submitting={submitting}
          handleSubmit={createPrompt}
-       
        />
      
      </>
