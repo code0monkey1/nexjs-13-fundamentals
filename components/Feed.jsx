@@ -1,6 +1,12 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+
 const Feed = () => {
   return (
-    <div>Feed</div>
+    <section>
+      
+      </section>
   )
 }
 
