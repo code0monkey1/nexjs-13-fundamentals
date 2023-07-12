@@ -5,6 +5,10 @@ export async function POST(req,res){
  
    try{
 
+    const{userId,prompt,tag} = await req.json()
+
+    console.log(userId,prompt,tag)
+
      await connectToDb()
      
      const newUser = await User.create(req.body)
