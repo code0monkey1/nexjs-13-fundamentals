@@ -8,6 +8,7 @@ const Feed = () => {
         <form className='relative w-full flex-center'>
           <input
            placeholder='Search for a Tag or a UserName'
+           value={searchText}
           />
         </form>
       </section>
