@@ -1,14 +1,13 @@
-import User from "@models/user";
-import { connectToDb } from "@utils/database";
 import NextAuth from "next-auth/next";
 import GoogleProvider from 'next-auth/providers/google';
+import User from "../../../../models/user";
+import { connectToDb } from "../../../../utils/database";
 
  /* The `handler` is a function that is used as the main entry point for NextAuth. It is
 responsible for handling authentication requests and callbacks. It is exported as both a GET
 and POST handler, which means it can handle both GET and POST requests. */
 
-const
-handler = NextAuth({
+const handler = NextAuth({
   providers:[
     GoogleProvider({
       clientId:process.env.GOOGLE_CLIENT_ID,
