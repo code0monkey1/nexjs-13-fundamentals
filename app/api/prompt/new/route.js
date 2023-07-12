@@ -10,9 +10,15 @@ export async function POST(req,res){
 
     await connectToDb()
      
-    const newUser = await Prompt.create(req.body)
+    const newPrompt = new Prompt({
+      creator:userId,
+      prompt,
+      tag
+    })
+    
+    const savedPrompt=  await newPrompt.save()
 
-     res.status(201).json(newUser)
+     res.status(201).json(savedPrompt)
     
    }
    catch(e){
