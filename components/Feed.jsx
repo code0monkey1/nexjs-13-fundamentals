@@ -1,7 +1,12 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
+import PromptCard from './PromptCard';
+
+const PromptCardList =({data,handleTagClick})=>{
+
+}
 const Feed = () => {
    
     const[searchText,setSearchText] = useState('')
@@ -23,6 +28,7 @@ const Feed = () => {
            className='search_input peer'
           />
         </form>
+        <PromptCardList/>
       </section>
   )
 }
