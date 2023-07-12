@@ -3,6 +3,9 @@
 import { useEffect, useState } from 'react'
 
 const Feed = () => {
+   
+    const[searchText,setSearchText] = useState('')
+
   return (
     <section className='feed'>
         <form className='relative w-full flex-center'>
