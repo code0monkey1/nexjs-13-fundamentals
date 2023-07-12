@@ -17,6 +17,8 @@ needs to be implemented to handle the form submission. */
 
 const CreatePrompt=()=>{
 
+  const session = useSession()
+
   const [submitting, setSubmitting] = useState(false)
   
   const [post, setPost] = useState({
@@ -32,7 +34,11 @@ const CreatePrompt=()=>{
     setSubmitting(true) 
 
     try{
-      const postObject:
+      const postObject ={
+        prompt:post.prompt,
+        tag:post.tag,
+        userId:session?.user.id
+      }
       const response = await axios.get('/api/prompt/new')
 
     }
