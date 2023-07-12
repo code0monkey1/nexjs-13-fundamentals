@@ -22,6 +22,8 @@ const Feed = () => {
 
     const [data,setData]  = useState([])
 
+    console.log("data is",data)
+
     useEffect(()=>{
 
         const fetchPrompts= async()=>{
