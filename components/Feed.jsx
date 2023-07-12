@@ -10,7 +10,8 @@ const Feed = () => {
 
         setSearchText(target.value)
     }
-
+   
+    console.log(searchText)
   return (
     <section className='feed'>
         <form className='relative w-full flex-center'>
