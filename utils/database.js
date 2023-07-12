@@ -2,8 +2,6 @@ import mongoose from "mongoose";
 
 let isConnected  = false;
 
-
-
 export const connectToDb =async()=>{
 
   mongoose.set('strictQuery',true)
@@ -17,7 +15,7 @@ export const connectToDb =async()=>{
   }
   
   try{
-    console.log("The mongodb uri is",process.env.MONGODB_URI)
+
     await mongoose.connect(process.env.MONGODB_URI,{
        dbName:"next_app",
        useNewUrlParser:true,
