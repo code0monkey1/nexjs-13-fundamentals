@@ -2,7 +2,7 @@
 const mongoose = require('mongoose'); // Erase if already required
 
 // Declare the Schema of the Mongo model
-const promptSchema = new mongoose.Schema({
+const PromptSchema = new mongoose.Schema({
 
     creator:{
       type:mongoose.Schema.Types.ObjectId, 
@@ -21,6 +21,6 @@ const promptSchema = new mongoose.Schema({
 });
 
 //Export the model
-const Prompt= mongoose.models.Prompt || model('Prompt',promptSchema)
+const Prompt= mongoose.models.Prompt || model('Prompt',PromptSchema)
 
 export default Prompt
