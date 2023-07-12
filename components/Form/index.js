@@ -22,7 +22,7 @@ const Form=({
 
                <TagInput post={post} setPost={setPost}/>
 
-               <Cancel submitting={submitting} type={type}/>
+               <Submit_Cancel submitting={submitting} type={type}/>
 
             </form>
             
@@ -79,7 +79,8 @@ const TagInput=({post, setPost})=> {
 }
 
 
-const Cancel=({submitting, type}) =>{
+const Submit_Cancel=({submitting, type}) =>{
+
 
    return <div className="flex-end mx-3 mb-5 gap-4">
 
@@ -88,7 +89,7 @@ const Cancel=({submitting, type}) =>{
       </Link>
 
       <button
-         type="button"
+         type="submit"
          disabled={submitting}
          className="px-5 py-1.5 rounded-full text-sm bg-primary-orange text-white"
       >
