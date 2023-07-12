@@ -1,6 +1,7 @@
 "use client"
 
 // The form for filling out the prompt
+import axios from 'axios'
 import Form from '../../components/Form'
 
 //used to get the current logged in client details
@@ -31,6 +32,8 @@ const CreatePrompt=()=>{
     setSubmitting(true) 
 
     try{
+      const postObject:
+      const response = await axios.get('/api/prompt/new')
 
     }
     catch(e){
