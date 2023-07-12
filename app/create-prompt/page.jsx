@@ -29,7 +29,7 @@ const CreatePrompt=()=>{
 
 
   const createPrompt=async(e)=>{
-     
+     console.log("create prompt triggered")
     e.preventDefault()
     
     setSubmitting(true) 
