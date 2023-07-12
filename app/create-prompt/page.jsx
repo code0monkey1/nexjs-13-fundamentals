@@ -16,7 +16,8 @@ get the current logged in client details. The `CreatePrompt` function is current
 needs to be implemented to handle the form submission. */
 
 const CreatePrompt=()=>{
-
+   
+  // you get the data object, but you rename it to session to use in your app
   const {data:session} = useSession()
   
   const router = useRouter()
