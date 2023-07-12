@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 import PromptCard from './PromptCard';
 
+
 const PromptCardList =({data,handleTagClick})=>{
 
 }
@@ -28,7 +29,7 @@ const Feed = () => {
            className='search_input peer'
           />
         </form>
-        <PromptCardList/>
+        <PromptCardList data={[]} handleTagClick={()=>{}}/>
       </section>
   )
 }
