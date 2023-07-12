@@ -22,7 +22,7 @@ export async function POST(req,res){
    }
    catch(e){
 
-    res.status(501).send("Error : "+e.message)
+    return new Response("Failed to create a new prompt",{status:500})
 
    } 
   
