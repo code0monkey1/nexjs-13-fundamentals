@@ -2,8 +2,8 @@ const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose'); // Erase if already required
 
 // Declare the Schema of the Mongo model
-var promptSchema = new mongoose.Schema({
-  
+const promptSchema = new mongoose.Schema({
+
     prompt:{
         type:String,
         required:true,
@@ -13,7 +13,7 @@ var promptSchema = new mongoose.Schema({
         required:true,
         
     },
-    userId:{
+    creator:{
        type:ObjectId,
        required:true
     },
@@ -21,4 +21,6 @@ var promptSchema = new mongoose.Schema({
 });
 
 //Export the model
-module.exports = mongoose.model('User', userSchema);
+const Prompt= mongoose.models.Prompt || model('Prompt',promptSchema)
+
+export default Prompt
