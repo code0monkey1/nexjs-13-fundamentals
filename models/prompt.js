@@ -6,11 +6,11 @@ const promptSchema = new mongoose.Schema({
 
     prompt:{
         type:String,
-        required:true,
+        required:[true,"Prompt is required"],
     },
     tag:{
         type:String,
-        required:true,
+        required:[true,"Tag is required"],
         
     },
     creator:{
