@@ -4,8 +4,12 @@ import { useEffect, useState } from 'react'
 
 const Feed = () => {
   return (
-    <section>
-      
+    <section className='feed'>
+        <form className='relative w-full flex-center'>
+          <input
+           placeholder='Search for a Tag or a UserName'
+          />
+        </form>
       </section>
   )
 }
