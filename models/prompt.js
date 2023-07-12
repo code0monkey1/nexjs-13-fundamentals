@@ -21,6 +21,6 @@ const PromptSchema = new mongoose.Schema({
 });
 
 //Export the model
-const Prompt= mongoose.models.Prompt || model('Prompt',PromptSchema)
+const Prompt= mongoose.models.Prompt || mongoose.model('Prompt',PromptSchema)
 
 export default Prompt
