@@ -1,7 +1,7 @@
 import Prompt from '../../../../models/prompt';
 import { connectToDb } from "../../../../utils/database";
 
-export async function POST(req,res){
+export async function POST(req){
  
    try{
 
