@@ -78,6 +78,7 @@ const TagInput=({post, setPost})=> {
       )
 }
 
+
 const Cancel=({submitting, type}) =>{
 
    return <div className="flex-end mx-3 mb-5 gap-4">
