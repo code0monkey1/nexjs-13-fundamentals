@@ -1,4 +1,4 @@
-const PromptCard=()=>{
+const PromptCard=({data})=>{
 
   return <>
      <h1>Hello</h1>
