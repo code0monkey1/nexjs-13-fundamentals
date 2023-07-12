@@ -1,4 +1,4 @@
-const PromptCard=({data})=>{
+const PromptCard=({key,prompt,handleTagClick})=>{
 
   return <>
      <h1>Hello</h1>
