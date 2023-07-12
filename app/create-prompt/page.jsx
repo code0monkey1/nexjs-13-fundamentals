@@ -17,7 +17,8 @@ needs to be implemented to handle the form submission. */
 
 const CreatePrompt=()=>{
 
-  const session = useSession()
+  const {data:session} = useSession()
+  
   const router = useRouter()
 
   const [submitting, setSubmitting] = useState(false)
@@ -29,6 +30,7 @@ const CreatePrompt=()=>{
 
 
   const createPrompt=async(e)=>{
+
      console.log("create prompt triggered")
     e.preventDefault()
     
