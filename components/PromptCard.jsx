@@ -45,7 +45,8 @@ const PromptCard = ({
           />
         </div>
       </div>
-      <p>{post.prompt}</p>
+      <p className="my-4 font-satoshi text-sm text-gray-700">{post.prompt}</p>
+      <p>{post.tag}</p>
     </div>
   );
 };
