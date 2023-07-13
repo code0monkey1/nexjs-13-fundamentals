@@ -121,16 +121,7 @@ const Nav = () => {
                 >
                   Create Prompt
                 </Link>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setToggleDropdown(false);
-                    signOut();
-                  }}
-                  className="mt-5 w-full black_btn"
-                >
-                  Sign Out
-                </button>
+                <SignOutButton setToggleDropdown={setToggleDropdown} />
               </div>
             )}
           </div>
@@ -155,3 +146,17 @@ const Nav = () => {
 };
 
 export default Nav;
+function SignOutButton({ setToggleDropdown }) {
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        setToggleDropdown(false);
+        signOut();
+      }}
+      className="mt-5 w-full black_btn"
+    >
+      Sign Out
+    </button>
+  );
+}
