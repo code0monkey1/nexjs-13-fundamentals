@@ -118,19 +118,7 @@ const Nav = () => {
             )}
           </div>
         ) : (
-          <>
-            {providers &&
-              Object.values(providers).map((provider) => (
-                <button
-                  type="button"
-                  key={provider.name}
-                  onClick={() => {}}
-                  className="black_btn"
-                >
-                  SignIn
-                </button>
-              ))}
-          </>
+          <SignIn providers={providers} />
         )}
       </div>
     </nav>
@@ -138,6 +126,24 @@ const Nav = () => {
 };
 
 export default Nav;
+function SignIn(providers) {
+  return (
+    <>
+      {providers &&
+        Object.values(providers).map((provider) => (
+          <button
+            type="button"
+            key={provider.name}
+            onClick={() => {}}
+            className="black_btn"
+          >
+            SignIn
+          </button>
+        ))}
+    </>
+  );
+}
+
 function CreatePrompt({ setToggleDropdown }) {
   return (
     <Link
