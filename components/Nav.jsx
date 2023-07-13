@@ -105,13 +105,7 @@ const Nav = () => {
 
             {toggleDropdown && (
               <div className="dropdown">
-                <Link
-                  href="/profile"
-                  className="dropdown_link"
-                  onClick={() => setToggleDropdown(false)}
-                >
-                  My Profile
-                </Link>
+                <MyProfile stToggleDropdown={setToggleDropdown} />
                 <CreatePrompt stToggleDropdown={setToggleDropdown} />
                 <SignOut setToggleDropdown={setToggleDropdown} />
               </div>
@@ -126,6 +120,18 @@ const Nav = () => {
 };
 
 export default Nav;
+function MyProfile({ setToggleDropdown }) {
+  return (
+    <Link
+      href="/profile"
+      className="dropdown_link"
+      onClick={() => setToggleDropdown(false)}
+    >
+      My Profile
+    </Link>
+  );
+}
+
 function SignIn(providers) {
   return (
     <>
