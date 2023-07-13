@@ -20,6 +20,7 @@ const PromptCard = ({
     // this copies the prompt to the clipboard
     navigator.clipboard.writeText(post.prompt);
 
+    // to change the copied icon back from ticked
     setTimeout(() => setCopied(''), 3000);
   };
   return (
