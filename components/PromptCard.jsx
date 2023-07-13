@@ -13,9 +13,9 @@ const PromptCard = ({
   handleDelete,
 }) => {
   return (
-    <>
+    <div className="prompt_card">
       <h1>Hello</h1>
-    </>
+    </div>
   );
 };
 
