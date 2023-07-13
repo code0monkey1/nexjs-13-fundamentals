@@ -1,25 +1,22 @@
-'use client'
+'use client';
 
-import { useSession } from "next-auth/react"
-import Image from "next/image"
-import { usePathname, useRouter } from 'next/navigation'
-import { useState } from "react"
+import { useSession } from 'next-auth/react';
+import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
+import { useState } from 'react';
 
-const PromptCard=(
-  {
+const PromptCard = ({
   key,
   prompt,
   handleTagClick,
   handleEdit,
-  handleDelete
-}
-  )=>{
+  handleDelete,
+}) => {
+  return (
+    <>
+      <h1>Hello</h1>
+    </>
+  );
+};
 
-  return <>
-     <h1>Hello</h1>
-  </>
-
-}
-
-
-export default PromptCard
+export default PromptCard;
