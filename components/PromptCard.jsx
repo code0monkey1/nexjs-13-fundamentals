@@ -23,7 +23,10 @@ const PromptCard = ({
           className="rounded-full object-contain"
         />
 
-        <h1>Hello</h1>
+        <div className="flex flex-col">
+          <h3 className="font-satoshi">{prompt.creator.username}</h3>
+          <p>{prompt.creator.email}</p>
+        </div>
       </div>
     </div>
   );
