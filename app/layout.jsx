@@ -1,33 +1,30 @@
-import Nav from '../components/Nav'
-import Provider from '../components/Provider'
+import Nav from '../components/Nav';
+import Provider from '../components/Provider';
 
-import '../styles/globals.css'
+import '../styles/globals.css';
 
+export const metadata = {
+  title: 'Next Demo',
+  description: 'Learning the basics of Next.js',
+};
 
-export const metadata={
-  title:"Next Demo",
-  description:"Learning the basics of Next.js"
-}
-
-const RootLayout = ({children}) => {
+const RootLayout = ({ children }) => {
   return (
-  <html lang='en'>
-    <body>
-      <Provider>
-        <div className='main'>
-         <div className='gradient'/>
-        </div>
-          <main className='app'>
-            
-            <Nav/>
-            
+    <html lang="en">
+      <body>
+        <Provider>
+          <div className="main">
+            <div className="gradient" />
+          </div>
+          <main className="app">
+            <Nav />
+
             {children}
-
           </main>
-     </Provider>
-    </body>
+        </Provider>
+      </body>
     </html>
-  )
-}
+  );
+};
 
-export default RootLayout
+export default RootLayout;
