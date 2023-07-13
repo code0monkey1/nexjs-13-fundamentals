@@ -112,8 +112,8 @@ const Nav = () => {
                 >
                   My Profile
                 </Link>
-                <CreatePromptButton stToggleDropdown={setToggleDropdown} />
-                <SignOutButton setToggleDropdown={setToggleDropdown} />
+                <CreatePrompt stToggleDropdown={setToggleDropdown} />
+                <SignOut setToggleDropdown={setToggleDropdown} />
               </div>
             )}
           </div>
@@ -138,7 +138,7 @@ const Nav = () => {
 };
 
 export default Nav;
-function CreatePromptButton({ setToggleDropdown }) {
+function CreatePrompt({ setToggleDropdown }) {
   return (
     <Link
       href="/create-prompt"
@@ -152,7 +152,7 @@ function CreatePromptButton({ setToggleDropdown }) {
   );
 }
 
-function SignOutButton({ setToggleDropdown }) {
+function SignOut({ setToggleDropdown }) {
   return (
     <button
       type="button"
