@@ -74,7 +74,19 @@ const Nav = () => {
             </Link>
           </div>
         ) : (
-          <SignIn providers={providers} />
+          <>
+            {providers &&
+              Object.values(providers).map((provider) => (
+                <button
+                  type="button"
+                  key={provider.name}
+                  onClick={() => signIn(provider.id)}
+                  className="black_btn"
+                >
+                  SignIn
+                </button>
+              ))}
+          </>
         )}
       </div>
       {/* Mobile View Nav*/}
@@ -93,14 +105,32 @@ const Nav = () => {
 
             {toggleDropdown && (
               <div className="dropdown">
-                <MyProfile stToggleDropdown={setToggleDropdown} />
-                <CreatePrompt stToggleDropdown={setToggleDropdown} />
-                <SignOut setToggleDropdown={setToggleDropdown} />
+                <Link
+                  href="/profile"
+                  className="dropdown_link"
+                  onClick={() => setToggleDropdown(false)}
+                >
+                  My Profile
+                </Link>
+                <CreatePromptButton stToggleDropdown={setToggleDropdown} />
+                <SignOutButton setToggleDropdown={setToggleDropdown} />
               </div>
             )}
           </div>
         ) : (
-          <SignIn providers={providers} />
+          <>
+            {providers &&
+              Object.values(providers).map((provider) => (
+                <button
+                  type="button"
+                  key={provider.name}
+                  onClick={() => {}}
+                  className="black_btn"
+                >
+                  SignIn
+                </button>
+              ))}
+          </>
         )}
       </div>
     </nav>
@@ -108,37 +138,7 @@ const Nav = () => {
 };
 
 export default Nav;
-function MyProfile({ setToggleDropdown }) {
-  return (
-    <Link
-      href="/profile"
-      className="dropdown_link"
-      onClick={() => setToggleDropdown(false)}
-    >
-      My Profile
-    </Link>
-  );
-}
-
-function SignIn({ providers }) {
-  return (
-    <>
-      {providers &&
-        Object.values(providers).map((provider) => (
-          <button
-            type="button"
-            key={provider.name}
-            onClick={() => {}}
-            className="black_btn"
-          >
-            SignIn
-          </button>
-        ))}
-    </>
-  );
-}
-
-function CreatePrompt({ setToggleDropdown }) {
+function CreatePromptButton({ setToggleDropdown }) {
   return (
     <Link
       href="/create-prompt"
@@ -152,7 +152,7 @@ function CreatePrompt({ setToggleDropdown }) {
   );
 }
 
-function SignOut({ setToggleDropdown }) {
+function SignOutButton({ setToggleDropdown }) {
   return (
     <button
       type="button"
