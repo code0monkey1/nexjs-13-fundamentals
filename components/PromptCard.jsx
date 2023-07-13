@@ -36,13 +36,15 @@ const PromptCard = ({
           <Image
             width={20}
             height={20}
+            alt="copy_image"
             src={
               copied === post.prompt
                 ? '/assets/icons/tick.svg'
-                : 'assets/icons/copy.svg'
+                : '/assets/icons/copy.svg'
             }
           />
         </div>
+        <p>{post.prompt}</p>
       </div>
     </div>
   );
