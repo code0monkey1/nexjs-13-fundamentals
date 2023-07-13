@@ -16,7 +16,11 @@ const PromptCard = ({
 
   const handleCopy = () => {
     setCopied(post.prompt);
+
+    // this copies the prompt to the clipboard
     navigator.clipboard.writeText(post.prompt);
+
+    setTimeout(() => setCopied(''), 3000);
   };
   return (
     <div className="prompt_card">
