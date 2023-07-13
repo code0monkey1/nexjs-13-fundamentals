@@ -31,6 +31,7 @@ const PromptCard = ({
             {prompt.creator.email}
           </p>
         </div>
+        <div className=" copy_btn" onClick={() => {}}></div>
       </div>
     </div>
   );
