@@ -13,6 +13,11 @@ const PromptCard = ({
   handleDelete,
 }) => {
   const [copied, setCopied] = useState('');
+
+  const handleCopy = () => {
+    setCopied(post.prompt);
+    navigator.clipboard.writeText(post.prompt);
+  };
   return (
     <div className="prompt_card">
       <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
@@ -32,7 +37,7 @@ const PromptCard = ({
             {post.creator.email}
           </p>
         </div>
-        <div className=" copy_btn" onClick={() => {}}>
+        <div className=" copy_btn" onClick={handleCopy}>
           <Image
             width={20}
             height={20}
