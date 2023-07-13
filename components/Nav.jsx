@@ -74,19 +74,7 @@ const Nav = () => {
             </Link>
           </div>
         ) : (
-          <>
-            {providers &&
-              Object.values(providers).map((provider) => (
-                <button
-                  type="button"
-                  key={provider.name}
-                  onClick={() => signIn(provider.id)}
-                  className="black_btn"
-                >
-                  SignIn
-                </button>
-              ))}
-          </>
+          <SignIn providers={providers} />
         )}
       </div>
       {/* Mobile View Nav*/}
@@ -132,7 +120,7 @@ function MyProfile({ setToggleDropdown }) {
   );
 }
 
-function SignIn(providers) {
+function SignIn({ providers }) {
   return (
     <>
       {providers &&
