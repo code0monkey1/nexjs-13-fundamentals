@@ -12,6 +12,7 @@ const PromptCard = ({
   handleEdit,
   handleDelete,
 }) => {
+  const [copied, setCopied] = useState('');
   return (
     <div className="prompt_card">
       <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
@@ -33,6 +34,8 @@ const PromptCard = ({
         </div>
         <div className=" copy_btn" onClick={() => {}}>
           <Image
+            width={20}
+            height={20}
             src={
               copied === post.prompt
                 ? '/assets/icons/tick.svg'
