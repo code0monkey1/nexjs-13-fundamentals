@@ -14,7 +14,17 @@ const PromptCard = ({
 }) => {
   return (
     <div className="prompt_card">
-      <h1>Hello</h1>
+      <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
+        <Image
+          src={prompt.creator.image}
+          alt="user_image"
+          width={40}
+          height={40}
+          className="rounded-full object-contain"
+        />
+
+        <h1>Hello</h1>
+      </div>
     </div>
   );
 };

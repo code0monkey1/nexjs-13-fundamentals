@@ -7,8 +7,6 @@ import PromptCard from './PromptCard';
 import axios from 'axios';
 
 const PromptCardList = ({ data, handleTagClick }) => {
-  console.log('The data', JSON.stringify(data, null, 2));
-
   return (
     <div className="mt-16 prompt_layout">
       {data.map((d) => (
