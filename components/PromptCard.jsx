@@ -44,8 +44,8 @@ const PromptCard = ({
             }
           />
         </div>
-        <p>{post.prompt}</p>
       </div>
+      <p>{post.prompt}</p>
     </div>
   );
 };
