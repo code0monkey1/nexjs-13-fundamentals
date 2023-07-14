@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { getProviders, signIn, signOut, useSession } from 'next-auth/react';
 
 import { useEffect, useState } from 'react';
+
 const Nav = () => {
   const { data: session } = useSession();
 
@@ -50,9 +51,7 @@ const Nav = () => {
           <div className="flex gap-3 md:gap-5">
             {/* Used to create a new post  */}
 
-            <Link href="/create-prompt" className="black_btn">
-              Create Post
-            </Link>
+            <CreatePost />
             <button type="button" onClick={signOut} className="outline_btn">
               Sign Out
             </button>
@@ -173,5 +172,11 @@ const ProfileImage = ({ session }) => (
       className="rounded-full"
       alt="profile"
     />
+  </Link>
+);
+
+const CreatePost = () => (
+  <Link href="/create-prompt" className="black_btn">
+    Create Post
   </Link>
 );
