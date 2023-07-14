@@ -29,9 +29,12 @@ const Nav = () => {
     setUpProvider();
   }, []);
 
-  const LogInProvider =
-    providers &&
-    Object.values(providers).map((provider) => <SignIn provider={provider} />);
+  const LogInProvider = () =>
+    providers ? (
+      Object.values(providers).map((provider) => <SignIn provider={provider} />)
+    ) : (
+      <></>
+    );
 
   return (
     <nav className="flex-between w-full mb-16 pt-3">
@@ -47,7 +50,7 @@ const Nav = () => {
             <ProfileImage session={session} />
           </div>
         ) : (
-          <>{LogInProvider}</>
+          <LogInProvider />
         )}
       </div>
       {/* Mobile View Nav*/}
@@ -60,6 +63,8 @@ const Nav = () => {
                 setToggleDropdown={setToggleDropdown}
               />
 
+              {/* Only Shows when toggleDropdown is true */}
+
               {toggleDropdown && (
                 <div className="dropdown">
                   <ProfilePopup setToggleDropdown={setToggleDropdown} />
@@ -69,7 +74,7 @@ const Nav = () => {
               )}
             </div>
           ) : (
-            <>{LogInProvider}</>
+            <LogInProvider />
           )}
         </div>
       </>
