@@ -29,22 +29,13 @@ const Nav = () => {
     setUpProvider();
   }, []);
 
-  const SignInProvider = () =>
-    Object.values(providers).map((provider) => <SignIn provider={provider} />);
-
   return (
     <nav className="flex-between w-full mb-16 pt-3">
       <Logo />
       {/*desktop native  first component */}
       <div className="sm:flex hidden">
         {isUserLoggedIn ? (
-          <div className="flex gap-3 md:gap-5">
-            {/* Used to create a new post  */}
-            <CreatePost />
-            <SignOut />
-            {/* We will use this to  show the profile picture of the logged in user  , clicking on which takes us to the profile page of the logged in user */}
-            <ProfileImage session={session} />
-          </div>
+          <UserActions session={session} />
         ) : providers ? (
           <SignInProvider />
         ) : (
@@ -184,5 +175,15 @@ const DropDownMenu = ({ setToggleDropdown }) => (
     <ProfilePopup setToggleDropdown={setToggleDropdown} />
     <CreatePromptPopup stToggleDropdown={setToggleDropdown} />
     <SignOutPopup setToggleDropdown={setToggleDropdown} />
+  </div>
+);
+
+const UserActions = ({ session }) => (
+  <div className="flex gap-3 md:gap-5">
+    {/* Used to create a new post  */}
+    <CreatePost />
+    <SignOut />
+    {/* We will use this to  show the profile picture of the logged in user  , clicking on which takes us to the profile page of the logged in user */}
+    <ProfileImage session={session} />
   </div>
 );
