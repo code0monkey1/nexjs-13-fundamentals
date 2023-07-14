@@ -10,15 +10,6 @@ import { getProviders, signIn, signOut, useSession } from 'next-auth/react';
 
 import { useEffect, useState } from 'react';
 
-// const ProfileImage = ({ session, toggleDropdown }) => (<Image
-//   src={session?.user.image}
-//   width={37}
-//   height={37}
-//   className="rounded-full"
-//   alt="profile"
-//   onClick={() => toggleDropdown((prev) => !prev)}
-// />);
-
 const Nav = () => {
   const { data: session } = useSession();
 
@@ -152,12 +143,13 @@ const SignIn = ({ provider }) => (
   </button>
 );
 
-const ProfileImage = ({ session }) => (
+const ProfileImage = ({ session, toggleDropdown }) => (
   <Link href="/profile">
     <Image
       src={session?.user.image}
       width={37}
       height={37}
+      onClick={() => toggleDropdown((prev) => !prev)}
       className="rounded-full"
       alt="profile"
     />
