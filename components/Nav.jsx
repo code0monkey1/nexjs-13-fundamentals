@@ -22,6 +22,17 @@ const MyProfile = ({ setToggleDropdown }) => (
   </Link>
 );
 
+const SignIn = ({ provider }) => (
+  <button
+    type="button"
+    key={provider.name}
+    onClick={() => signIn(provider.id)}
+    className="black_btn"
+  >
+    SignIn
+  </button>
+);
+
 Nav = () => {
   const { data: session } = useSession();
 
@@ -86,14 +97,7 @@ Nav = () => {
           <>
             {providers &&
               Object.values(providers).map((provider) => (
-                <button
-                  type="button"
-                  key={provider.name}
-                  onClick={() => signIn(provider.id)}
-                  className="black_btn"
-                >
-                  SignIn
-                </button>
+                <SignIn provider={provider} />
               ))}
           </>
         )}
@@ -115,8 +119,8 @@ Nav = () => {
               {toggleDropdown && (
                 <div className="dropdown">
                   <MyProfile setToggleDropdown={setToggleDropdown} />
-                  <CreatePromptButton stToggleDropdown={setToggleDropdown} />
-                  <SignOutButton setToggleDropdown={setToggleDropdown} />
+                  <CreatePrompt stToggleDropdown={setToggleDropdown} />
+                  <SignOut setToggleDropdown={setToggleDropdown} />
                 </div>
               )}
             </div>
@@ -142,7 +146,7 @@ Nav = () => {
 };
 
 export default Nav;
-function CreatePromptButton({ setToggleDropdown }) {
+function CreatePrompt({ setToggleDropdown }) {
   return (
     <Link
       href="/create-prompt"
@@ -156,7 +160,7 @@ function CreatePromptButton({ setToggleDropdown }) {
   );
 }
 
-function SignOutButton({ setToggleDropdown }) {
+function SignOut({ setToggleDropdown }) {
   return (
     <button
       type="button"
