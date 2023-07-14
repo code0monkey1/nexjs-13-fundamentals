@@ -30,11 +30,7 @@ const Nav = () => {
   }, []);
 
   const SignInProvider = () =>
-    providers ? (
-      Object.values(providers).map((provider) => <SignIn provider={provider} />)
-    ) : (
-      <></>
-    );
+    Object.values(providers).map((provider) => <SignIn provider={provider} />);
 
   return (
     <nav className="flex-between w-full mb-16 pt-3">
@@ -49,8 +45,10 @@ const Nav = () => {
             {/* We will use this to  show the profile picture of the logged in user  , clicking on which takes us to the profile page of the logged in user */}
             <ProfileImage session={session} />
           </div>
-        ) : (
+        ) : providers ? (
           <SignInProvider />
+        ) : (
+          ''
         )}
       </div>
       {/* Mobile View Nav*/}
@@ -69,8 +67,10 @@ const Nav = () => {
                 <DropDownMenu setToggleDropdown={setToggleDropdown} />
               )}
             </div>
-          ) : (
+          ) : providers ? (
             <SignInProvider />
+          ) : (
+            ''
           )}
         </div>
       </>
