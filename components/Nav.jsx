@@ -9,7 +9,6 @@ import Link from 'next/link';
 import { getProviders, signIn, signOut, useSession } from 'next-auth/react';
 
 import { useEffect, useState } from 'react';
-
 const Nav = () => {
   const { data: session } = useSession();
 
@@ -60,15 +59,7 @@ const Nav = () => {
 
             {/* We will use this to  show the profile picture of the logged in user  , clicking on which takes us to the profile page of the logged in user */}
 
-            <Link href="/profile">
-              <Image
-                src={session?.user.image}
-                width={37}
-                height={37}
-                className="rounded-full"
-                alt="profile"
-              />
-            </Link>
+            <ProfileImage session={session} />
           </div>
         ) : (
           <>
@@ -123,6 +114,7 @@ const Nav = () => {
 };
 
 export default Nav;
+
 function CreatePrompt({ setToggleDropdown }) {
   return (
     <Link
@@ -170,4 +162,16 @@ const SignIn = ({ provider }) => (
   >
     SignIn
   </button>
+);
+
+const ProfileImage = ({ session }) => (
+  <Link href="/profile">
+    <Image
+      src={session?.user.image}
+      width={37}
+      height={37}
+      className="rounded-full"
+      alt="profile"
+    />
+  </Link>
 );
