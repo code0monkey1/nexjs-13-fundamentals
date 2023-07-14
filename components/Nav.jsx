@@ -99,9 +99,9 @@ const Nav = () => {
 
               {toggleDropdown && (
                 <div className="dropdown">
-                  <Profile setToggleDropdown={setToggleDropdown} />
-                  <CreatePromptButton stToggleDropdown={setToggleDropdown} />
-                  <SignOutButton setToggleDropdown={setToggleDropdown} />
+                  <ProfilePopup setToggleDropdown={setToggleDropdown} />
+                  <CreatePromptPopup stToggleDropdown={setToggleDropdown} />
+                  <SignOutPopup setToggleDropdown={setToggleDropdown} />
                 </div>
               )}
             </div>
@@ -120,7 +120,7 @@ const Nav = () => {
 };
 
 export default Nav;
-function CreatePromptButton({ setToggleDropdown }) {
+function CreatePromptPopup({ setToggleDropdown }) {
   return (
     <Link
       href="/create-prompt"
@@ -134,7 +134,7 @@ function CreatePromptButton({ setToggleDropdown }) {
   );
 }
 
-function SignOutButton({ setToggleDropdown }) {
+function SignOutPopup({ setToggleDropdown }) {
   return (
     <button
       type="button"
@@ -160,7 +160,7 @@ const SignIn = ({ provider }) => (
   </button>
 );
 
-const Profile = ({ setToggleDropdown }) => (
+const ProfilePopup = ({ setToggleDropdown }) => (
   <Link
     href="/profile"
     className="dropdown_link"
