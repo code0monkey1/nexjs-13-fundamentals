@@ -12,6 +12,17 @@ import { useEffect, useState } from 'react';
 
 let Nav;
 
+const SignIn = ({ provider }) => (
+  <button
+    type="button"
+    key={provider.name}
+    onClick={() => signIn(provider.id)}
+    className="black_btn"
+  >
+    SignIn
+  </button>
+);
+
 Nav = () => {
   const { data: session } = useSession();
 
@@ -76,14 +87,7 @@ Nav = () => {
           <>
             {providers &&
               Object.values(providers).map((provider) => (
-                <button
-                  type="button"
-                  key={provider.name}
-                  onClick={() => signIn(provider.id)}
-                  className="black_btn"
-                >
-                  SignIn
-                </button>
+                <SignIn provider={provider} />
               ))}
           </>
         )}
@@ -120,14 +124,7 @@ Nav = () => {
             <>
               {providers &&
                 Object.values(providers).map((provider) => (
-                  <button
-                    type="button"
-                    key={provider.name}
-                    onClick={() => {}}
-                    className="black_btn"
-                  >
-                    SignIn
-                  </button>
+                  <SignIn provider={provider} />
                 ))}
             </>
           )}
