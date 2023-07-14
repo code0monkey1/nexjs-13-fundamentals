@@ -16,6 +16,29 @@ const SignOut = () => (
   </button>
 );
 
+const ProfileImageSmall = ({ session, setToggleDropdown }) => (
+  <Image
+    src={session?.user.image}
+    width={37}
+    height={37}
+    className="rounded-full"
+    alt="profile"
+    onClick={() => setToggleDropdown((prev) => !prev)}
+  />
+);
+
+const ProfileImage = ({ session }) => (
+  <Link href="/profile">
+    <Image
+      src={session?.user.image}
+      width={37}
+      height={37}
+      className="rounded-full"
+      alt="profile"
+    />
+  </Link>
+);
+
 const Nav = () => {
   const { data: session } = useSession();
 
@@ -51,15 +74,7 @@ const Nav = () => {
 
             {/* We will use this to  show the profile picture of the logged in user  , clicking on which takes us to the profile page of the logged in user */}
 
-            <Link href="/profile">
-              <Image
-                src={session?.user.image}
-                width={37}
-                height={37}
-                className="rounded-full"
-                alt="profile"
-              />
-            </Link>
+            <ProfileImage session={session} />
           </div>
         ) : (
           <>
@@ -75,13 +90,9 @@ const Nav = () => {
         <div className="sm:hidden flex relative">
           {isUserLoggedIn ? (
             <div className="flex">
-              <Image
-                src={session?.user.image}
-                width={37}
-                height={37}
-                className="rounded-full"
-                alt="profile"
-                onClick={() => setToggleDropdown((prev) => !prev)}
+              <ProfileImageSmall
+                session={session}
+                setToggleDropdown={setToggleDropdown}
               />
 
               {toggleDropdown && (
