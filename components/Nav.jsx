@@ -10,7 +10,9 @@ import { getProviders, signIn, signOut, useSession } from 'next-auth/react';
 
 import { useEffect, useState } from 'react';
 
-const Nav = () => {
+let Nav;
+
+Nav = () => {
   const { data: session } = useSession();
 
   const isUserLoggedIn = session?.user;
@@ -33,25 +35,55 @@ const Nav = () => {
 
   return (
     <nav className="flex-between w-full mb-16 pt-3">
-      <NavImageAndTitle />
+      <Link href="/" className="flex gap-2 flex-center">
+        <Image
+          // the src `/` directly points to the public folder , so
+          // /assets === public/assets/...
+          src="/assets/images/logo.svg"
+          alt="logo"
+          width={30}
+          height={30}
+          className="object-contain"
+        />
+        <p className="logo_text">PROMPTOPIA</p>
+      </Link>
       {/*desktop native  first component */}
       <div className="sm:flex hidden">
         {isUserLoggedIn ? (
           <div className="flex gap-3 md:gap-5">
             {/* Used to create a new post  */}
 
-            <CreatePost />
-            <SignOutLarge />
+            <Link href="/create-prompt" className="black_btn">
+              Create Post
+            </Link>
+            <button type="button" onClick={signOut} className="outline_btn">
+              Sign Out
+            </button>
 
             {/* We will use this to  show the profile picture of the logged in user  , clicking on which takes us to the profile page of the logged in user */}
 
-            <ProfileImage session={session} />
+            <Link href="/profile">
+              <Image
+                src={session?.user.image}
+                width={37}
+                height={37}
+                className="rounded-full"
+                alt="profile"
+              />
+            </Link>
           </div>
         ) : (
           <>
             {providers &&
               Object.values(providers).map((provider) => (
-                <SignIn provider={provider} />
+                <button
+                  type="button"
+                  key={provider.name}
+                  onClick={() => signIn(provider.id)}
+                  className="black_btn"
+                >
+                  SignIn
+                </button>
               ))}
           </>
         )}
@@ -61,13 +93,26 @@ const Nav = () => {
         <div className="sm:hidden flex relative">
           {isUserLoggedIn ? (
             <div className="flex">
-              <ProfileImage session={session} toggleDropdown={toggleDropdown} />
+              <Image
+                src={session?.user.image}
+                width={37}
+                height={37}
+                className="rounded-full"
+                alt="profile"
+                onClick={() => toggleDropdown((prev) => !prev)}
+              />
 
               {toggleDropdown && (
                 <div className="dropdown">
-                  <MyProfile setToggleDropdown={setToggleDropdown} />
-                  <CreatePrompt stToggleDropdown={setToggleDropdown} />
-                  <SignOut setToggleDropdown={setToggleDropdown} />
+                  <Link
+                    href="/profile"
+                    className="dropdown_link"
+                    onClick={() => setToggleDropdown(false)}
+                  >
+                    My Profile
+                  </Link>
+                  <CreatePromptButton stToggleDropdown={setToggleDropdown} />
+                  <SignOutButton setToggleDropdown={setToggleDropdown} />
                 </div>
               )}
             </div>
@@ -93,8 +138,7 @@ const Nav = () => {
 };
 
 export default Nav;
-
-function CreatePrompt({ setToggleDropdown }) {
+function CreatePromptButton({ setToggleDropdown }) {
   return (
     <Link
       href="/create-prompt"
@@ -108,7 +152,7 @@ function CreatePrompt({ setToggleDropdown }) {
   );
 }
 
-function SignOut({ setToggleDropdown }) {
+function SignOutButton({ setToggleDropdown }) {
   return (
     <button
       type="button"
@@ -122,63 +166,3 @@ function SignOut({ setToggleDropdown }) {
     </button>
   );
 }
-const MyProfile = ({ setToggleDropdown }) => (
-  <Link
-    href="/profile"
-    className="dropdown_link"
-    onClick={() => setToggleDropdown(false)}
-  >
-    My Profile
-  </Link>
-);
-
-const SignIn = ({ provider }) => (
-  <button
-    type="button"
-    key={provider.name}
-    onClick={() => signIn(provider.id)}
-    className="black_btn"
-  >
-    SignIn
-  </button>
-);
-
-const ProfileImage = ({ session, toggleDropdown }) => (
-  <Link href="/profile">
-    <Image
-      src={session?.user.image}
-      width={37}
-      height={37}
-      onClick={() => toggleDropdown((prev) => !prev)}
-      className="rounded-full"
-      alt="profile"
-    />
-  </Link>
-);
-
-const CreatePost = () => (
-  <Link href="/create-prompt" className="black_btn">
-    Create Post
-  </Link>
-);
-
-const SignOutLarge = () => (
-  <button type="button" onClick={signOut} className="outline_btn">
-    Sign Out
-  </button>
-);
-
-const NavImageAndTitle = () => (
-  <Link href="/" className="flex gap-2 flex-center">
-    <Image
-      // the src `/` directly points to the public folder , so
-      // /assets === public/assets/...
-      src="/assets/images/logo.svg"
-      alt="logo"
-      width={30}
-      height={30}
-      className="object-contain"
-    />
-    <p className="logo_text">PROMPTOPIA</p>
-  </Link>
-);
