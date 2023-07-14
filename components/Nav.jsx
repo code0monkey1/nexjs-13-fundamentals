@@ -66,11 +66,7 @@ const Nav = () => {
               {/* Only Shows when toggleDropdown is true */}
 
               {toggleDropdown && (
-                <div className="dropdown">
-                  <ProfilePopup setToggleDropdown={setToggleDropdown} />
-                  <CreatePromptPopup stToggleDropdown={setToggleDropdown} />
-                  <SignOutPopup setToggleDropdown={setToggleDropdown} />
-                </div>
+                <DropDownMenu setToggleDropdown={setToggleDropdown} />
               )}
             </div>
           ) : (
@@ -181,4 +177,12 @@ const ProfileImage = ({ session }) => (
       alt="profile"
     />
   </Link>
+);
+
+const DropDownMenu = ({ setToggleDropdown }) => (
+  <div className="dropdown">
+    <ProfilePopup setToggleDropdown={setToggleDropdown} />
+    <CreatePromptPopup stToggleDropdown={setToggleDropdown} />
+    <SignOutPopup setToggleDropdown={setToggleDropdown} />
+  </div>
 );
