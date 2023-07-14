@@ -29,6 +29,13 @@ const Nav = () => {
     setUpProvider();
   }, []);
 
+  const SignInProvider = () =>
+    providers
+      ? Object.values(providers).map((provider) => (
+          <SignIn provider={provider} />
+        ))
+      : '';
+
   return (
     <nav className="flex-between w-full mb-16 pt-3">
       <Logo />
@@ -36,10 +43,8 @@ const Nav = () => {
       <div className="sm:flex hidden">
         {isUserLoggedIn ? (
           <UserActions session={session} />
-        ) : providers ? (
-          <SignInProvider />
         ) : (
-          ''
+          <SignInProvider />
         )}
       </div>
       {/* Mobile View Nav*/}
@@ -58,10 +63,8 @@ const Nav = () => {
                 <DropDownMenu setToggleDropdown={setToggleDropdown} />
               )}
             </div>
-          ) : providers ? (
-            <SignInProvider />
           ) : (
-            ''
+            <SignInProvider />
           )}
         </div>
       </>
