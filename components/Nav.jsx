@@ -10,19 +10,10 @@ import { getProviders, signIn, signOut, useSession } from 'next-auth/react';
 
 import { useEffect, useState } from 'react';
 
-const Logo = () => (
-  <Link href="/" className="flex gap-2 flex-center">
-    <Image
-      // the src `/` directly points to the public folder , so
-      // /assets === public/assets/...
-      src="/assets/images/logo.svg"
-      alt="logo"
-      width={30}
-      height={30}
-      className="object-contain"
-    />
-    <p className="logo_text">PROMPTOPIA</p>
-  </Link>
+const SignOut = () => (
+  <button type="button" onClick={signOut} className="outline_btn">
+    Sign Out
+  </button>
 );
 
 const Nav = () => {
@@ -55,12 +46,8 @@ const Nav = () => {
           <div className="flex gap-3 md:gap-5">
             {/* Used to create a new post  */}
 
-            <Link href="/create-prompt" className="black_btn">
-              Create Post
-            </Link>
-            <button type="button" onClick={signOut} className="outline_btn">
-              Sign Out
-            </button>
+            <CreatePost />
+            <SignOut />
 
             {/* We will use this to  show the profile picture of the logged in user  , clicking on which takes us to the profile page of the logged in user */}
 
@@ -167,5 +154,25 @@ const ProfilePopup = ({ setToggleDropdown }) => (
     onClick={() => setToggleDropdown(false)}
   >
     My Profile
+  </Link>
+);
+const Logo = () => (
+  <Link href="/" className="flex gap-2 flex-center">
+    <Image
+      // the src `/` directly points to the public folder , so
+      // /assets === public/assets/...
+      src="/assets/images/logo.svg"
+      alt="logo"
+      width={30}
+      height={30}
+      className="object-contain"
+    />
+    <p className="logo_text">PROMPTOPIA</p>
+  </Link>
+);
+
+const CreatePost = () => (
+  <Link href="/create-prompt" className="black_btn">
+    Create Post
   </Link>
 );
