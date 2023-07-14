@@ -46,7 +46,6 @@ const Nav = () => {
         />
         <p className="logo_text">PROMPTOPIA</p>
       </Link>
-
       {/*desktop native  first component */}
       <div className="sm:flex hidden">
         {isUserLoggedIn ? (
@@ -89,49 +88,50 @@ const Nav = () => {
         )}
       </div>
       {/* Mobile View Nav*/}
+      <>
+        <div className="sm:hidden flex relative">
+          {isUserLoggedIn ? (
+            <div className="flex">
+              <Image
+                src={session?.user.image}
+                width={37}
+                height={37}
+                className="rounded-full"
+                alt="profile"
+                onClick={() => toggleDropdown((prev) => !prev)}
+              />
 
-      <div className="sm:hidden flex relative">
-        {isUserLoggedIn ? (
-          <div className="flex">
-            <Image
-              src={session?.user.image}
-              width={37}
-              height={37}
-              className="rounded-full"
-              alt="profile"
-              onClick={() => toggleDropdown((prev) => !prev)}
-            />
-
-            {toggleDropdown && (
-              <div className="dropdown">
-                <Link
-                  href="/profile"
-                  className="dropdown_link"
-                  onClick={() => setToggleDropdown(false)}
-                >
-                  My Profile
-                </Link>
-                <CreatePromptButton stToggleDropdown={setToggleDropdown} />
-                <SignOutButton setToggleDropdown={setToggleDropdown} />
-              </div>
-            )}
-          </div>
-        ) : (
-          <>
-            {providers &&
-              Object.values(providers).map((provider) => (
-                <button
-                  type="button"
-                  key={provider.name}
-                  onClick={() => {}}
-                  className="black_btn"
-                >
-                  SignIn
-                </button>
-              ))}
-          </>
-        )}
-      </div>
+              {toggleDropdown && (
+                <div className="dropdown">
+                  <Link
+                    href="/profile"
+                    className="dropdown_link"
+                    onClick={() => setToggleDropdown(false)}
+                  >
+                    My Profile
+                  </Link>
+                  <CreatePromptButton stToggleDropdown={setToggleDropdown} />
+                  <SignOutButton setToggleDropdown={setToggleDropdown} />
+                </div>
+              )}
+            </div>
+          ) : (
+            <>
+              {providers &&
+                Object.values(providers).map((provider) => (
+                  <button
+                    type="button"
+                    key={provider.name}
+                    onClick={() => {}}
+                    className="black_btn"
+                  >
+                    SignIn
+                  </button>
+                ))}
+            </>
+          )}
+        </div>
+      </>
     </nav>
   );
 };
