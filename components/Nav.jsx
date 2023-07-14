@@ -114,7 +114,7 @@ Nav = () => {
 
               {toggleDropdown && (
                 <div className="dropdown">
-                  <NewComponent setToggleDropdown={setToggleDropdown} />
+                  <MyProfile setToggleDropdown={setToggleDropdown} />
                   <CreatePromptButton stToggleDropdown={setToggleDropdown} />
                   <SignOutButton setToggleDropdown={setToggleDropdown} />
                 </div>
