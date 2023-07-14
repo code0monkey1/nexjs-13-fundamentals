@@ -1,5 +1,4 @@
 'use client';
-
 // used for image optimization
 import Image from 'next/image';
 
@@ -11,7 +10,19 @@ import { getProviders, signIn, signOut, useSession } from 'next-auth/react';
 
 import { useEffect, useState } from 'react';
 
-const Nav = () => {
+let Nav;
+
+const MyProfile = ({ setToggleDropdown }) => (
+  <Link
+    href="/profile"
+    className="dropdown_link"
+    onClick={() => setToggleDropdown(false)}
+  >
+    My Profile
+  </Link>
+);
+
+Nav = () => {
   const { data: session } = useSession();
 
   const isUserLoggedIn = session?.user;
@@ -103,13 +114,7 @@ const Nav = () => {
 
               {toggleDropdown && (
                 <div className="dropdown">
-                  <Link
-                    href="/profile"
-                    className="dropdown_link"
-                    onClick={() => setToggleDropdown(false)}
-                  >
-                    My Profile
-                  </Link>
+                  <NewComponent setToggleDropdown={setToggleDropdown} />
                   <CreatePromptButton stToggleDropdown={setToggleDropdown} />
                   <SignOutButton setToggleDropdown={setToggleDropdown} />
                 </div>
