@@ -10,6 +10,15 @@ import { getProviders, signIn, signOut, useSession } from 'next-auth/react';
 
 import { useEffect, useState } from 'react';
 
+// const ProfileImage = ({ session, toggleDropdown }) => (<Image
+//   src={session?.user.image}
+//   width={37}
+//   height={37}
+//   className="rounded-full"
+//   alt="profile"
+//   onClick={() => toggleDropdown((prev) => !prev)}
+// />);
+
 const Nav = () => {
   const { data: session } = useSession();
 
@@ -61,14 +70,7 @@ const Nav = () => {
         <div className="sm:hidden flex relative">
           {isUserLoggedIn ? (
             <div className="flex">
-              <Image
-                src={session?.user.image}
-                width={37}
-                height={37}
-                className="rounded-full"
-                alt="profile"
-                onClick={() => toggleDropdown((prev) => !prev)}
-              />
+              <ProfileImage session={session} toggleDropdown={toggleDropdown} />
 
               {toggleDropdown && (
                 <div className="dropdown">
