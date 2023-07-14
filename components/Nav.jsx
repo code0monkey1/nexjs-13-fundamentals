@@ -38,7 +38,6 @@ const Nav = () => {
         <Image
           // the src `/` directly points to the public folder , so
           // /assets === public/assets/...
-
           src="/assets/images/logo.svg"
           alt="logo"
           width={30}
