@@ -23,13 +23,15 @@ const Nav = () => {
     const setUpProvider = async () => {
       const response = await getProviders();
 
-      console.log('response', JSON.stringify(response, null, 2));
-
       setProviders(response);
     };
 
     setUpProvider();
   }, []);
+
+  const SignInProvider =
+    providers &&
+    Object.values(providers).map((provider) => <SignIn provider={provider} />);
 
   return (
     <nav className="flex-between w-full mb-16 pt-3">
@@ -45,12 +47,7 @@ const Nav = () => {
             <ProfileImage session={session} />
           </div>
         ) : (
-          <>
-            {providers &&
-              Object.values(providers).map((provider) => (
-                <SignIn provider={provider} />
-              ))}
-          </>
+          <>{SignInProvider}</>
         )}
       </div>
       {/* Mobile View Nav*/}
@@ -72,12 +69,7 @@ const Nav = () => {
               )}
             </div>
           ) : (
-            <>
-              {providers &&
-                Object.values(providers).map((provider) => (
-                  <SignIn provider={provider} />
-                ))}
-            </>
+            <>{SignInProvider}</>
           )}
         </div>
       </>
