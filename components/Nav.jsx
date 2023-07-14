@@ -10,30 +10,7 @@ import { getProviders, signIn, signOut, useSession } from 'next-auth/react';
 
 import { useEffect, useState } from 'react';
 
-let Nav;
-
-const MyProfile = ({ setToggleDropdown }) => (
-  <Link
-    href="/profile"
-    className="dropdown_link"
-    onClick={() => setToggleDropdown(false)}
-  >
-    My Profile
-  </Link>
-);
-
-const SignIn = ({ provider }) => (
-  <button
-    type="button"
-    key={provider.name}
-    onClick={() => signIn(provider.id)}
-    className="black_btn"
-  >
-    SignIn
-  </button>
-);
-
-Nav = () => {
+const Nav = () => {
   const { data: session } = useSession();
 
   const isUserLoggedIn = session?.user;
@@ -174,3 +151,23 @@ function SignOut({ setToggleDropdown }) {
     </button>
   );
 }
+const MyProfile = ({ setToggleDropdown }) => (
+  <Link
+    href="/profile"
+    className="dropdown_link"
+    onClick={() => setToggleDropdown(false)}
+  >
+    My Profile
+  </Link>
+);
+
+const SignIn = ({ provider }) => (
+  <button
+    type="button"
+    key={provider.name}
+    onClick={() => signIn(provider.id)}
+    className="black_btn"
+  >
+    SignIn
+  </button>
+);
