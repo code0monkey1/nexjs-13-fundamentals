@@ -22,10 +22,8 @@ const Nav = () => {
   useEffect(() => {
     const setUpProvider = async () => {
       const response = await getProviders();
-
       setProviders(response);
     };
-
     setUpProvider();
   }, []);
 
@@ -51,18 +49,11 @@ const Nav = () => {
       <>
         <div className="sm:hidden flex relative">
           {isUserLoggedIn ? (
-            <div className="flex">
-              <ProfileImageSmall
-                session={session}
-                setToggleDropdown={setToggleDropdown}
-              />
-
-              {/* Only Shows when toggleDropdown is true */}
-
-              {toggleDropdown && (
-                <DropDownMenu setToggleDropdown={setToggleDropdown} />
-              )}
-            </div>
+            <MobileUserActions
+              session={session}
+              setToggleDropdown={setToggleDropdown}
+              toggleDropdown={toggleDropdown}
+            />
           ) : (
             <SignInProvider />
           )}
@@ -188,5 +179,18 @@ const UserActions = ({ session }) => (
     <SignOut />
     {/* We will use this to  show the profile picture of the logged in user  , clicking on which takes us to the profile page of the logged in user */}
     <ProfileImage session={session} />
+  </div>
+);
+
+const MobileUserActions = ({ session, setToggleDropdown, toggleDropdown }) => (
+  <div className="flex">
+    <ProfileImageSmall
+      session={session}
+      setToggleDropdown={setToggleDropdown}
+    />
+
+    {/* Only Shows when toggleDropdown is true */}
+
+    {toggleDropdown && <DropDownMenu setToggleDropdown={setToggleDropdown} />}
   </div>
 );
