@@ -39,12 +39,9 @@ const Nav = () => {
         {isUserLoggedIn ? (
           <div className="flex gap-3 md:gap-5">
             {/* Used to create a new post  */}
-
             <CreatePost />
             <SignOut />
-
             {/* We will use this to  show the profile picture of the logged in user  , clicking on which takes us to the profile page of the logged in user */}
-
             <ProfileImage session={session} />
           </div>
         ) : (
@@ -89,6 +86,7 @@ const Nav = () => {
 };
 
 export default Nav;
+
 function CreatePromptPopup({ setToggleDropdown }) {
   return (
     <Link
