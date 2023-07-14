@@ -29,7 +29,7 @@ const Nav = () => {
     setUpProvider();
   }, []);
 
-  const LogInProvider = () =>
+  const SignInProvider = () =>
     providers ? (
       Object.values(providers).map((provider) => <SignIn provider={provider} />)
     ) : (
@@ -50,7 +50,7 @@ const Nav = () => {
             <ProfileImage session={session} />
           </div>
         ) : (
-          <LogInProvider />
+          <SignInProvider />
         )}
       </div>
       {/* Mobile View Nav*/}
@@ -74,7 +74,7 @@ const Nav = () => {
               )}
             </div>
           ) : (
-            <LogInProvider />
+            <SignInProvider />
           )}
         </div>
       </>
