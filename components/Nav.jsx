@@ -10,35 +10,6 @@ import { getProviders, signIn, signOut, useSession } from 'next-auth/react';
 
 import { useEffect, useState } from 'react';
 
-const SignOut = () => (
-  <button type="button" onClick={signOut} className="outline_btn">
-    Sign Out
-  </button>
-);
-
-const ProfileImageSmall = ({ session, setToggleDropdown }) => (
-  <Image
-    src={session?.user.image}
-    width={37}
-    height={37}
-    className="rounded-full"
-    alt="profile"
-    onClick={() => setToggleDropdown((prev) => !prev)}
-  />
-);
-
-const ProfileImage = ({ session }) => (
-  <Link href="/profile">
-    <Image
-      src={session?.user.image}
-      width={37}
-      height={37}
-      className="rounded-full"
-      alt="profile"
-    />
-  </Link>
-);
-
 const Nav = () => {
   const { data: session } = useSession();
 
@@ -185,5 +156,34 @@ const Logo = () => (
 const CreatePost = () => (
   <Link href="/create-prompt" className="black_btn">
     Create Post
+  </Link>
+);
+
+const SignOut = () => (
+  <button type="button" onClick={signOut} className="outline_btn">
+    Sign Out
+  </button>
+);
+
+const ProfileImageSmall = ({ session, setToggleDropdown }) => (
+  <Image
+    src={session?.user.image}
+    width={37}
+    height={37}
+    className="rounded-full"
+    alt="profile"
+    onClick={() => setToggleDropdown((prev) => !prev)}
+  />
+);
+
+const ProfileImage = ({ session }) => (
+  <Link href="/profile">
+    <Image
+      src={session?.user.image}
+      width={37}
+      height={37}
+      className="rounded-full"
+      alt="profile"
+    />
   </Link>
 );
