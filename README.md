@@ -282,3 +282,13 @@ The `Nav` component will be a client component , as we will be using `state hook
     > [Page for creating new prompt](./app/create-prompt/page.jsx)
 
 **After submitting the post , if the post request is successful , you're redirected to the home page where you can view your newly created prompt**
+
+---
+
+##### Feed Page :
+
+1. This is the page that displays all the created prompts
+
+   > [Feed Page](./components/Feed.jsx)
+
+1. Next, we'll create a new
