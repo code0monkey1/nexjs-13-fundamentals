@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import Prompt from '../../../models/prompt';
 import { connectToDb } from '../../../utils/database';
 
@@ -26,13 +27,14 @@ export const GET = async () => {
 };
 
 export const POST = async (req, { param }) => {
+  const router = useRouter();
   const data = await req.json();
 
   console.log('The params are', JSON.stringify(param));
 
   console.log('received data', JSON.stringify(data));
 
-  const query = req.query;
+  const query = router.query;
   const { page, limit } = query;
 
   console.log(page, limit);
