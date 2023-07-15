@@ -38,6 +38,7 @@
         ( you'll get the data at `http://localhost:3000/api/users`)
 
     - Automatic Code Splitting :
+
       - Code splitting is a technique of splitting large bundles of javascript code to small , more manageable bundles that are loaded in as and when needed .
 
       - Code splitting leads to quicker load times of an app , thereby optimizing the user experience
@@ -264,4 +265,10 @@ The `Nav` component will be a client component , as we will be using `state hook
 
 > [ End of Part 5 ]
 
+---
+
+> [ Part 6 ]
+
 ##### Creating Posts :
+
+> To copy text to the clipboard , you can use the following as is : `navigator.clipboard.writeText(textToSaveToClipboard)`
