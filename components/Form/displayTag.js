@@ -1,4 +1,4 @@
-const displayTag = (post, tagValue) => {
+const displayTag = ({ post, tagValue }) => {
   return {
     ...post,
     tag: tagValue,

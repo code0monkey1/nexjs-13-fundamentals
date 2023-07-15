@@ -48,7 +48,9 @@ const TagInput = ({ post, setPost }) => {
 
       <input
         value={post.tag}
-        onChange={(e) => setPost(displayTag(prompt, e.target.value))}
+        onChange={(e) =>
+          setPost(displayTag({ prompt, tagValue: e.target.value }))
+        }
         placeholder="#tag"
         required
         className="form_input"
