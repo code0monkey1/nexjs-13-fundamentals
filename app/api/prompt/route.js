@@ -25,4 +25,8 @@ export const GET = async () => {
   }
 };
 
-export const POST = async () => {};
+export const POST = async () => {
+  const data = await req.json();
+
+  return new Response(data);
+};
