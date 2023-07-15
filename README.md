@@ -275,7 +275,7 @@ The `Nav` component will be a client component , as we will be using `state hook
 
 1.  Create a new route for creating a new post :
 
-    > [Post Api for creating new prompt ](`./app/api/prompt/new/route.js`)
+    > [Post Api for creating new prompt ](./app/api/prompt/new/route.js)
 
 1.  Create the interface for submitting a new prompt :
 
