@@ -48,7 +48,7 @@ const TagInput = ({ post, setPost }) => {
 
       <input
         value={post.tag}
-        onChange={(e) => displayTag(prompt, e.target.value)}
+        onChange={(e) => setPost(displayTag(prompt, e.target.value))}
         placeholder="#tag"
         required
         className="form_input"
@@ -84,7 +84,9 @@ const PromptInput = ({ post, setPost }) => {
 
       <textarea
         value={post.prompt}
-        onChange={(e) => setPost(displayPrompt(post, e.target.value))}
+        onChange={(e) =>
+          setPost(displayPrompt({ post, promptValue: e.target.value }))
+        }
         placeholder="Write your prompt here..."
         required
         className="form_textarea"
