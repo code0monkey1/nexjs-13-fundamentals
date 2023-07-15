@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import Prompt from '../../../models/prompt';
 import { connectToDb } from '../../../utils/database';
 
