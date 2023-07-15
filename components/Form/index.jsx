@@ -87,16 +87,18 @@ const PromptInput = ({ post, setPost }) => {
 
       <textarea
         value={post.prompt}
-        onChange={(e) => {
-          setPost({
-            ...post,
-            prompt: e.target.value,
-          });
-        }}
+        onChange={(e) => setPost(displayPrompt(post, e.target.value))}
         placeholder="Write your prompt here..."
         required
         className="form_textarea"
       />
     </label>
   );
+};
+
+const displayPrompt = (post, promptValue) => {
+  return {
+    ...post,
+    prompt: promptValue,
+  };
 };
