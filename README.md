@@ -274,4 +274,8 @@ The `Nav` component will be a client component , as we will be using `state hook
 > To copy text to the clipboard , you can use the following as is : `navigator.clipboard.writeText(textToSaveToClipboard)`
 
 1.  Create a new route for creating a new post :
-1.  [ Api for creating new prompt ](`./app/api/prompt/new/`)
+
+    > [Post Api for creating new prompt ](`./app/api/prompt/new/`)
+
+1.  Create the interface for submitting a new prompt :
+    > [Page for creating new prompt](./app/create-prompt/page.jsx)
