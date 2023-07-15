@@ -25,8 +25,10 @@ export const GET = async () => {
   }
 };
 
-export const POST = async (req) => {
+export const POST = async (req, { param }) => {
   const data = await req.json();
+
+  console.log('The params are', JSON.stringify(param));
 
   console.log('received data', JSON.stringify(data));
 
