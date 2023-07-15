@@ -48,6 +48,8 @@ const CreatePrompt = () => {
         userId: session?.user.id,
       };
 
+      console.log('New Prompt', JSON.stringify(NewPrompt, null, 2));
+
       const response = await axios.post('/api/prompt/new', NewPrompt);
 
       if (response.status === 201) {
