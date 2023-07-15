@@ -28,6 +28,11 @@ const CreatePrompt = () => {
     tag: '',
   });
 
+  /* The `createPrompt` function is an asynchronous function that is triggered when the form is
+  submitted. It prevents the default form submission behavior, sets the `submitting` state to
+  `true`, and then tries to create a new prompt by making a POST request to the
+  `/api/prompt/new` endpoint with the `NewPrompt` object as the request body. */
+
   const createPrompt = async (e) => {
     console.log('create prompt triggered');
     e.preventDefault();
