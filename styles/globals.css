@@ -126,9 +126,6 @@
   @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
 }
 
-.prompt {
-  @apply max-width:13ch display:inline-block overflow:hidden;
-}
 /* Form Component */
 .form_textarea {
   @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-sm text-gray-500 outline-0;
