@@ -1,7 +1,5 @@
 import Link from 'next/link';
-import displayPrompt from './displayPrompt';
 import displaySubmitText from './displaySubmitText';
-import displayTag from './displayTag';
 
 const Form = ({ post, type, setPost, submitting, handleSubmit }) => {
   return (
@@ -48,9 +46,12 @@ const TagInput = ({ post, setPost }) => {
 
       <input
         value={post.tag}
-        onChange={(e) =>
-          setPost(displayTag({ prompt, tagValue: e.target.value }))
-        }
+        onChange={(e) => {
+          setPost({
+            ...post,
+            tag: e.target.value,
+          });
+        }}
         placeholder="#tag"
         required
         className="form_input"
@@ -86,9 +87,12 @@ const PromptInput = ({ post, setPost }) => {
 
       <textarea
         value={post.prompt}
-        onChange={(e) =>
-          setPost(displayPrompt({ post, promptValue: e.target.value }))
-        }
+        onChange={(e) => {
+          setPost({
+            ...post,
+            prompt: e.target.value,
+          });
+        }}
         placeholder="Write your prompt here..."
         required
         className="form_textarea"
