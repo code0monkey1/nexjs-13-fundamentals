@@ -5,4 +5,4 @@ const displayTag = (post, tagValue) => {
   };
 };
 
-export default displayPrompt;
+export default displayTag;

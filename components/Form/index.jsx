@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import displaySubmitText from './displaySubmitText';
-
 import displayPrompt from './displayPrompt';
+import displaySubmitText from './displaySubmitText';
+import displayTag from './displayTag';
+
 const Form = ({ post, type, setPost, submitting, handleSubmit }) => {
   return (
     <section className="w-full max-w-full flex-start flex-col">
@@ -47,12 +48,7 @@ const TagInput = ({ post, setPost }) => {
 
       <input
         value={post.tag}
-        onChange={(e) => {
-          setPost({
-            ...post,
-            tag: e.target.value,
-          });
-        }}
+        onChange={(e) => displayTag(prompt, e.target.value)}
         placeholder="#tag"
         required
         className="form_input"
