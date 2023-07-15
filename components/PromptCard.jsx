@@ -3,7 +3,7 @@ import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
-import displayCopied from './displayCopied';
+import { displayCopied } from './Prompt';
 
 /* The `PromptCard` component is a React component that renders a card displaying information
 about a prompt. It receives props such as `post`, `handleTagClick`, `handleEdit`, and
