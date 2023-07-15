@@ -2,11 +2,9 @@ import Prompt from '../../../../../models/prompt';
 
 import { connectToDb } from '../../../../../utils/database';
 
-export const GET = async (request, { params }) => {
+export const GET = async (req, { params }) => {
   // the params will have the `id` property , as this object has all the optional params we pass in a url
-  console.log('The request is ', JSON.stringify(request.json()));
 
-  console.log('The params are', JSON.stringify(params, null, 2));
   try {
     await connectToDb();
 
