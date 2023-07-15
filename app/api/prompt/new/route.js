@@ -7,6 +7,8 @@ export async function POST(req) {
 
     const { userId, prompt, tag } = await req.json();
 
+    console.log('userId', userId, 'prompt', prompt, 'tag', tag);
+
     await connectToDb();
 
     const newPrompt = new Prompt({
