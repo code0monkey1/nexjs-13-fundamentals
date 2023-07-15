@@ -25,8 +25,10 @@ export const GET = async () => {
   }
 };
 
-export const POST = async () => {
+export const POST = async (req) => {
   const data = await req.json();
 
-  return new Response(data);
+  console.log('received data', JSON.stringify(data));
+
+  return new Response(JSON.stringify(data));
 };
