@@ -24,7 +24,7 @@ const PromptCard = ({
     setTimeout(() => setCopied(''), 3000);
   };
   return (
-    <div className="prompt_card">
+    <div className="prompt_card ">
       <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
         <Image
           src={post.creator.image}
@@ -55,10 +55,7 @@ const PromptCard = ({
           />
         </div>
       </div>
-      <p className="my-4 font-satoshi text-sm text-gray-700 text-ellipsis">
-        {' '}
-        {post.prompt}
-      </p>
+      <p className="my-4 font-satoshi text-sm text-gray-700 "> {post.prompt}</p>
       <p
         onClick={() => handleTagClick && handleTagClick(post.tag)}
         className="font-inter text-sm blue_gradient cursor-pointer"
