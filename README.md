@@ -280,3 +280,5 @@ The `Nav` component will be a client component , as we will be using `state hook
 1.  Create the interface for submitting a new prompt :
 
     > [Page for creating new prompt](./app/create-prompt/page.jsx)
+
+**After submitting the post , if the post request is successful , you're redirected to the home page where you can view your newly created prompt**
