@@ -24,3 +24,5 @@ export const GET = async () => {
     return new Response('Failed to fetch Prompts : ' + e, { status: 500 });
   }
 };
+
+export const POST = async () => {};
