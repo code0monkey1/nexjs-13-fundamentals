@@ -32,5 +32,7 @@ export const POST = async (req, { param }) => {
 
   console.log('received data', JSON.stringify(data));
 
+  console.log('The query is', JSON.stringify(req.query));
+
   return new Response(JSON.stringify(data));
 };
