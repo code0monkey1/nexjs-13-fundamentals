@@ -291,4 +291,5 @@ The `Nav` component will be a client component , as we will be using `state hook
 
    > [Feed Page](./components/Feed.jsx)
 
-1. Next, we'll create a new
+1. Next, we'll create a new `Get` end point to retrieve all posts
+   > [ Get Prompts ](./app/api/prompt/route.js)
