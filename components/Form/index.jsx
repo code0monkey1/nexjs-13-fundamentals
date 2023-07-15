@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import displaySubmitText from './displaySubmitText';
 
+import displayPrompt from './displayPrompt';
 const Form = ({ post, type, setPost, submitting, handleSubmit }) => {
   return (
     <section className="w-full max-w-full flex-start flex-col">
@@ -94,11 +95,4 @@ const PromptInput = ({ post, setPost }) => {
       />
     </label>
   );
-};
-
-const displayPrompt = (post, promptValue) => {
-  return {
-    ...post,
-    prompt: promptValue,
-  };
 };
