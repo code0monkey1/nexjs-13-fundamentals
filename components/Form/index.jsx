@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import displaySubmitText from './displaySubmitText';
 
 const Form = ({ post, type, setPost, submitting, handleSubmit }) => {
   return (
@@ -71,7 +72,7 @@ const Submit_Cancel = ({ submitting, type }) => {
         disabled={submitting}
         className="px-5 py-1.5 rounded-full text-sm bg-primary-orange text-white"
       >
-        {submitting ? `${type}...` : `${type}`}
+        {displaySubmitText(submitting, type)}
       </button>
     </div>
   );
