@@ -24,17 +24,3 @@ export const GET = async () => {
     return new Response('Failed to fetch Prompts : ' + e, { status: 500 });
   }
 };
-
-export const POST = async (req, { param }) => {
-  const data = await req.json();
-
-  console.log('The params are', JSON.stringify(param));
-
-  console.log('received data', JSON.stringify(data));
-
-  const { page, limit } = query;
-
-  console.log(page, limit);
-
-  return new Response(JSON.stringify(data));
-};
