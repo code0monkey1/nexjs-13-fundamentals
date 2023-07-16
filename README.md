@@ -301,3 +301,5 @@ The `Nav` component will be a client component , as we will be using `state hook
 > [Part 7]
 
 ##### Profile Page :
+
+**The profile page should show only the prompts created by the current use , and should give the ability to `edit` or `delete` those prompts at will**
