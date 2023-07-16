@@ -15,7 +15,12 @@ export const PATCH = async (req, { params }) => {
       return new Response('No prompt found', { status: 404 });
     }
 
-    return new Response(JSON.stringify(prompt), { status: 200 });
+    promptToUpdate.prompt = prompt;
+    promptToUpdate.tag = tag;
+
+    const updatedPrompt = await promptToUpdate.save();
+
+    return new Response(JSON.stringify(updatedPrompt), { status: 200 });
   } catch (e) {
     return new Response('Failed to fetch Prompts : ' + e, { status: 500 });
   }
