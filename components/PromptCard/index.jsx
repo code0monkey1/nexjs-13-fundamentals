@@ -59,6 +59,8 @@ const PromptCard = ({
       >
         #{post.tag}
       </p>
+
+      {/* Display Delete or edit button  subjected to the person being validated to edit or delete prompt*/}
     </div>
   );
 };
