@@ -293,3 +293,11 @@ The `Nav` component will be a client component , as we will be using `state hook
 
 1. Next, we'll create a new `Get` end point to retrieve all posts
    > [ Get Prompts ](./app/api/prompt/route.js)
+
+> [End Part 6]
+
+---
+
+> [Part 7]
+
+##### Profile Page :
