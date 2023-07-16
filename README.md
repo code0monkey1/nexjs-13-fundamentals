@@ -309,3 +309,5 @@ The `Nav` component will be a client component , as we will be using `state hook
     > [User Posts Route](/app/api/users/%5Bid%5D/posts/route.js)
 
     _the params will have the `id` property , as this object has all the optional params we pass in a url_
+1. The Profile component dynamically renders the user data
+   > [Profile Component](/components/Profile/index.jsx)
