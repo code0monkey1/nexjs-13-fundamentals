@@ -44,12 +44,12 @@ const UpdatePrompt = () => {
     setSubmitting(true);
 
     try {
-      console.log('Updated Prompt', JSON.stringify(NewPrompt, null, 2));
+      console.log('Updated Prompt', JSON.stringify(post, null, 2));
 
-      const response = await axios.update(`/api/prompt/${promptId}`, NewPrompt);
+      const response = await axios.update(`/api/prompt/${promptId}`, post);
 
       if (response.status === 201) {
-        router.push('/');
+        router.push('/profile');
       }
     } catch (e) {
       console.error('Error: ' + e);
