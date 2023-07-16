@@ -29,6 +29,10 @@ const MyProfile = () => {
     if (session?.user.id) fetchPosts();
   }, [session?.user.id]);
 
+  /* The `handleEdit` function is responsible for handling the editing of a post. When called, it
+ navigates the user to the update prompt page for the specific post that is being edited. It uses
+ the `router.push` function from the `next/navigation` module to navigate to the update prompt page
+ with the post's ID as a query parameter. */
   const handleEdit = (post) => {
     router.push(`/update-prompt?id=${post._id}`);
   };
