@@ -36,13 +36,9 @@ export const DELETE = async (req) => {
     populate the `creator` field of each prompt with the corresponding user object. The result of
     the query is then assigned to the `prompts` variable. */
 
-    const prompt = await Prompt.findByIdAndRemove(params.id);
+    await Prompt.findByIdAndRemove(params.id);
 
-    if (!prompt) {
-      return new Response('No prompt found', { status: 404 });
-    }
-
-    return new Response(JSON.stringify(prompt), { status: 200 });
+    return new Response('prompt deleted successfully', { status: 200 });
   } catch (e) {
     return new Response('Failed to fetch Prompts : ' + e, { status: 500 });
   }
