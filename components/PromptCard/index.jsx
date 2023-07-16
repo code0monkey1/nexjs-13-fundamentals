@@ -85,7 +85,7 @@ const PromptCard = ({
 
 export default PromptCard;
 
-const EditOrDelete = ({ handleEdit }) => {
+const EditOrDelete = ({ handleEdit, handleDelete }) => {
   return (
     <div className="mt-5 flex-center gap-4  border-t border-gray-100 pt-3">
       <p
@@ -94,7 +94,12 @@ const EditOrDelete = ({ handleEdit }) => {
       >
         Edit
       </p>
-      <p></p>
+      <p
+        className="font-inter text-sm orange_gradient cursor-pointer"
+        onClick={handleDelete}
+      >
+        Delete
+      </p>
     </div>
   );
 };
