@@ -31,17 +31,6 @@ const PromptCard = ({
     setTimeout(() => setCopied(''), 3000);
   };
 
-  (async () => {
-    console.log(
-      'sessionid',
-      await session?.user.id,
-      'creatorId',
-      await post.creator._id,
-      'pathName',
-      pathName
-    );
-  })();
-
   const isUserOnProfilePage =
     session?.user.id === post.creator._id && pathName === '/profile';
 
@@ -83,7 +72,7 @@ const PromptCard = ({
 
       {/* Display Delete or edit button  subjected to the person being validated to edit or delete prompt*/}
 
-      {userOnProfile && <EditOrDelete />}
+      {isUserOnProfilePage ? <EditOrDelete /> : ''}
     </div>
   );
 };
