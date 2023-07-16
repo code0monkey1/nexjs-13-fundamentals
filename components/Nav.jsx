@@ -114,6 +114,7 @@ const ProfilePopup = ({ setToggleDropdown }) => (
     My Profile
   </Link>
 );
+
 const Logo = () => (
   <Link href="/" className="flex gap-2 flex-center">
     <Image
