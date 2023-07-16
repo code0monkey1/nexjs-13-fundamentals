@@ -304,5 +304,8 @@ The `Nav` component will be a client component , as we will be using `state hook
 
 **The profile page should show only the prompts created by the current use , and should give the ability to `edit` or `delete` those prompts**
 
-1. We create a new api endpoint `users/[id]/posts` to get the posts of a specific user wit the given `id`
-   > [User Posts Route](/app/api/users/%5Bid%5D/posts/route.js)
+1.  We create a new api endpoint `users/[id]/posts` to get the posts of a specific user wit the given `id`
+
+    > [User Posts Route](/app/api/users/%5Bid%5D/posts/route.js)
+
+    _the params will have the `id` property , as this object has all the optional params we pass in a url_
