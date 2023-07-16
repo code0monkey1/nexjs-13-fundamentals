@@ -20,6 +20,10 @@ export const GET = async (req, { params }) => {
 
     const prompt = await Prompt.findById(params.id).populate('creator');
 
+    if (!prompt) {
+      return new Response('No prompt found', { status: 404 });
+    }
+
     return new Response(JSON.stringify(prompt), { status: 200 });
   } catch (e) {
     return new Response('Failed to fetch Prompts : ' + e, { status: 500 });
