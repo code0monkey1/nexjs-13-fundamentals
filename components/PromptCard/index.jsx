@@ -74,15 +74,27 @@ const PromptCard = ({
         subjected to the person being validated 
         to edit or delete prompt*/}
 
-      {isUserOnProfilePage ? <EditOrDelete /> : ''}
+      {isUserOnProfilePage ? (
+        <EditOrDelete handleEdit={handleEdit} handleDelete={handleDelete} />
+      ) : (
+        ''
+      )}
     </div>
   );
 };
 
 export default PromptCard;
 
-const EditOrDelete = () => {
+const EditOrDelete = ({ handleEdit }) => {
   return (
-    <div className="mt-5 flex-center gap-4  border-t border-gray-100 pt-3"></div>
+    <div className="mt-5 flex-center gap-4  border-t border-gray-100 pt-3">
+      <p
+        className="font-inter text-sm green_gradient cursor-pointer"
+        onClick={handleEdit}
+      >
+        Edit
+      </p>
+      <p></p>
+    </div>
   );
 };
