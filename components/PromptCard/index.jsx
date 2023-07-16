@@ -15,6 +15,8 @@ const PromptCard = ({
 }) => {
   const [copied, setCopied] = useState('');
 
+  const { data: session } = useSession();
+
   const handleCopy = () => {
     setCopied(post.prompt);
 
@@ -62,7 +64,9 @@ const PromptCard = ({
 
       {/* Display Delete or edit button  subjected to the person being validated to edit or delete prompt*/}
 
-      {<EditOrDelete />}
+      {session?.user.id === post.creator.id && pathName === '/profile' && (
+        <EditOrDelete />
+      )}
     </div>
   );
 };
