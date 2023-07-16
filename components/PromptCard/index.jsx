@@ -48,12 +48,7 @@ const PromptCard = ({
             width={20}
             height={20}
             alt="copy_image"
-            src={displayCopied({ copied: copied, prompt: post.prompt })}
-            // src={
-            //   copied === post.prompt
-            //     ? '/assets/icons/tick.svg'
-            //     : '/assets/icons/copy.svg'
-            // }
+            src={displayCopied({ copied, prompt: post.prompt })}
           />
         </div>
       </div>
