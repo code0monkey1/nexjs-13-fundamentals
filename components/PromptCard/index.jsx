@@ -74,5 +74,7 @@ const PromptCard = ({
 export default PromptCard;
 
 const EditOrDelete = () => {
-  <></>;
+  <>
+    <h1>Editor Showing</h1>
+  </>;
 };
