@@ -14,6 +14,8 @@ const MyProfile = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
+      // We search for posts by the specific user logged in
+
       const response = await axios.get(`/api/users/${session?.user.id}/posts`);
       const data = response.data;
 
