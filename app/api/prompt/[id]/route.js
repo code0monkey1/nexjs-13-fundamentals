@@ -1,6 +1,8 @@
 export const PATCH = async (req, { params }) => {
   const { prompt, tag } = await req.json();
 
+  console.log('Updating route', 'prompt', prompt, 'tag', tag);
+
   try {
     await connectToDb();
 
@@ -18,7 +20,7 @@ export const PATCH = async (req, { params }) => {
     existingPrompt.prompt = prompt;
     existingPrompt.tag = tag;
 
-    await promptToUpdate.save();
+    await existingPrompt.save();
 
     return new Response(JSON.stringify(existingPrompt), { status: 200 });
   } catch (e) {
