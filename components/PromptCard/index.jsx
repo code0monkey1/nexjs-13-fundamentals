@@ -17,6 +17,8 @@ const PromptCard = ({
 
   const { data: session } = useSession();
 
+  const pathName = usePathname();
+
   const handleCopy = () => {
     setCopied(post.prompt);
 
