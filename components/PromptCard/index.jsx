@@ -61,8 +61,14 @@ const PromptCard = ({
       </p>
 
       {/* Display Delete or edit button  subjected to the person being validated to edit or delete prompt*/}
+
+      {<EditOrDelete />}
     </div>
   );
 };
 
 export default PromptCard;
+
+const EditOrDelete = () => {
+  <></>;
+};
