@@ -1,4 +1,4 @@
-const displaySubmitText = (submitting, type) => {
+const displaySubmitText = ({ submitting, type }) => {
   return submitting ? `${type}...` : `${type}`;
 };
 

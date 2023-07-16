@@ -72,7 +72,7 @@ const Submit_Cancel = ({ submitting, type }) => {
         disabled={submitting}
         className="px-5 py-1.5 rounded-full text-sm bg-primary-orange text-white"
       >
-        {displaySubmitText(submitting, type)}
+        {displaySubmitText({ submitting, type })}
       </button>
     </div>
   );
