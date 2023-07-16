@@ -46,9 +46,9 @@ const UpdatePrompt = () => {
     try {
       console.log('Updated Prompt', JSON.stringify(post, null, 2));
 
-      const response = await axios.update(`/api/prompt/${promptId}`, post);
+      const response = await axios.patch(`/api/prompt/${promptId}`, post);
 
-      if (response.status === 201) {
+      if (response.status === 200) {
         router.push('/profile');
       }
     } catch (e) {
