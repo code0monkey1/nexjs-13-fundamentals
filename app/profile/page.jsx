@@ -50,6 +50,8 @@ const MyProfile = () => {
       try {
         await axios.delete(`/api/prompt/${post._id.toString()}`);
 
+        console.log('deleting post');
+
         const filteredPosts = myPosts.filter((item) => item._id !== post._id);
 
         setMyPosts(filteredPosts);
