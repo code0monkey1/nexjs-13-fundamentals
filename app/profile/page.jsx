@@ -1,5 +1,6 @@
 'use client';
 
+import axios from 'axios';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -13,8 +14,8 @@ const MyProfile = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch(`/api/users/${session?.user.id}/posts`);
-      const data = await response.json();
+      const response = await axios.get(`/api/users/${session?.user.id}/posts`);
+      const data = await response.data;
 
       setMyPosts(data);
     };
