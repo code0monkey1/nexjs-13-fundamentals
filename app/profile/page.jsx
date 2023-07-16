@@ -38,9 +38,7 @@ const MyProfile = () => {
 
     if (hasConfirmed) {
       try {
-        await fetch(`/api/prompt/${post._id.toString()}`, {
-          method: 'DELETE',
-        });
+        await axios.delete(`/api/prompt/${post._id.toString()}`);
 
         const filteredPosts = myPosts.filter((item) => item._id !== post._id);
 
