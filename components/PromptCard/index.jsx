@@ -36,7 +36,7 @@ const PromptCard = ({
       'sessionid',
       await session?.user.id,
       'creatorId',
-      await post.creator.id,
+      await post.creator._id,
       'pathName',
       pathName
     );
@@ -80,10 +80,8 @@ const PromptCard = ({
 
       {/* Display Delete or edit button  subjected to the person being validated to edit or delete prompt*/}
 
-      {session?.user.id === post.creator.id && pathName === '/profile' ? (
+      {session?.user.id === post.creator._id && pathName === '/profile' && (
         <EditOrDelete />
-      ) : (
-        <div>Not Editable</div>
       )}
     </div>
   );
