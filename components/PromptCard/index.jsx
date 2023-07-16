@@ -15,8 +15,10 @@ const PromptCard = ({
 }) => {
   const [copied, setCopied] = useState('');
 
+  // to get logged in user credentials
   const { data: session } = useSession();
 
+  // to get the current path
   const pathName = usePathname();
 
   const handleCopy = () => {
@@ -28,6 +30,7 @@ const PromptCard = ({
     // to change the copied icon back from ticked
     setTimeout(() => setCopied(''), 3000);
   };
+
   return (
     <div className="prompt_card ">
       <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
@@ -66,8 +69,10 @@ const PromptCard = ({
 
       {/* Display Delete or edit button  subjected to the person being validated to edit or delete prompt*/}
 
-      {session?.user.id === post.creator.id && pathName === '/profile' && (
+      {session?.user.id === post.creator.id && pathName === '/profile' ? (
         <EditOrDelete />
+      ) : (
+        <div>Not Editable</div>
       )}
     </div>
   );
@@ -76,7 +81,9 @@ const PromptCard = ({
 export default PromptCard;
 
 const EditOrDelete = () => {
-  <>
-    <h1>Editor Showing</h1>
-  </>;
+  return (
+    <>
+      <h1>Editor Showing</h1>
+    </>
+  );
 };
