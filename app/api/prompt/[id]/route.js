@@ -40,7 +40,7 @@ export const DELETE = async (req) => {
 
     return new Response('prompt deleted successfully', { status: 200 });
   } catch (e) {
-    return new Response('Failed to fetch Prompts : ' + e, { status: 500 });
+    return new Response('Failed to delete Prompt : ' + e, { status: 500 });
   }
 };
 
