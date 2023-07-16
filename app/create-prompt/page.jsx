@@ -52,7 +52,7 @@ const CreatePrompt = () => {
 
       const response = await axios.post('/api/prompt/new', NewPrompt);
 
-      if (response.status === 201) {
+      if (response.status === 200) {
         router.push('/');
       }
     } catch (e) {
