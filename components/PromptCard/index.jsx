@@ -4,6 +4,7 @@ import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
+import displayCopied from './displayCopied';
 
 const PromptCard = ({
   key,
@@ -47,11 +48,12 @@ const PromptCard = ({
             width={20}
             height={20}
             alt="copy_image"
-            src={
-              copied === post.prompt
-                ? '/assets/icons/tick.svg'
-                : '/assets/icons/copy.svg'
-            }
+            src={displayCopied({ copied: copied, prompt: post.prompt })}
+            // src={
+            //   copied === post.prompt
+            //     ? '/assets/icons/tick.svg'
+            //     : '/assets/icons/copy.svg'
+            // }
           />
         </div>
       </div>
