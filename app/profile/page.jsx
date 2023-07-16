@@ -6,6 +6,10 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Profile from '../../components/Profile';
 
+/* `const MyProfile` is a functional component in JavaScript React. It is responsible for rendering
+the user's profile page. It uses various hooks and functions to fetch and display the user's posts,
+handle editing and deleting of posts, and pass the necessary data and functions to the `Profile`
+component for rendering. */
 const MyProfile = () => {
   const router = useRouter();
   const { data: session } = useSession();
