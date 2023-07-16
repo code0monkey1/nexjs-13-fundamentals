@@ -26,7 +26,7 @@ export const PATCH = async (req, { params }) => {
   }
 };
 
-export const DELETE = async (req) => {
+export const DELETE = async (req, { params }) => {
   try {
     await connectToDb();
 
