@@ -11,8 +11,6 @@ import { useEffect, useState } from 'react';
 
 const UpdatePrompt = () => {
   // we need to get the previous data from the saved prompt
-  const { data: session } = useSession();
-
   // this is how we extract the search params from url in next
   const searchParams = useSearchParams();
 
@@ -27,7 +25,17 @@ const UpdatePrompt = () => {
     tag: '',
   });
 
-  useEffect(() => {}, [promptId]);
+  useEffect(() => {
+    const retrieveStoredPost = async () => {
+      const response = await axios.get(`/api/prompt/${promptId}`);
+
+      const savedPost = await response.data;
+
+      setPost(savedPost);
+    };
+
+    retrieveStoredPost();
+  }, [promptId]);
 
   const updatePrompt = async (e) => {
     console.log('update prompt triggered');
