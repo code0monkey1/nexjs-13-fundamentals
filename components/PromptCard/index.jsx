@@ -36,7 +36,7 @@ const PromptCard = ({
       'sessionid',
       await session?.user.id,
       'creatorId',
-      post.creator.id,
+      await post.creator.id,
       'pathName',
       pathName
     );
