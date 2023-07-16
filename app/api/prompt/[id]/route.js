@@ -18,7 +18,7 @@ export const GET = async (req, { params }) => {
     populate the `creator` field of each prompt with the corresponding user object. The result of
     the query is then assigned to the `prompts` variable. */
 
-    const prompts = await Prompt.find({ creator: params.id }).populate(
+    const prompts = await Prompt.findById({ id: params.id }).populate(
       'creator'
     );
 
