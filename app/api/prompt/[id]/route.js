@@ -1,4 +1,4 @@
-export const PATCH = async (req) => {
+export const PATCH = async (req, { params }) => {
   const { prompt, tag } = await req.json();
 
   try {
@@ -9,10 +9,9 @@ export const PATCH = async (req) => {
     `creator` property matching the `params.id` value. The `populate('creator')` method is used to
     populate the `creator` field of each prompt with the corresponding user object. The result of
     the query is then assigned to the `prompts` variable. */
+    const promptToUpdate = await Prompt.findById(params.id);
 
-    const updatedPrompt = await Prompt.updateOne(params.id).populate('creator');
-
-    if (!updatedPrompt) {
+    if (!promptToUpdate) {
       return new Response('No prompt found', { status: 404 });
     }
 
@@ -40,7 +39,7 @@ export const GET = async (req, { params }) => {
     populate the `creator` field of each prompt with the corresponding user object. The result of
     the query is then assigned to the `prompts` variable. */
 
-    const prompt = await Prompt.findById(params.id).populate('creator');
+    const prompt = await Prompt.findById(params.id);
 
     if (!prompt) {
       return new Response('No prompt found', { status: 404 });
