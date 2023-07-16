@@ -42,6 +42,9 @@ const PromptCard = ({
     );
   })();
 
+  const isUserOnProfilePage =
+    session?.user.id === post.creator._id && pathName === '/profile';
+
   return (
     <div className="prompt_card ">
       <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
@@ -80,9 +83,7 @@ const PromptCard = ({
 
       {/* Display Delete or edit button  subjected to the person being validated to edit or delete prompt*/}
 
-      {session?.user.id === post.creator._id && pathName === '/profile' && (
-        <EditOrDelete />
-      )}
+      {userOnProfile && <EditOrDelete />}
     </div>
   );
 };
