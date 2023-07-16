@@ -9,20 +9,20 @@ export const PATCH = async (req, { params }) => {
     `creator` property matching the `params.id` value. The `populate('creator')` method is used to
     populate the `creator` field of each prompt with the corresponding user object. The result of
     the query is then assigned to the `prompts` variable. */
-    const promptToUpdate = await Prompt.findById(params.id);
+    const existingPrompt = await Prompt.findById(params.id);
 
-    if (!promptToUpdate) {
+    if (!existingPrompt) {
       return new Response('No prompt found', { status: 404 });
     }
 
-    promptToUpdate.prompt = prompt;
-    promptToUpdate.tag = tag;
+    existingPrompt.prompt = prompt;
+    existingPrompt.tag = tag;
 
-    const updatedPrompt = await promptToUpdate.save();
+    await promptToUpdate.save();
 
-    return new Response(JSON.stringify(updatedPrompt), { status: 200 });
+    return new Response(JSON.stringify(existingPrompt), { status: 200 });
   } catch (e) {
-    return new Response('Failed to fetch Prompts : ' + e, { status: 500 });
+    return new Response('Failed to update the Prompt : ' + e, { status: 500 });
   }
 };
 
