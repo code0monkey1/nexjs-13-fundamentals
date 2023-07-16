@@ -316,7 +316,7 @@ _The profile page should show only the prompts created by the current use , and 
 
 1.  `handleEdit` : This is used to update an already present prompt by an authorized user
 
-    - Today this is it
-    - > [handleEdit](./app/api/prompt/route.js)
+    - This is used to update i.e `PATCH` , with the given `id` , if the person is authorized
+    - > [Update Route](./app/api/prompt/%5Bid%5D/route.js)
 
 1.  `handleDelete` : This is used to delete a prompt by an authorized user
