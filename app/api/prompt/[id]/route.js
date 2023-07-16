@@ -1,4 +1,6 @@
-const PATCH = async (req) => {
+export const PATCH = async (req) => {
+  const { prompt, tag } = await req.json();
+
   try {
     await connectToDb();
 
@@ -8,9 +10,9 @@ const PATCH = async (req) => {
     populate the `creator` field of each prompt with the corresponding user object. The result of
     the query is then assigned to the `prompts` variable. */
 
-    const prompt = await Prompt.findById(params.id).populate('creator');
+    const updatedPrompt = await Prompt.updateOne(params.id).populate('creator');
 
-    if (!prompt) {
+    if (!updatedPrompt) {
       return new Response('No prompt found', { status: 404 });
     }
 
