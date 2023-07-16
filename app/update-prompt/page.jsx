@@ -38,10 +38,13 @@ const UpdatePrompt = () => {
   }, [promptId]);
 
   const updatePrompt = async (e) => {
-    console.log('update prompt triggered');
     e.preventDefault();
 
     setSubmitting(true);
+
+    if (!promptId) {
+      return alert('promptId not found');
+    }
 
     try {
       console.log('Updated Prompt', JSON.stringify(post, null, 2));
