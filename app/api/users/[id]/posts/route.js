@@ -8,6 +8,12 @@ export const GET = async (req, { params }) => {
   try {
     await connectToDb();
 
+    /* `const prompts` is declaring a variable that will store the result of the `Prompt.find()` query.
+    The `Prompt.find()` method is used to find all documents in the `Prompt` collection that have a
+    `creator` property matching the `params.id` value. The `populate('creator')` method is used to
+    populate the `creator` field of each prompt with the corresponding user object. The result of
+    the query is then assigned to the `prompts` variable. */
+
     const prompts = await Prompt.find({ creator: params.id }).populate(
       'creator'
     );
