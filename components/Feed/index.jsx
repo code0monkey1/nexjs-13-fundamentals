@@ -6,6 +6,7 @@ import PromptCard from '../PromptCard';
 
 import axios from 'axios';
 import { useDebounce } from 'use-debounce';
+import debounce from '../../utils/debounce';
 
 const Feed = () => {
   const [searchText, setSearchText] = useState('');
