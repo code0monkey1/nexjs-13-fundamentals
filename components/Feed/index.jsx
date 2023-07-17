@@ -5,12 +5,14 @@ import { useEffect, useState } from 'react';
 import PromptCard from '../PromptCard';
 
 import axios from 'axios';
-import debounce from '../../utils/debounce';
+import { useDebounce } from 'use-debounce';
 
 const Feed = () => {
   const [searchText, setSearchText] = useState('');
 
   const [data, setData] = useState([]);
+
+  const [debouncedValue] = useDebounce(searchText, 3000);
 
   useEffect(() => {
     const fetchPrompts = async () => {
