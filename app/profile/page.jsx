@@ -16,6 +16,7 @@ const MyProfile = () => {
 
   const [myPosts, setMyPosts] = useState([]);
 
+  console.log('session', JSON.stringify(session, null, 2));
   useEffect(() => {
     const fetchPosts = async () => {
       // We search for posts by the specific user logged in
