@@ -7,16 +7,14 @@ import PromptCard from '../PromptCard';
 import axios from 'axios';
 import { useDebounce } from 'use-debounce';
 
-import debounce from '../../utils/debounce';
-
 const Feed = () => {
   const [searchText, setSearchText] = useState('');
 
   const [data, setData] = useState([]);
 
-  // const [debouncedValue] = useDebounce(searchText, 300);
+  const [debouncedValue] = useDebounce(searchText, 300);
 
-  // const [filteredData, setFilteredData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
     const fetchPrompts = async () => {
@@ -24,7 +22,7 @@ const Feed = () => {
 
       if (response.status === 200) {
         setData(response.data);
-        // setFilteredData(response.data);
+        setFilteredData(response.data);
       } else {
         throw new Error('Prompts could not be fetched');
       }
@@ -33,19 +31,18 @@ const Feed = () => {
     fetchPrompts();
   }, []);
 
-  // useEffect(() => {
-  //   setFilteredData(
-  //     data?.filter((d) =>
-  //       d.prompt.toLowerCase().includes(debouncedValue.toLowerCase())
-  //     )
-  //   );
-  //   console.log('debounced value is', debouncedValue);
-  //   console.log(filteredData);
-  // }, [debouncedValue]);
+  useEffect(() => {
+    setFilteredData(
+      data?.filter((d) =>
+        d.prompt.toLowerCase().includes(debouncedValue.toLowerCase())
+      )
+    );
+    console.log('debounced value is', debouncedValue);
+    console.log(filteredData);
+  }, [debouncedValue]);
 
   const handleSearchChange = ({ target }) => {
     // go through the data and display either tag or content or username
-    console.log('search text', target.value);
 
     setSearchText(target.value);
   };
@@ -56,12 +53,12 @@ const Feed = () => {
         <input
           placeholder="Search for a Tag or a UserName"
           value={searchText}
-          onChange={debounce(handleSearchChange, 3000)}
+          onChange={handleSearchChange}
           required
           className="search_input peer"
         />
       </form>
-      <PromptCardList data={data} handleTagClick={() => {}} />
+      <PromptCardList data={filteredData} handleTagClick={() => {}} />
     </section>
   );
 };
