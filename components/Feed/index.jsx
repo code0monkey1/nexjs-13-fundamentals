@@ -9,7 +9,7 @@ import { useDebounce } from 'use-debounce';
 
 const Feed = () => {
   const [searchText, setSearchText] = useState('');
-  const [tag, useTag] = useState('');
+  const [tag, setTag] = useState('');
   const [data, setData] = useState([]);
 
   const [debouncedValue] = useDebounce(searchText, 3000);
@@ -33,8 +33,10 @@ const Feed = () => {
 
   useEffect(() => {
     setFilteredData(
-      data?.filter((d) =>
-        d.prompt.toLowerCase().includes(debouncedValue.toLowerCase())
+      data?.filter(
+        (d) =>
+          d.prompt.toLowerCase().includes(debouncedValue.toLowerCase()) ||
+          d.tag.toLowerCase() === tag.toLowerCase()
       )
     );
   }, [debouncedValue]);
@@ -47,9 +49,6 @@ const Feed = () => {
 
   const handleTagClick = (tag) => {
     setSearchText(tag);
-    setFilteredData(
-      data?.filter((d) => d.tag.toLowerCase() === tag.toLowerCase())
-    );
   };
 
   return (
