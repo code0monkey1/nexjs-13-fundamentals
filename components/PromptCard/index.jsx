@@ -2,7 +2,7 @@
 
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import displayCopied from './displayCopied';
 
@@ -11,7 +11,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 
   // to get logged in user credentials
   const { data: session } = useSession();
-
+  const router = useRouter();
   // to get the current path
   const pathName = usePathname();
 
@@ -41,9 +41,9 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 
         <div className="flex flex-col">
           <h3
-            onClick={() =>
-              handleTagClick && handleTagClick(post.creator.username)
-            }
+            onClick={() => {
+              router.push('/');
+            }}
             className="font-satoshi font-semibold text-gray-900"
           >
             {post.creator.username}
