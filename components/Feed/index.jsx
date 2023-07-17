@@ -9,7 +9,7 @@ import { useDebounce } from 'use-debounce';
 
 const Feed = () => {
   const [searchText, setSearchText] = useState('');
-
+  const [tag, useTag] = useState('');
   const [data, setData] = useState([]);
 
   const [debouncedValue] = useDebounce(searchText, 3000);
@@ -37,8 +37,6 @@ const Feed = () => {
         d.prompt.toLowerCase().includes(debouncedValue.toLowerCase())
       )
     );
-    console.log('debounced value is', debouncedValue);
-    console.log(filteredData);
   }, [debouncedValue]);
 
   const handleSearchChange = ({ target }) => {
@@ -47,6 +45,12 @@ const Feed = () => {
     setSearchText(target.value);
   };
 
+  const handleTagClick = (tag) => {
+    setSearchText(tag);
+    setFilteredData(
+      data?.filter((d) => d.tag.toLowerCase() === tag.toLowerCase())
+    );
+  };
   return (
     <section className="feed">
       <form className="relative w-full flex-center">
@@ -58,7 +62,7 @@ const Feed = () => {
           className="search_input peer"
         />
       </form>
-      <PromptCardList data={filteredData} handleTagClick={() => {}} />
+      <PromptCardList data={filteredData} handleTagClick={handleTagClick} />
     </section>
   );
 };
