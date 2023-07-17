@@ -11,6 +11,8 @@ const Feed = () => {
 
   const [data, setData] = useState([]);
 
+  useEffect(() => {}, [searchText]);
+
   useEffect(() => {
     const fetchPrompts = async () => {
       const response = await axios.get('/api/prompt');
@@ -27,11 +29,8 @@ const Feed = () => {
 
   const handleSearchChange = ({ target }) => {
     // go through the data and display either tag or content or username
-    clearTimeout(value);
 
-    let value = setTimeout(() => {
-      setSearchText(target.value);
-    }, 3000);
+    setSearchText(target.value);
   };
 
   const filteredData = data?.filter((d) =>
