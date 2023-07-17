@@ -31,7 +31,7 @@ const Feed = () => {
   };
 
   const filteredData = data?.filter((d) =>
-    d.post.prompt.toLowerCase().includes(searchText.toLowerCase())
+    d.prompt.toLowerCase().includes(searchText.toLowerCase())
   );
 
   return (
