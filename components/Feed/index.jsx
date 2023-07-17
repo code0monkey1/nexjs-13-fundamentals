@@ -51,6 +51,7 @@ const Feed = () => {
       data?.filter((d) => d.tag.toLowerCase() === tag.toLowerCase())
     );
   };
+
   return (
     <section className="feed">
       <form className="relative w-full flex-center">
