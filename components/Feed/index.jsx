@@ -9,10 +9,9 @@ import { useDebounce } from 'use-debounce';
 
 const Feed = () => {
   const [searchText, setSearchText] = useState('');
-  const [tag, setTag] = useState('');
   const [data, setData] = useState([]);
 
-  const [debouncedValue] = useDebounce(searchText, 3000);
+  const [debouncedValue] = useDebounce(searchText, 500);
 
   const [filteredData, setFilteredData] = useState([]);
 
@@ -36,7 +35,7 @@ const Feed = () => {
       data?.filter(
         (d) =>
           d.prompt.toLowerCase().includes(debouncedValue.toLowerCase()) ||
-          d.tag.toLowerCase() === tag.toLowerCase()
+          d.tag.toLowerCase() === debouncedValue.toLowerCase()
       )
     );
   }, [debouncedValue]);
