@@ -30,7 +30,7 @@ const Feed = () => {
     setSearchText(target.value);
   };
 
-  const filteredData = data.filter((d) =>
+  const filteredData = data?.filter((d) =>
     d.post.prompt.toLowerCase().includes(searchText.toLowerCase())
   );
 
@@ -45,7 +45,7 @@ const Feed = () => {
           className="search_input peer"
         />
       </form>
-      <PromptCardList data={data} handleTagClick={() => {}} />
+      <PromptCardList data={filteredData} handleTagClick={() => {}} />
     </section>
   );
 };
