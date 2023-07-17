@@ -12,7 +12,7 @@ const Feed = () => {
 
   const [data, setData] = useState([]);
 
-  const [debouncedValue] = useDebounce(searchText, 5000);
+  const [debouncedValue] = useDebounce(searchText, 500);
 
   let filteredData = data;
 
@@ -32,7 +32,7 @@ const Feed = () => {
 
   useEffect(() => {
     filteredData = data?.filter((d) =>
-      d.prompt.toLowerCase().includes(searchText.toLowerCase())
+      d.prompt.toLowerCase().includes(debouncedValue.toLowerCase())
     );
     console.log('debounced value is', debouncedValue);
   }, [debouncedValue]);
