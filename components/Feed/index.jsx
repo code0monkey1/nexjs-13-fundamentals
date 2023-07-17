@@ -12,9 +12,9 @@ const Feed = () => {
 
   const [data, setData] = useState([]);
 
-  const [debouncedValue] = useDebounce(searchText, 3000);
+  const [debouncedValue] = useDebounce(searchText, 300);
 
-  let filteredData = data;
+  const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
     const fetchPrompts = async () => {
@@ -32,13 +32,14 @@ const Feed = () => {
   }, []);
 
   useEffect(() => {
-    filteredData = data?.filter((d) =>
-      d.prompt.toLowerCase().includes(debouncedValue.toLowerCase())
+    setFilteredData(
+      data?.filter((d) =>
+        d.prompt.toLowerCase().includes(debouncedValue.toLowerCase())
+      )
     );
-
     console.log('debounced value is', debouncedValue);
     console.log(filteredData);
-  }, [debouncedValue, useDebounce]);
+  }, [debouncedValue]);
 
   const handleSearchChange = ({ target }) => {
     // go through the data and display either tag or content or username
