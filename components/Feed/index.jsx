@@ -12,9 +12,23 @@ const Feed = () => {
 
   const [data, setData] = useState([]);
 
-  const [debouncedValue] = useDebounce(searchText, 3000);
+  const [debouncedValue] = useDebounce(searchText, 300);
 
   let filteredData = data;
+
+  useEffect(() => {
+    const fetchPrompts = async () => {
+      const response = await axios.get('/api/prompt');
+
+      if (response.status === 200) {
+        setData(response.data);
+      } else {
+        throw new Error('Prompts could not be fetched');
+      }
+    };
+
+    fetchPrompts();
+  }, []);
 
   useEffect(() => {
     filteredData = data?.filter((d) =>
