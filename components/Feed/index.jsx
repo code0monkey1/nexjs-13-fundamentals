@@ -11,7 +11,15 @@ const Feed = () => {
 
   const [data, setData] = useState([]);
 
-  useEffect(() => {}, [searchText]);
+  useEffect(() => {
+    let timeout = setTimeout(() => {
+      setSearchText;
+    }, 3000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [searchText]);
 
   useEffect(() => {
     const fetchPrompts = async () => {
