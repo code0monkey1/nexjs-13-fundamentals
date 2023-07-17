@@ -27,7 +27,11 @@ const Feed = () => {
 
   const handleSearchChange = ({ target }) => {
     // go through the data and display either tag or content or username
-    setSearchText(target.value);
+    clearTimeout(value);
+
+    let value = setTimeout(() => {
+      setSearchText(target.value);
+    }, 3000);
   };
 
   const filteredData = data?.filter((d) =>
