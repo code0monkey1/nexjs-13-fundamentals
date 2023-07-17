@@ -35,7 +35,8 @@ const Feed = () => {
       data?.filter(
         (d) =>
           d.prompt.toLowerCase().includes(debouncedValue.toLowerCase()) ||
-          d.tag.toLowerCase() === debouncedValue.toLowerCase()
+          d.tag.toLowerCase() === debouncedValue.toLowerCase() ||
+          d.creator.username === debouncedValue
       )
     );
   }, [debouncedValue]);
@@ -46,8 +47,8 @@ const Feed = () => {
     setSearchText(target.value);
   };
 
-  const handleTagClick = (tag) => {
-    setSearchText(tag);
+  const handleCardClick = (value) => {
+    setSearchText(value);
   };
 
   return (
@@ -61,18 +62,18 @@ const Feed = () => {
           className="search_input peer"
         />
       </form>
-      <PromptCardList data={filteredData} handleTagClick={handleTagClick} />
+      <PromptCardList data={filteredData} handleCardClick={handleCardClick} />
     </section>
   );
 };
 
 export default Feed;
 
-const PromptCardList = ({ data, handleTagClick }) => {
+const PromptCardList = ({ data, handleCardClick }) => {
   return (
     <div className="mt-16 prompt_layout">
       {data.map((d) => (
-        <PromptCard key={d._id} post={d} handleTagClick={handleTagClick} />
+        <PromptCard key={d._id} post={d} handleTagClick={handleCardClick} />
       ))}
     </div>
   );
