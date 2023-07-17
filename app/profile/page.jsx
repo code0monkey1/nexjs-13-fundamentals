@@ -61,14 +61,16 @@ const MyProfile = () => {
     }
   };
 
-  const firstName = session`${session?.user.name.split(' ')[0]}'s`;
-  
+  const firstName = session ? `${session?.user.name.split(' ')[0]}'s` : '';
+
   return (
     <>
       {/* This is the reusable profile component that will dynamically render the current users profile info*/}
       <Profile
         name={firstName}
-        desc={`Welcome to ${firstName}'s personalized profile page. Share your exceptional prompts and inspire others with the power of your imagination`}
+        desc={`Welcome to ${
+          session ? firstName : ''
+        }'s personalized profile page. Share your exceptional prompts and inspire others with the power of your imagination`}
         data={myPosts}
         handleEdit={handleEdit}
         handleDelete={handleDelete}
