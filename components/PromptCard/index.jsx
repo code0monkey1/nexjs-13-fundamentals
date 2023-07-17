@@ -6,13 +6,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import displayCopied from './displayCopied';
 
-const PromptCard = ({
-  key,
-  post,
-  handleTagClick,
-  handleEdit,
-  handleDelete,
-}) => {
+const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const [copied, setCopied] = useState('');
 
   // to get logged in user credentials
