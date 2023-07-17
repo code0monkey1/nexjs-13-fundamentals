@@ -14,7 +14,7 @@ const Feed = () => {
 
   const [debouncedValue] = useDebounce(searchText, 500);
 
-  let filteredData = data;
+  const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
     const fetchPrompts = async () => {
@@ -31,10 +31,13 @@ const Feed = () => {
   }, []);
 
   useEffect(() => {
-    filteredData = data?.filter((d) =>
-      d.prompt.toLowerCase().includes(debouncedValue.toLowerCase())
+    setFilteredData(
+      data?.filter((d) =>
+        d.prompt.toLowerCase().includes(debouncedValue.toLowerCase())
+      )
     );
     console.log('debounced value is', debouncedValue);
+    console.log(filteredData);
   }, [debouncedValue]);
 
   const handleSearchChange = ({ target }) => {
