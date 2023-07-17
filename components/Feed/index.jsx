@@ -5,21 +5,12 @@ import { useEffect, useState } from 'react';
 import PromptCard from '../PromptCard';
 
 import axios from 'axios';
+import debounce from '../../utils/debounce';
 
 const Feed = () => {
   const [searchText, setSearchText] = useState('');
 
   const [data, setData] = useState([]);
-
-  useEffect(() => {
-    let timeout = setTimeout(() => {
-      setSearchText;
-    }, 3000);
-
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, [searchText]);
 
   useEffect(() => {
     const fetchPrompts = async () => {
@@ -51,7 +42,7 @@ const Feed = () => {
         <input
           placeholder="Search for a Tag or a UserName"
           value={searchText}
-          onChange={handleSearchChange}
+          onChange={debounce(handleSearchChange, 300)}
           required
           className="search_input peer"
         />
