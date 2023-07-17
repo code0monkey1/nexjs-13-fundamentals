@@ -14,29 +14,19 @@ const Feed = () => {
 
   const [debouncedValue] = useDebounce(searchText, 3000);
 
+  let filteredData = data;
+
   useEffect(() => {
-    const fetchPrompts = async () => {
-      const response = await axios.get('/api/prompt');
-
-      if (response.status === 200) {
-        setData(response.data);
-      } else {
-        throw new Error('Prompts could not be fetched');
-      }
-    };
-
-    fetchPrompts();
-  }, []);
+    filteredData = data?.filter((d) =>
+      d.prompt.toLowerCase().includes(searchText.toLowerCase())
+    );
+  }, [debouncedValue]);
 
   const handleSearchChange = ({ target }) => {
     // go through the data and display either tag or content or username
 
     setSearchText(target.value);
   };
-
-  const filteredData = data?.filter((d) =>
-    d.prompt.toLowerCase().includes(searchText.toLowerCase())
-  );
 
   return (
     <section className="feed">
