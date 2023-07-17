@@ -11,7 +11,6 @@ the user's profile page. It uses various hooks and functions to fetch and displa
 handle editing and deleting of posts, and pass the necessary data and functions to the `Profile`
 component for rendering. */
 const MyProfile = () => {
-  
   const router = useRouter();
   const { data: session } = useSession();
 
@@ -66,7 +65,7 @@ const MyProfile = () => {
     <>
       {/* This is the reusable profile component that will dynamically render the current users profile info*/}
       <Profile
-        name={session?.user.name}
+        name={`${session?.user.name.split(' ')[0]}'s`}
         desc={`Welcome to ${session?.user.name}'s personalized profile page. Share your exceptional prompts and inspire others with the power of your imagination`}
         data={myPosts}
         handleEdit={handleEdit}
