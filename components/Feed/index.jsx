@@ -22,6 +22,7 @@ const Feed = () => {
 
       if (response.status === 200) {
         setData(response.data);
+        setFilteredData(response.data);
       } else {
         throw new Error('Prompts could not be fetched');
       }
