@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest",
+    "tdd": "jest --watchAll --coverage --runInBand --verbose"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
@@ -23,6 +24,7 @@
     "tailwindcss": "3.3.2"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.22.5",
     "@types/axios": "^0.14.0",
     "@types/react": "18.2.14",
     "jest": "^29.6.1",
