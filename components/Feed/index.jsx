@@ -42,7 +42,7 @@ const Feed = () => {
         <input
           placeholder="Search for a Tag or a UserName"
           value={searchText}
-          onChange={debounce(handleSearchChange, 300)}
+          onChange={handleSearchChange}
           required
           className="search_input peer"
         />
