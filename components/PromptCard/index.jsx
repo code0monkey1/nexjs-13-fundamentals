@@ -6,7 +6,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import displayCopied from './displayCopied';
 
-const PromptCard = ({ post, handleCardClick, handleEdit, handleDelete }) => {
+const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const [copied, setCopied] = useState('');
 
   // to get logged in user credentials
@@ -39,12 +39,7 @@ const PromptCard = ({ post, handleCardClick, handleEdit, handleDelete }) => {
           className="rounded-full object-contain"
         />
 
-        <div
-          className="flex flex-col"
-          onClick={() =>
-            handleCardClick && handleCardClick(post.creator.username)
-          }
-        >
+        <div className="flex flex-col">
           <h3 className="font-satoshi font-semibold text-gray-900">
             {post.creator.username}
           </h3>
@@ -63,7 +58,7 @@ const PromptCard = ({ post, handleCardClick, handleEdit, handleDelete }) => {
       </div>
       <p className="my-4 font-satoshi text-sm text-gray-700 "> {post.prompt}</p>
       <p
-        onClick={() => handleCardClick && handleCardClick(post.tag)}
+        onClick={() => handleTagClick && handleTagClick(post.tag)}
         className="font-inter text-sm blue_gradient cursor-pointer"
       >
         #{post.tag}

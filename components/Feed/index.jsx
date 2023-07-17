@@ -47,8 +47,8 @@ const Feed = () => {
     setSearchText(target.value);
   };
 
-  const handleCardClick = (value) => {
-    setSearchText(value);
+  const handleTagClick = (tag) => {
+    setSearchText(tag);
   };
 
   return (
@@ -62,18 +62,18 @@ const Feed = () => {
           className="search_input peer"
         />
       </form>
-      <PromptCardList data={filteredData} handleCardClick={handleCardClick} />
+      <PromptCardList data={filteredData} handleTagClick={handleTagClick} />
     </section>
   );
 };
 
 export default Feed;
 
-const PromptCardList = ({ data, handleCardClick }) => {
+const PromptCardList = ({ data, handleTagClick }) => {
   return (
     <div className="mt-16 prompt_layout">
       {data.map((d) => (
-        <PromptCard key={d._id} post={d} handleTagClick={handleCardClick} />
+        <PromptCard key={d._id} post={d} handleTagClick={handleTagClick} />
       ))}
     </div>
   );
