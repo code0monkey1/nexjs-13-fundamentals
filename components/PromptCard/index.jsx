@@ -2,7 +2,7 @@
 
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import displayCopied from './displayCopied';
 
@@ -40,7 +40,12 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
         />
 
         <div className="flex flex-col">
-          <h3 className="font-satoshi font-semibold text-gray-900">
+          <h3
+            onClick={() =>
+              handleTagClick && handleTagClick(post.creator.username)
+            }
+            className="font-satoshi font-semibold text-gray-900"
+          >
             {post.creator.username}
           </h3>
           <p className="font-inter text-sm text-gray-500">
