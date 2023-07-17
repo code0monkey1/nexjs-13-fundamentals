@@ -12,7 +12,7 @@ const Feed = () => {
 
   const [data, setData] = useState([]);
 
-  const [debouncedValue] = useDebounce(searchText, 300);
+  const [debouncedValue] = useDebounce(searchText, 3000);
 
   const [filteredData, setFilteredData] = useState([]);
 
