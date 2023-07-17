@@ -60,6 +60,7 @@ const Feed = () => {
           onChange={handleSearchChange}
           required
           className="search_input peer"
+          onclick="this.value=''"
         />
       </form>
       <PromptCardList data={filteredData} handleTagClick={handleTagClick} />
