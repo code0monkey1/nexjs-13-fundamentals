@@ -6,15 +6,6 @@ import PromptCard from '../PromptCard';
 
 import axios from 'axios';
 
-const PromptCardList = ({ data, handleTagClick }) => {
-  return (
-    <div className="mt-16 prompt_layout">
-      {data.map((d) => (
-        <PromptCard key={d._id} post={d} handleTagClick={handleTagClick} />
-      ))}
-    </div>
-  );
-};
 const Feed = () => {
   const [searchText, setSearchText] = useState('');
 
@@ -35,8 +26,13 @@ const Feed = () => {
   }, []);
 
   const handleSearchChange = ({ target }) => {
+    // go through the data and display either tag or content or username
     setSearchText(target.value);
   };
+
+  const filteredData = data.filter((d) =>
+    d.post.prompt.toLowerCase().includes(searchText.toLowerCase())
+  );
 
   return (
     <section className="feed">
@@ -55,3 +51,13 @@ const Feed = () => {
 };
 
 export default Feed;
+
+const PromptCardList = ({ data, handleTagClick }) => {
+  return (
+    <div className="mt-16 prompt_layout">
+      {data.map((d) => (
+        <PromptCard key={d._id} post={d} handleTagClick={handleTagClick} />
+      ))}
+    </div>
+  );
+};
