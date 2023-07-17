@@ -43,12 +43,12 @@ const Feed = () => {
   //   console.log(filteredData);
   // }, [debouncedValue]);
 
-  const handleSearchChange = useDebounce(({ target }) => {
+  const handleSearchChange = ({ target }) => {
     // go through the data and display either tag or content or username
     console.log('search text', target.value);
 
     setSearchText(target.value);
-  }, 3000);
+  };
 
   return (
     <section className="feed">
@@ -56,7 +56,7 @@ const Feed = () => {
         <input
           placeholder="Search for a Tag or a UserName"
           value={searchText}
-          onChange={handleSearchChange}
+          onChange={debounce(handleSearchChange, 3000)}
           required
           className="search_input peer"
         />
