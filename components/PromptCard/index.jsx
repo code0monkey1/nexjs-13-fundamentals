@@ -28,7 +28,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     setTimeout(() => setCopied(''), 3000);
   };
 
-  const isUserOnProfilePage =
+  const isAuthorizedUserOnProfilePage =
     session?.user.id === post.creator._id && pathName === '/profile';
 
   return (
@@ -41,7 +41,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 
       <Tag handleTagClick={handleTagClick} post={post} />
 
-      {isUserOnProfilePage && (
+      {isAuthorizedUserOnProfilePage && (
         <EditOrDelete handleEdit={handleEdit} handleDelete={handleDelete} />
       )}
     </div>
