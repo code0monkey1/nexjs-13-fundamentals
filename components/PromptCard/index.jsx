@@ -39,19 +39,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
           className="rounded-full object-contain"
         />
 
-        <div className="flex flex-col">
-          <h3
-            onClick={() => {
-              router.push('/');
-            }}
-            className="font-satoshi font-semibold text-gray-900"
-          >
-            {post.creator.username}
-          </h3>
-          <p className="font-inter text-sm text-gray-500">
-            {post.creator.email}
-          </p>
-        </div>
+        <UserDetails post={post} router={router} />
         <CopyPrompt copied={copied} handleCopy={handleCopy} post={post} />
       </div>
       <Prompt post={post} />
@@ -112,5 +100,19 @@ const CopyPrompt = ({ copied, handleCopy, post }) => (
       alt="copy_image"
       src={displayCopied({ copied, prompt: post.prompt })}
     />
+  </div>
+);
+
+const UserDetails = ({ post, router }) => (
+  <div className="flex flex-col">
+    <h3
+      onClick={() => {
+        router.push('/');
+      }}
+      className="font-satoshi font-semibold text-gray-900"
+    >
+      {post.creator.username}
+    </h3>
+    <p className="font-inter text-sm text-gray-500">{post.creator.email}</p>
   </div>
 );
