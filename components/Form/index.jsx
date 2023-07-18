@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import Heading from './Heading/index.jsx';
+import Hero from './Hero/index.jsx';
 import displaySubmitText from './displaySubmitText';
 
 const Form = ({ post, type, setPost, submitting, handleSubmit }) => {
   return (
     <section className="w-full max-w-full flex-start flex-col">
-      <Heading type={type} />
+      <Hero type={type} />
 
       <form
         onSubmit={handleSubmit}

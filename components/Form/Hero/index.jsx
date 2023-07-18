@@ -1,4 +1,4 @@
-const Heading = ({ type }) => {
+const Hero = ({ type }) => {
   return (
     <>
       <h1 className="head_text text-left">
@@ -12,4 +12,4 @@ const Heading = ({ type }) => {
   );
 };
 
-export default Heading;
+export default Hero;
