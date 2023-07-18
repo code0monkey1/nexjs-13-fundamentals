@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import Prompt from './Prompt';
+import Tag from './Tag';
+import UserDetails from './UserDetails';
 import displayCopied from './displayCopied';
 
 const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
@@ -47,57 +49,3 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 };
 
 export default PromptCard;
-
-const EditOrDelete = ({ handleEdit, handleDelete }) => {
-  return (
-    <div className="mt-5 flex-center gap-4  border-t border-gray-100 pt-3">
-      <p
-        className="font-inter text-sm green_gradient cursor-pointer"
-        onClick={handleEdit}
-      >
-        Edit
-      </p>
-      <p
-        className="font-inter text-sm orange_gradient cursor-pointer"
-        onClick={handleDelete}
-      >
-        Delete
-      </p>
-    </div>
-  );
-};
-
-const Tag = ({ handleTagClick, post }) => (
-  <p
-    onClick={() => handleTagClick && handleTagClick(post.tag)}
-    className="font-inter text-sm blue_gradient cursor-pointer"
-  >
-    #{post.tag}
-  </p>
-);
-
-const UserDetails = ({ post, router }) => {
-  return (
-    <>
-      <Image
-        src={post.creator.image}
-        alt="user_image"
-        width={40}
-        height={40}
-        className="rounded-full object-contain"
-      />
-
-      <div className="flex flex-col">
-        <h3
-          onClick={() => {
-            router.push('/');
-          }}
-          className="font-satoshi font-semibold text-gray-900"
-        >
-          {post.creator.username}
-        </h3>
-        <p className="font-inter text-sm text-gray-500">{post.creator.email}</p>
-      </div>
-    </>
-  );
-};
