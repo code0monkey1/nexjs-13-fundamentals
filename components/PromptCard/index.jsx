@@ -8,6 +8,7 @@ import Prompt from './Prompt';
 import Tag from './Tag';
 import UserDetails from './UserDetails';
 import displayCopied from './displayCopied';
+import { isEditable } from './isEditable';
 
 const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const [copied, setCopied] = useState('');
@@ -28,11 +29,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     setTimeout(() => setCopied(''), 3000);
   };
 
-  const isAuthorizedUser = session?.user.id === post.creator._id;
-
-  const isOnProfilePage = pathName === '/profile';
-
-  const isEditable = isAuthorizedUser && isOnProfilePage;
+  const isCardEditable = isEditable({ session, post, pathName });
 
   return (
     <div className="prompt_card ">
@@ -44,7 +41,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 
       <Tag handleTagClick={handleTagClick} post={post} />
 
-      {isEditable && (
+      {isCardEditable && (
         <EditOrDelete handleEdit={handleEdit} handleDelete={handleDelete} />
       )}
     </div>
