@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const UserDetails = ({ post, router }) => {
+const UserDetails = ({ post, router, handleCopy }) => {
   return (
     <>
       <Image
@@ -21,6 +21,18 @@ const UserDetails = ({ post, router }) => {
           {post.creator.username}
         </h3>
         <p className="font-inter text-sm text-gray-500">{post.creator.email}</p>
+      </div>
+      <div className="copy_btn" onClick={handleCopy}>
+        <Image
+          src={
+            copied === post.prompt
+              ? '/assets/icons/tick.svg'
+              : '/assets/icons/copy.svg'
+          }
+          alt={copied === post.prompt ? 'tick_icon' : 'copy_icon'}
+          width={12}
+          height={12}
+        />
       </div>
     </>
   );
