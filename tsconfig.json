@@ -26,7 +26,8 @@
     "**/*.tsx",
     "test/form.test.js",
     "components/PromptCard/UserDetails.jsx",
-    "components/PromptCard/EditOrDelete.jsx"
+    "components/PromptCard/EditOrDelete.jsx",
+    "components/Form/Heading/index.jsx"
   ],
   "exclude": ["node_modules"]
 }

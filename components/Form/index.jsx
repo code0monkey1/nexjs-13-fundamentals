@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Heading from './Heading/index';
+import Heading from './Heading/index.jsx';
 import displaySubmitText from './displaySubmitText';
 
 const Form = ({ post, type, setPost, submitting, handleSubmit }) => {
