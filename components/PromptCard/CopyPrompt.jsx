@@ -1,3 +1,4 @@
+import Image from 'next/image';
 const CopyPrompt = ({ post, copied, handleCopy }) => {
   return (
     <div className="copy_btn" onClick={handleCopy}>
