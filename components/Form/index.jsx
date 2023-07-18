@@ -34,10 +34,7 @@ const TagInput = ({ post, setPost }) => {
       <input
         value={post.tag}
         onChange={(e) => {
-          setPost({
-            ...post,
-            tag: e.target.value,
-          });
+          setPost(setTag({ post, tagValue: e.target.value }));
         }}
         placeholder="#tag"
         required
@@ -88,5 +85,12 @@ function setPrompt({ post, promptValue }) {
   return {
     ...post,
     prompt: promptValue,
+  };
+}
+
+function setTag({ post, tagValue }) {
+  return {
+    ...post,
+    tag: tagValue,
   };
 }
