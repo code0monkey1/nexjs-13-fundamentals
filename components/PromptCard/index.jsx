@@ -1,9 +1,9 @@
 'use client';
 
 import { useSession } from 'next-auth/react';
-import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
+import EditOrDelete from './EditOrDelete';
 import Prompt from './Prompt';
 import Tag from './Tag';
 import UserDetails from './UserDetails';
