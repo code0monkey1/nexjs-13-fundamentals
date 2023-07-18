@@ -4,6 +4,7 @@ import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
+import Prompt from './Prompt';
 import displayCopied from './displayCopied';
 
 const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
@@ -32,7 +33,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     <div className="prompt_card ">
       <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
         <UserDetails post={post} router={router} />
-        <CopyPrompt copied={copied} handleCopy={handleCopy} post={post} />
+        <Prompt copied={copied} handleCopy={handleCopy} post={post} />
       </div>
 
       <Prompt post={post} />
@@ -74,21 +75,6 @@ const Tag = ({ handleTagClick, post }) => (
   >
     #{post.tag}
   </p>
-);
-
-const Prompt = ({ post }) => (
-  <p className="my-4 font-satoshi text-sm text-gray-700 "> {post.prompt}</p>
-);
-
-const CopyPrompt = ({ copied, handleCopy, post }) => (
-  <div className=" copy_btn" onClick={handleCopy}>
-    <Image
-      width={20}
-      height={20}
-      alt="copy_image"
-      src={displayCopied({ copied, prompt: post.prompt })}
-    />
-  </div>
 );
 
 const UserDetails = ({ post, router }) => {
