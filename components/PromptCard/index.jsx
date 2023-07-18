@@ -61,13 +61,8 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
           />
         </div>
       </div>
-      <p className="my-4 font-satoshi text-sm text-gray-700 "> {post.prompt}</p>
-      <p
-        onClick={() => handleTagClick && handleTagClick(post.tag)}
-        className="font-inter text-sm blue_gradient cursor-pointer"
-      >
-        #{post.tag}
-      </p>
+      <Prompt post={post} />
+      <Tag handleTagClick={handleTagClick} post={post} />
 
       {/* Display Delete or edit button
         subjected to the person being validated 
@@ -102,3 +97,16 @@ const EditOrDelete = ({ handleEdit, handleDelete }) => {
     </div>
   );
 };
+
+const Tag = ({ handleTagClick, post }) => (
+  <p
+    onClick={() => handleTagClick && handleTagClick(post.tag)}
+    className="font-inter text-sm blue_gradient cursor-pointer"
+  >
+    #{post.tag}
+  </p>
+);
+
+const Prompt = ({ post }) => (
+  <p className="my-4 font-satoshi text-sm text-gray-700 "> {post.prompt}</p>
+);
