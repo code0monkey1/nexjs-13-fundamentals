@@ -75,10 +75,7 @@ const PromptInput = ({ post, setPost }) => {
       <textarea
         value={post.prompt}
         onChange={(e) => {
-          setPost({
-            ...post,
-            prompt: e.target.value,
-          });
+          setPost(setPrompt({ post, promptValue: e.target.value }));
         }}
         placeholder="Write your prompt here..."
         required
@@ -87,3 +84,9 @@ const PromptInput = ({ post, setPost }) => {
     </label>
   );
 };
+function setPrompt({ post, promptValue }) {
+  return {
+    ...post,
+    prompt: promptValue,
+  };
+}
