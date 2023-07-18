@@ -1,13 +1,10 @@
 import Image from 'next/image';
+import displayCopied from './displayCopied';
 const CopyPrompt = ({ post, copied, handleCopy }) => {
   return (
     <div className="copy_btn" onClick={handleCopy}>
       <Image
-        src={
-          copied === post.prompt
-            ? '/assets/icons/tick.svg'
-            : '/assets/icons/copy.svg'
-        }
+        src={displayCopied({ copied, prompt: post.prompt })}
         alt={copied === post.prompt ? 'tick_icon' : 'copy_icon'}
         width={12}
         height={12}
