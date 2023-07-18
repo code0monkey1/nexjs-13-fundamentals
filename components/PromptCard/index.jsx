@@ -52,14 +52,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
             {post.creator.email}
           </p>
         </div>
-        <div className=" copy_btn" onClick={handleCopy}>
-          <Image
-            width={20}
-            height={20}
-            alt="copy_image"
-            src={displayCopied({ copied, prompt: post.prompt })}
-          />
-        </div>
+        <CopyPrompt copied={copied} handleCopy={handleCopy} post={post} />
       </div>
       <Prompt post={post} />
       <Tag handleTagClick={handleTagClick} post={post} />
@@ -109,4 +102,15 @@ const Tag = ({ handleTagClick, post }) => (
 
 const Prompt = ({ post }) => (
   <p className="my-4 font-satoshi text-sm text-gray-700 "> {post.prompt}</p>
+);
+
+const CopyPrompt = ({ copied, handleCopy, post }) => (
+  <div className=" copy_btn" onClick={handleCopy}>
+    <Image
+      width={20}
+      height={20}
+      alt="copy_image"
+      src={displayCopied({ copied, prompt: post.prompt })}
+    />
+  </div>
 );
