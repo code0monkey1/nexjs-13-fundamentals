@@ -33,10 +33,9 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     <div className="prompt_card ">
       <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
         <UserDetails post={post} router={router} />
-        <Prompt copied={copied} handleCopy={handleCopy} post={post} />
       </div>
 
-      <Prompt post={post} />
+      <Prompt copied={copied} handleCopy={handleCopy} post={post} />
 
       <Tag handleTagClick={handleTagClick} post={post} />
 
