@@ -3,6 +3,7 @@
 import { useSession } from 'next-auth/react';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
+import CopyPrompt from './CopyPrompt';
 import EditOrDelete from './EditOrDelete';
 import Prompt from './Prompt';
 import Tag from './Tag';
@@ -35,7 +36,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     <div className="prompt_card ">
       <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
         <UserDetails post={post} router={router} />
-        <CopyPrompt copied={copied} handleCopy={handleCopy} />
+        <CopyPrompt post={post} copied={copied} handleCopy={handleCopy} />
       </div>
 
       <Prompt post={post} />
