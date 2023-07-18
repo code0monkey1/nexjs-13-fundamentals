@@ -39,10 +39,8 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 
       <Tag handleTagClick={handleTagClick} post={post} />
 
-      {isUserOnProfilePage ? (
+      {isUserOnProfilePage && (
         <EditOrDelete handleEdit={handleEdit} handleDelete={handleDelete} />
-      ) : (
-        ''
       )}
     </div>
   );
