@@ -14,7 +14,7 @@ const Form = ({ post, type, setPost, submitting, handleSubmit }) => {
 
         <TagInput post={post} setPost={setPost} />
 
-        <Submit_Cancel submitting={submitting} type={type} />
+        <SubmitOrCancel submitting={submitting} type={type} />
       </form>
     </section>
   );
@@ -60,7 +60,7 @@ const TagInput = ({ post, setPost }) => {
   );
 };
 
-const Submit_Cancel = ({ submitting, type }) => {
+const SubmitOrCancel = ({ submitting, type }) => {
   return (
     <div className="flex-end mx-3 mb-5 gap-4">
       <Link href="/" className="text-grey-500 text-sm">
