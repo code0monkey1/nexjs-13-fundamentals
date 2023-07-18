@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Heading from './Heading/index';
 import displaySubmitText from './displaySubmitText';
 
 const Form = ({ post, type, setPost, submitting, handleSubmit }) => {
@@ -21,20 +22,6 @@ const Form = ({ post, type, setPost, submitting, handleSubmit }) => {
 };
 
 export default Form;
-
-const Heading = ({ type }) => {
-  return (
-    <>
-      <h1 className="head_text text-left">
-        <span className="blue_gradient">{type} Post</span>
-      </h1>
-
-      <p className="desc text-left max-w-md">
-        {type} and share amazing prompts with the world
-      </p>
-    </>
-  );
-};
 
 const TagInput = ({ post, setPost }) => {
   return (
