@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 const UserDetails = ({ post, router }) => {
-  console.log('post creator', post.creator);
   return (
     <>
       <Image
@@ -11,7 +10,7 @@ const UserDetails = ({ post, router }) => {
         height={40}
         className="rounded-full object-contain"
         onClick={() => {
-          router.push(`/profile/${post.creator.id}`);
+          router.push(`/profile/${post.creator._id}`);
         }}
       />
 

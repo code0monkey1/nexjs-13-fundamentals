@@ -8,7 +8,6 @@ import EditOrDelete from './EditOrDelete';
 import Prompt from './Prompt';
 import Tag from './Tag';
 import UserDetails from './UserDetails';
-import displayCopied from './displayCopied';
 import { isEditable } from './isEditable';
 
 const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
