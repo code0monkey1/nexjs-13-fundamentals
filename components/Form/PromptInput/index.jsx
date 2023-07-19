@@ -1,3 +1,4 @@
+import setPrompt from './setPrompt';
 const PromptInput = ({ post, setPost }) => {
   return (
     <label>

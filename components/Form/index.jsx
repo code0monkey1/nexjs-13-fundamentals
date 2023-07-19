@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Hero from './Hero/index.jsx';
+import PromptInput from './PromptInput';
 import displaySubmitText from './displaySubmitText';
 
 const Form = ({ post, type, setPost, submitting, handleSubmit }) => {
@@ -23,28 +24,28 @@ const Form = ({ post, type, setPost, submitting, handleSubmit }) => {
 
 export default Form;
 
-const TagInput = ({ post, setPost }) => {
-  return (
-    <label>
-      <span className="font-satoshi font-semibold text-base text-gray-700">
-        Tag{' '}
-        <span className="font-normal">( #code , #system-design , #idea )</span>
-      </span>
+// const TagInput = ({ post, setPost }) => {
+//   return (
+//     <label>
+//       <span className="font-satoshi font-semibold text-base text-gray-700">
+//         Tag{' '}
+//         <span className="font-normal">( #code , #system-design , #idea )</span>
+//       </span>
 
-      <input
-        value={post.tag}
-        onChange={(e) => {
-          setPost((prevPost) =>
-            setTag({ post: prevPost, tagValue: e.target.value })
-          );
-        }}
-        placeholder="#tag"
-        required
-        className="form_input"
-      />
-    </label>
-  );
-};
+//       <input
+//         value={post.tag}
+//         onChange={(e) => {
+//           setPost((prevPost) =>
+//             setTag({ post: prevPost, tagValue: e.target.value })
+//           );
+//         }}
+//         placeholder="#tag"
+//         required
+//         className="form_input"
+//       />
+//     </label>
+//   );
+// };
 
 const SubmitOrCancel = ({ submitting, type }) => {
   return (
@@ -64,33 +65,33 @@ const SubmitOrCancel = ({ submitting, type }) => {
   );
 };
 
-const PromptInput = ({ post, setPost }) => {
-  return (
-    <label>
-      <span className="font-satoshi font-semibold text-base text-gray-700">
-        Your A.I Prompt to make you work less
-      </span>
+// const PromptInput = ({ post, setPost }) => {
+//   return (
+//     <label>
+//       <span className="font-satoshi font-semibold text-base text-gray-700">
+//         Your A.I Prompt to make you work less
+//       </span>
 
-      <textarea
-        value={post.prompt}
-        onChange={(e) =>
-          setPost((prevPost) =>
-            setPrompt({ post: prevPost, promptValue: e.target.value })
-          )
-        }
-        placeholder="Write your prompt here..."
-        required
-        className="form_textarea"
-      />
-    </label>
-  );
-};
-function setPrompt({ post, promptValue }) {
-  return {
-    ...post,
-    prompt: promptValue,
-  };
-}
+//       <textarea
+//         value={post.prompt}
+//         onChange={(e) =>
+//           setPost((prevPost) =>
+//             setPrompt({ post: prevPost, promptValue: e.target.value })
+//           )
+//         }
+//         placeholder="Write your prompt here..."
+//         required
+//         className="form_textarea"
+//       />
+//     </label>
+//   );
+// };
+// function setPrompt({ post, promptValue }) {
+//   return {
+//     ...post,
+//     prompt: promptValue,
+//   };
+// }
 
 function setTag({ post, tagValue }) {
   return {
