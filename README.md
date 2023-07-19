@@ -320,3 +320,7 @@ _The profile page should show only the prompts created by the current use , and 
     - > [Update Route](./app/api/prompt/%5Bid%5D/route.js)
 
 1.  `handleDelete` : This is used to delete a prompt by an authorized user
+
+---
+
+### Deployment
