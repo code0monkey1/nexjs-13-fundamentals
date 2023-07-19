@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
-const UserDetails = ({ post, router, handleCopy }) => {
+const UserDetails = ({ post, router }) => {
+  console.log('post creator', post.creator);
   return (
     <>
       <Image
@@ -9,6 +10,9 @@ const UserDetails = ({ post, router, handleCopy }) => {
         width={40}
         height={40}
         className="rounded-full object-contain"
+        onClick={() => {
+          router.push(`/profile/${post.creator.id}`);
+        }}
       />
 
       <div className="flex flex-col">
