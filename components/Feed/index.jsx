@@ -1,11 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
-import PromptCard from '../PromptCard';
-
 import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { useDebounce } from 'use-debounce';
+import PromptCard from '../PromptCard';
 
 const Feed = () => {
   const [searchText, setSearchText] = useState('');
