@@ -1,3 +1,5 @@
+import setTag from './setTag';
+
 const TagInput = ({ post, setPost }) => {
   return (
     <label>

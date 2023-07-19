@@ -93,9 +93,9 @@ const SubmitOrCancel = ({ submitting, type }) => {
 //   };
 // }
 
-function setTag({ post, tagValue }) {
-  return {
-    ...post,
-    tag: tagValue,
-  };
-}
+// function setTag({ post, tagValue }) {
+//   return {
+//     ...post,
+//     tag: tagValue,
+//   };
+// }
