@@ -12,6 +12,7 @@ handle editing and deleting of posts, and pass the necessary data and functions 
 component for rendering. */
 const MyProfile = () => {
   const router = useRouter();
+
   const { data: session } = useSession();
 
   const [myPosts, setMyPosts] = useState([]);
