@@ -2,9 +2,9 @@
 
 import axios from 'axios';
 import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import Profile from '../../components/Profile';
+import Profile from '../../../components/Profile/index';
 
 /* `const MyProfile` is a functional component in JavaScript React. It is responsible for rendering
 the user's profile page. It uses various hooks and functions to fetch and display the user's posts,
@@ -12,6 +12,10 @@ handle editing and deleting of posts, and pass the necessary data and functions 
 component for rendering. */
 const MyProfile = () => {
   const router = useRouter();
+  const params = useParams();
+
+  console.log('router', router);
+  console.log('params', params);
 
   const { data: session } = useSession();
 
@@ -20,8 +24,8 @@ const MyProfile = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       // We search for posts by the specific user logged in
-
-      const response = await axios.get(`/api/users/${session?.user.id}/posts`);
+ 
+      const response = await axios.get(`/api/users/${params.id}/posts`);
       const data = response.data;
 
       setMyPosts(data);
