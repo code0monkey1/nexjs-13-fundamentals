@@ -322,5 +322,3 @@ _The profile page should show only the prompts created by the current use , and 
 1.  `handleDelete` : This is used to delete a prompt by an authorized user
 
 ---
-
-### Deployment

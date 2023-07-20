@@ -11,9 +11,8 @@ import UserDetails from './UserDetails';
 import { isEditable } from './isEditable';
 
 const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
-
   const params = useParams();
-  
+
   const [copied, setCopied] = useState('');
 
   // to get logged in user credentials
