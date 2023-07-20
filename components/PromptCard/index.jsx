@@ -20,6 +20,8 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   // to get the current path
   const pathName = usePathname();
 
+  console.log('path name from the router ', router.pathname);
+
   const handleCopy = () => {
     setCopied(post.prompt);
 
