@@ -1,7 +1,6 @@
 'use client';
 
 import axios from 'axios';
-import { useSession } from 'next-auth/react';
 import { useParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Profile from '../../../components/Profile/index';
@@ -11,6 +10,7 @@ the user's profile page. It uses various hooks and functions to fetch and displa
 handle editing and deleting of posts, and pass the necessary data and functions to the `Profile`
 component for rendering. */
 const UserProfile = () => {
+  const router = useRouter();
   const params = useParams();
 
   const [myPosts, setMyPosts] = useState([]);
