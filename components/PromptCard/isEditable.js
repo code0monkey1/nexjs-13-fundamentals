@@ -1,7 +1,8 @@
 export const isEditable = ({ session, post, pathName }) => {
   const isAuthorizedUser = session?.user.id === post.creator._id;
 
-  const isOnProfilePage = pathName === '/profile';
+  const isOnProfilePage =
+    pathName === '/profile' || pathName === '/profile/:id';
 
   const isEditable = isAuthorizedUser && isOnProfilePage;
 
