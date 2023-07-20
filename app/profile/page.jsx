@@ -65,7 +65,7 @@ const MyProfile = () => {
     <>
       {/* This is the reusable profile component that will dynamically render the current users profile info*/}
       <Profile
-        name={'Your Profile'}
+        name={'Your'}
         desc={`Welcome to Your personalized profile page. Share your exceptional prompts and inspire others with the power of your imagination`}
         data={myPosts}
         handleEdit={handleEdit}
