@@ -17,8 +17,9 @@ const Feed = async () => {
     const response = await fetch('/api/prompt');
 
     if (response.status === 200) {
-      setData(response.json());
-      setFilteredData(response.json());
+      const data = await response.json();
+      setData(data);
+      setFilteredData(data);
     } else {
       throw new Error('Prompts could not be fetched');
     }
