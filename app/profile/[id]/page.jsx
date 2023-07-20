@@ -14,9 +14,6 @@ const MyProfile = () => {
   const router = useRouter();
   const params = useParams();
 
-  console.log('router', router);
-  console.log('params', params);
-
   const { data: session } = useSession();
 
   const [myPosts, setMyPosts] = useState([]);
