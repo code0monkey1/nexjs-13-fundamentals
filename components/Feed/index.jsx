@@ -13,20 +13,18 @@ const Feed = async () => {
 
   const [filteredData, setFilteredData] = useState([]);
 
-  useEffect(() => {
-    const fetchPrompts = async () => {
-      const response = await axios.get('/api/prompt');
+  const fetchPrompts = async () => {
+    const response = await fetch('/api/prompt');
 
-      if (response.status === 200) {
-        setData(response.data);
-        setFilteredData(response.data);
-      } else {
-        throw new Error('Prompts could not be fetched');
-      }
-    };
+    if (response.status === 200) {
+      setData(response.json());
+      setFilteredData(response.json());
+    } else {
+      throw new Error('Prompts could not be fetched');
+    }
+  };
 
-    fetchPrompts();
-  }, []);
+  fetchPrompts();
 
   useEffect(() => {
     setFilteredData(
