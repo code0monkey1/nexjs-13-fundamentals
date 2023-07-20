@@ -27,12 +27,13 @@ const Nav = () => {
     setUpProvider();
   }, []);
 
+  /* `const SignInProvider` is a functional component that renders the sign-in buttons for each
+  provider. It maps over the `providers` object and renders a `SignIn` component for each provider.
+  The `SignIn` component is a button that triggers the `signIn` function when clicked, passing the
+  provider's `id` as an argument. */
   const SignInProvider = () =>
-    providers
-      ? Object.values(providers).map((provider) => (
-          <SignIn provider={provider} />
-        ))
-      : '';
+    providers &&
+    Object.values(providers).map((provider) => <SignIn provider={provider} />);
 
   return (
     <nav className="flex-between w-full mb-16 pt-3">
