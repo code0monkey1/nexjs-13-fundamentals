@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { useDebounce } from 'use-debounce';
 import PromptCard from '../PromptCard';
 
-const Feed = async () => {
+const Feed = () => {
   const [searchText, setSearchText] = useState('');
   const [data, setData] = useState([]);
 
