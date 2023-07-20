@@ -15,6 +15,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 
   // to get logged in user credentials
   const { data: session } = useSession();
+
   const router = useRouter();
   // to get the current path
   const pathName = usePathname();
