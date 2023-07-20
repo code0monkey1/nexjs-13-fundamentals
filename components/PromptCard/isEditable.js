@@ -14,6 +14,10 @@ export const isEditable = ({ session, post, pathName, params }) => {
   );
 
   const isOnDynamicProfileRoute = pathName.startsWith('/profile') && params.id;
+  console.log(
+    '🚀 ~ file: isEditable.js:17 ~ isEditable ~ params.id:',
+    params.id
+  );
 
   console.log(
     '🚀 ~ file: isEditable.js:9 ~ isEditable ~ isOnDynamicProfileRoute:',
