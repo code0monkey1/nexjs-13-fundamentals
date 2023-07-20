@@ -17,7 +17,7 @@
         ![Server Site Generation](./data/pics/ssg.jpg 'static site generation')
       - ISG ( It re-generates a static site template after specified amount of time , so any changes to the data in that time is reflect . )
         [ The syntactical difference b/w this and the previous 2 is that you define a re-validation time , after which the page will be rebuilt on the server and served as a static page ]
-        ![Incremental Static Generation](./data/pics/ssg.jpg 'incremental static generation')
+        ![Incremental Static Generation](./data/pics/isg.jpg 'incremental static generation')
 
     - Creating a new page:
 
