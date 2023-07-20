@@ -1,7 +1,7 @@
 'use client';
 
 import { useSession } from 'next-auth/react';
-import { usePathname, useRouter } from 'next/navigation';
+import { useParams, usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import CopyPrompt from './CopyPrompt';
 import EditOrDelete from './EditOrDelete';
@@ -11,6 +11,7 @@ import UserDetails from './UserDetails';
 import { isEditable } from './isEditable';
 
 const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
+  const params = useParams();
   const [copied, setCopied] = useState('');
 
   // to get logged in user credentials
@@ -32,7 +33,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     setTimeout(() => setCopied(''), 3000);
   };
 
-  const isCardEditable = isEditable({ session, post, pathName });
+  const isCardEditable = isEditable({ session, post, pathName, params });
 
   return (
     <div className="prompt_card ">
