@@ -33,7 +33,9 @@ const UserProfile = () => {
     if (params.id) fetchPosts();
   }, [params.id]);
 
-  const firstName = myPosts.length ? myPosts[0].creator.username : '';
+  const firstName = myPosts.length
+    ? myPosts[0].creator.username.toUpperCase()
+    : '';
 
   console.log('first name is ', firstName);
 
