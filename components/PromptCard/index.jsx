@@ -11,7 +11,9 @@ import UserDetails from './UserDetails';
 import { isEditable } from './isEditable';
 
 const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
+
   const params = useParams();
+  
   const [copied, setCopied] = useState('');
 
   // to get logged in user credentials
@@ -20,8 +22,6 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const router = useRouter();
   // to get the current path
   const pathName = usePathname();
-
-  console.log('path name from the router ', router.pathname);
 
   const handleCopy = () => {
     setCopied(post.prompt);
