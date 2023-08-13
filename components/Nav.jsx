@@ -127,7 +127,7 @@ const Logo = () => (
       height={150}
       className="object-contain"
     />
-    <p className="logo_text text-lg text-9xl "> GPT PROMPTS</p>
+    <p className="logo_text "> GPT - PROMPTS</p>
   </Link>
 );
 
