@@ -123,11 +123,11 @@ const Logo = () => (
       // /assets === public/assets/...
       src="/assets/images/logo.svg"
       alt="logo"
-      width={50}
-      height={50}
+      width={150}
+      height={150}
       className="object-contain"
     />
-    <p className="logo_text"> ⌨️ GPT PROMPTS</p>
+    <p className="logo_text text-9xl "> GPT PROMPTS</p>
   </Link>
 );
 
